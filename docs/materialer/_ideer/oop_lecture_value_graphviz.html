@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Value Class &amp; Graph with nodes and edges exaple &mdash; ITA 2024 3. semester</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css?v=a5898925" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+        <script src="../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../../_static/scripts/sphinx-book-theme.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            SoftwareArkitektur
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro.html">1. Introduktion til SWA og Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../py_intro_1.html">2. Introduction til python (dag1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../py_intro_2.html">3. Python - Datastrukture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../py_intro_4.html">4. Python funktioner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../py_intro_3.html">5. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flask.html">7. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../flask_2.html">8. Flask (dag 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../decorators.html">9. Python  - Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../oop_1.html">10. Python - OOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dokumentation.html">11. Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../orm.html">12. Object Relational Mapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../test_1.html">13. Softwaretests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dag1.html">14. Mikroservices med python, docker og Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../swagger.html">15. Swagger API dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../16.html">16. Sidste dag med undervisning (16)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../eksamensprojekt.html">17. Eksamens Projektperiode (17-24)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../auditional_exercises.html">18. Extra øvelser</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">SoftwareArkitektur</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Value Class &amp; Graph with nodes and edges exaple</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/_ideer/oop_lecture_value_graphviz.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Value-Class-&amp;-Graph-with-nodes-and-edges-exaple">
+<h1>Value Class &amp; Graph with nodes and edges exaple<a class="headerlink" href="#Value-Class-&-Graph-with-nodes-and-edges-exaple" title="Link to this heading"></a></h1>
+<p><strong>Problem to be solved:</strong> We have to make a new kind of tool that can help us build a chart like this:</p>
+<img alt="materialer/_static/output.svg.svg" src="materialer/_static/output.svg.svg" /><p>The actual drawing (the graphics) is done by a a tool called ‘graphviz’, and a few <a class="reference external" href="testfiles/graphcode.py">functions</a>, making use of graphviz, and then imported into this notebook.</p>
+<div class="line-block">
+<div class="line">This “tool” needs some information, which in this case basically is a number (a=2.0, b=-3.0).</div>
+<div class="line">The usual number storing object (‘int’) can’t keep all the information we need. Besides just holding a number, we want this new tool to remember the original name of the object (a, b), what other objects helped make it (in c´s case it is a, b), and what math actions (like + or *) were used to create it. So, we need to build a new, and more complex object (or datastructure) that can remember all these things.</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Install graphviz on you computer: https://graphviz.org/download/
+# install requirement packages in this project
+#%pip install graphviz
+
+#import into this project
+from graphviz import Digraph
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Value:
+
+    def __init__(self, data, parents=(), operator=&#39;&#39;, label=&#39;&#39;):
+        self.data = data                # the actual value
+        self.prev = set(parents)      # the 2 or more object used to create the object
+        self.op = operator            # the operator used when creating the object (+,-,*,/)
+        self.label = label              # The variable name connected to the object
+
+    def __repr__(self):
+        return f&quot;Value(data={self.data})&quot;
+
+    def __add__(self, other):
+        return Value(self.data + other.data, (self, other), &#39;+&#39;)
+
+    def __mul__(self, other):
+        return Value(self.data * other.data, (self, other), &#39;*&#39;)
+
+    def __sub__(self, other):
+        return Value(self.data - other.data, (self, other), &#39;-&#39;)
+
+    def __truediv__(self, other):
+        if other.data == 0:  # Division by zero check
+            raise ValueError(&quot;Division by zero is not allowed&quot;)
+        return Value(self.data / other.data, (self, other), &#39;/&#39;)
+</pre></div>
+</div>
+</div>
+<section id="Draw-Dot-Code">
+<h2>Draw Dot Code<a class="headerlink" href="#Draw-Dot-Code" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">The following import of a functions are not super important for you to look at right now.</div>
+<div class="line">The function ‘draw_dot’ takes care of drawing the diagram, and expects a Value object as parameter input.</div>
+</div>
+<p><strong>The focus in this demo should be on the Value class.</strong></p>
+<div class="line-block">
+<div class="line">If you later look through the code step by step, you should by now (after 6 weeks with python) be able to understand what it does.</div>
+<div class="line">If you do not understand the code, it is a good exercise to go through the code and understand it.</div>
+</div>
+<p>The <a class="reference external" href="https://github.com/python-elective-kea/fall2023-code-examples-from-teachings/tree/master/ses7/graphcode.py">graphcode.py</a> can be found in the code from today session.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># These 2 functions are not super important for you to look at right now. The fokus should be on the Value class.
+# But basicly what the 2 functions do are to produce the graph below with its nodes and edges.
+# If you later look through the code step by step, you should by now be able to understand what it does.
+# If not it is a good exercise to do so.
+
+# In order for this to work you have to install graphviz on your laptop.
+# Install graphviz on you computer: https://graphviz.org/download/
+
+# Then install graphviz in the environment &#39;pip install graphviz&#39;
+
+from graphviz import Digraph
+
+
+def trace(root):
+    # builds a set of all nodes and edges in a graph
+    nodes, edges = set(), set()
+
+    def build(v):
+        if v not in nodes:
+            nodes.add(v)
+            for child in v.prev:
+                edges.add((child, v))
+                build(child)
+
+    build(root)
+
+    return nodes, edges
+
+def draw_dot(root):
+    dot = Digraph(format=&#39;svg&#39;, graph_attr={&#39;rankdir&#39;: &#39;LR&#39;}) # LR = left to right
+
+    nodes, edges = trace(root)
+    for n in nodes:
+        uid = str(id(n))
+        # for any value in the graph, create a rectangular (&#39;record&#39;) node for it
+        dot.node(name=uid, label=f&quot;{{ {n.label} | data {n.data:.1f} }}&quot;, shape=&#39;record&#39;)
+        if n.op:
+            # if this value is a result of some operation, create an op node for it
+            dot.node(name=uid + n.op, label=n.op)
+            # and connect this node to it
+            dot.edge(uid + n.op, uid)
+
+    for n1, n2 in edges:
+        # connect n1 to the op node of n2
+        dot.edge(str(id(n1)), str(id(n2)) + n2.op)
+
+    return dot
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = Value(2, label=&#39;a&#39;)
+b = Value(-3, label=&#39;b&#39;)
+c = a + b; c.label=&#39;c&#39;
+d = c - b; d.label=&#39;d&#39;
+
+draw_dot(d)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/materialer__ideer_oop_lecture_value_graphviz_7_0.svg" src="../../_images/materialer__ideer_oop_lecture_value_graphviz_7_0.svg" /></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

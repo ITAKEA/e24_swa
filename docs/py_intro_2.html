@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Python - Datastrukture &mdash; ITA 2024 3. semester</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=a5898925" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/scripts/sphinx-book-theme.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="4. Python funktioner" href="py_intro_4.html" />
+    <link rel="prev" title="2. Introduction til python (dag1)" href="py_intro_1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SoftwareArkitektur
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduktion til SWA og Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">2. Introduction til python (dag1)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Python - Datastrukture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">3.1. Læringsmål</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forberedelse">3.2. Forberedelse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">3.3. Dagens indhold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">3.4. Hjemmearbejde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materialer">3.5. Materialer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ovelser">3.6. Øvelser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ex-0-1-slicing">3.6.1. Ex 0.1: Slicing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ex-1-1-is-it-a-tuple-or-a-list">3.6.2. Ex 1.1: Is it a tuple or a list?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#list-tuples-set-dict-exercises">3.7. List &amp; Tuples, Set, Dict exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quizes">3.8. quizes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_4.html">4. Python funktioner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">5. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">7. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask (dag 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">9. Python  - Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oop_1.html">10. Python - OOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">11. Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orm.html">12. Object Relational Mapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_1.html">13. Softwaretests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dag1.html">14. Mikroservices med python, docker og Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swagger.html">15. Swagger API dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16.html">16. Sidste dag med undervisning (16)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eksamensprojekt.html">17. Eksamens Projektperiode (17-24)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">18. Extra øvelser</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SoftwareArkitektur</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Python - Datastrukture</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainpy_intro_2.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-datastrukture">
+<h1><span class="section-number">3. </span>Python - Datastrukture<a class="headerlink" href="#python-datastrukture" title="Link to this heading"></a></h1>
+<p>I dag skal vi arbejde med pythons datastrukturer. Python har som udgangspunkt kun fire indbyggede datastrukture. Det er Lister, Tuples, Sets og Dictionaries.<br />Efter i dag vil i være i stand til at oprette  Listes og Tupler, tilgå deres elementer vha. deres index, bruge pythons slicing værktøj på lister og tupler, bruge arethmetikske operatore på lister og tupler, bruge pythons indbyggede functioner på lister og tupler, arbejde med metoderne tilknyttet list og tuple objekterne, og i vil have en grundlæggende forståelse for forskellen i brugen af disse 2.<br />I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arbejde med Dictionaries og forstå dens key : Value struktur.</p>
+<section id="laeringsmal">
+<h2><span class="section-number">3.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Arbejde med lister, tuples</p>
+<ul>
+<li><p>Arbejde med deres indeks</p></li>
+<li><p>Bruge slicing/udsnit-syntaksen</p></li>
+</ul>
+</li>
+<li><p>Kende de vigtigste forskelle mellem lister og tuples</p></li>
+<li><p>Læse fra filer og skrive til filer ved hjælp af den indbyggede “open” funktion.</p></li>
+</ul>
+</section>
+<section id="forberedelse">
+<h2><span class="section-number">3.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<p>Før vi mødes i klassen skal du have:</p>
+<ul class="simple">
+<li><p>Skimmed denne artikkel: <a class="reference external" href="https://realpython.com/python-lists-tuples/">Lists and Tuples in Python</a> (15 min)</p></li>
+<li><p>Skimmed denne artikkel: [Sets in Python] (https://realpython.com/python-sets/) (15 min)</p></li>
+<li><p>Skimmed denne artikkel: <a class="reference external" href="https://realpython.com/python-dicts/">Dictionaries in Python</a> (15 min)</p></li>
+</ul>
+<p>For at checke om du har den rigtige forståelse skal du lave disse quizes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-dicts/">Python Dictionaries Quiz</a>(15 min)</p></li>
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-sets/">Python Sets Quiz</a> (15 min)</p></li>
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-lists-tuples/">Python Lists and Tuples Quiz</a> (15 min)</p></li>
+</ul>
+</section>
+<section id="dagens-indhold">
+<h2><span class="section-number">3.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>[Noter list/tuples] (teachings notes from today](notebooks/noterlists_tuples.ipynb)</p></li>
+<li><p>[Noter sets/dicts](teachings notes from today](notebooks/notes_set_dicts.ipynb&gt;)</p></li>
+<li><p><a class="reference external" href="https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2">Kodeeksempler fra undervisningen</a></p></li>
+</ul>
+</section>
+<section id="hjemmearbejde">
+<h2><span class="section-number">3.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Du skal lave øvelserne herunder færdige.</p></li>
+</ul>
+</section>
+<section id="materialer">
+<h2><span class="section-number">3.5. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/python-lists-tuples/">Lists and Tuples in Python</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/python-sort/">How to Use sorted() and .sort() in Python</a></p></li>
+<li><p><a class="reference external" href="notebooks/noterlists_tuples.ipynb">Notebook list/tuples teachings notes from today</a></p></li>
+<li><p>[Noter sets/dicts](teachings notes from today](notebooks/notes_set_dicts.ipynb&gt;)</p></li>
+<li><p><a class="reference external" href="https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2">Code examples from teachings</a></p></li>
+</ul>
+</section>
+<section id="ovelser">
+<h2><span class="section-number">3.6. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
+<section id="ex-0-1-slicing">
+<h3><span class="section-number">3.6.1. </span>Ex 0.1: Slicing<a class="headerlink" href="#ex-0-1-slicing" title="Link to this heading"></a></h3>
+<p>By using the slicing syntax change the following collections.</p>
+<p>After slicing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">]</span> <span class="n">should</span> <span class="n">become</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s1">&#39;are&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">]</span>
+<span class="p">[</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s1">&#39;here&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Hello&#39;</span><span class="p">]</span>
+<span class="p">(</span><span class="s1">&#39;Hello&#39;</span><span class="p">,</span> <span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;here&#39;</span><span class="p">)</span> <span class="n">should</span> <span class="n">become</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Huston&#39;</span><span class="p">,</span> <span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">]</span>
+<span class="s1">&#39;Hello World Huston we are here&#39;</span> <span class="o">-&gt;</span> <span class="s1">&#39;World Huston we&#39;</span>
+</pre></div>
+</div>
+<p>Figure out more on your own and practice this a lot!</p>
+   <hr></section>
+<section id="ex-1-1-is-it-a-tuple-or-a-list">
+<h3><span class="section-number">3.6.2. </span>Ex 1.1: Is it a tuple or a list?<a class="headerlink" href="#ex-1-1-is-it-a-tuple-or-a-list" title="Link to this heading"></a></h3>
+<p>| The following data should be presented as either a list or a tuple, or as a combination of both.<br />| Your job is to choose the right one.
+| Hint: A list is a collection of the same type of data, a tuple is a record (e.g. in a database a <strong>record</strong> is called a <strong>row</strong>)</p>
+<ol>
+<li><p>Claus, 51, male, clbo&#64;kea.dk, 31011970-1313</p></li>
+<li><p>Bmw, Toyota, Hyundai, Skoda, Fiat, Volvo</p></li>
+<li><p>Claus, Henning, Torben, Carl, Tine</p></li>
+<li><p>‘Hello’, ‘World’, ‘Huston’, ‘we’, ‘are’, ‘here’</p></li>
+<li><p>Rolling Stones, Goats Head Soup, 31 August 1973, 46:56</p></li>
+<li><p>40.730610, -73.935242, New York City, NY, USA; 31.739847, 65.755920, Kandahar, Kandahar Province, Afghanistan;</p>
+<hr></li>
+</ol>
+</section>
+</section>
+<section id="list-tuples-set-dict-exercises">
+<h2><span class="section-number">3.7. </span>List &amp; Tuples, Set, Dict exercises<a class="headerlink" href="#list-tuples-set-dict-exercises" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">List</span> <span class="pre">&amp;</span> <span class="pre">tuple</span> <span class="pre">exercises</span> <span class="pre">&lt;exercises/lists/lists.rst&gt;</span></code>_</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Set</span> <span class="pre">exercises</span> <span class="pre">&lt;https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/sets.py&gt;</span></code>_</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Dict</span> <span class="pre">exercises</span> <span class="pre">&lt;https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/dict.py&gt;</span></code>_</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="quizes">
+<h2><span class="section-number">3.8. </span>quizes<a class="headerlink" href="#quizes" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Lists</span> <span class="pre">and</span> <span class="pre">Tuples</span> <span class="pre">Quiz</span> <span class="pre">&lt;https://realpython.com/quizzes/python-lists-tuples/&gt;</span></code>_</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;while&quot;</span> <span class="pre">Loops</span> <span class="pre">Quiz</span> <span class="pre">&lt;https://realpython.com/quizzes/python-while-loop/&gt;</span></code>_</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="py_intro_1.html" class="btn btn-neutral float-left" title="2. Introduction til python (dag1)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="py_intro_4.html" class="btn btn-neutral float-right" title="4. Python funktioner" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+.DS_Store
+.gitconfig
+Dockerfile
+.venv
+.vscode
+
+
+# exercise solutions
+
+#01 - Strings
+#/sphinx/build/html/exercises/solution/01_strings/*
+#/docs/exercises/solution/01_strings/*
+
+#02 - Data Structures
+#/sphinx/build/html/exercises/solution/02_lists/*
+#/docs/exercises/solution/02_lists/*
+
+#04 - Files, Modules & LLM
+/sphinx/build/html/exercises/solution/04_os_sub_req/*
+/docs/exercises/solution/04_os_sub_req/*
+
+#04 Modules
+/sphinx/build/html/exercises/solution/04_modules/*
+/docs/exercises/solution/04_modules/*
+
+#08 OOP
+/sphinx/build/html/exercises/solution/08_oop/*
+/docs/exercises/solution/08_oop/*
+
+#09 datamodel
+/sphinx/build/html/exercises/solution/09_datamodel/*
+/docs/exercises/solution/09_datamodel/*
+
+#09 properties
+/sphinx/build/html/exercises/solution/10_encapsulation/*
+/docs/exercises/solution/10_encapsulation/*
+
+# 07 set_dict
+/sphinx/build/html/exercises/solution/07_set_dict/*
+/docs/exercises/solution/07_set_dict/*
+
+#06 decorators
+/sphinx/build/html/exercises/solution/06_decorators/*
+/docs/exercises/solution/06_decorators/*
+
+#11 generators
+/sphinx/build/html/exercises/solution/11_generators/*
+/docs/exercises/solution/1111111111111111111111_generators/*
+
+#10 context_managers
+sphinx/build/html/exercises/solution/10_context_managers/*
+docs/exercises/solution/10_context_managers/*
+
+#48 Problem Solving
+sphinx/build/html/exercises/solution/48_problem_solving/*
+docs/exercises/solution/48_problem_solving/*
+
+#49 tips & tricks
+sphinx/build/html/exercises/solution/49_tips&tricks/*
+docs/exercises/solution/49_tips&tricks/*

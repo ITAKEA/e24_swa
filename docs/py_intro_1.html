@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. Introduction til python (dag1) &mdash; ITA 2024 3. semester</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=a5898925" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/scripts/sphinx-book-theme.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Python - Datastrukture" href="py_intro_2.html" />
+    <link rel="prev" title="1. Introduktion til SWA og Cloud" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SoftwareArkitektur
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduktion til SWA og Cloud</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Introduction til python (dag1)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">2.1. Læringsmål</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forberedelse">2.2. Forberedelse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">2.3. Dagens indhold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">2.4. Hjemmearbejde</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#materialer-samlet-oversigt-over-alle-materialer-pa-denne-side">2.4.1. Materialer (samlet oversigt over alle materialer på denne side)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ovelser">2.4.1.1. Øvelser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">3. Python - Datastrukture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_4.html">4. Python funktioner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">5. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">7. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask (dag 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">9. Python  - Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="oop_1.html">10. Python - OOP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">11. Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orm.html">12. Object Relational Mapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_1.html">13. Softwaretests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dag1.html">14. Mikroservices med python, docker og Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swagger.html">15. Swagger API dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16.html">16. Sidste dag med undervisning (16)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eksamensprojekt.html">17. Eksamens Projektperiode (17-24)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">18. Extra øvelser</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SoftwareArkitektur</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>Introduction til python (dag1)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainpy_intro_1.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction-til-python-dag1">
+<h1><span class="section-number">2. </span>Introduction til python (dag1)<a class="headerlink" href="#introduction-til-python-dag1" title="Link to this heading"></a></h1>
+<section id="laeringsmal">
+<h2><span class="section-number">2.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Have grundlæggende kendskab til et udviklingsmiljø og vide, hvordan man bruger det.</p></li>
+<li><p>Have et grundlæggende kendskab til, hvordan et Python-script er struktureret.</p></li>
+<li><p>Kunne arbejde med Strings, betingelser og funktioner.</p></li>
+</ul>
+</section>
+<section id="forberedelse">
+<h2><span class="section-number">2.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<p>Hvis i ikke har nået det endnu, skal i gennemgå denne tutorial inden dagens undervisning:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.kaggle.com/code/colinmorris/hello-python">Python Course at Kaggle</a></p></li>
+</ul>
+<p>I skal desuden have installeret:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.python.org/downloads/">Python</a></p></li>
+<li><p><a class="reference external" href="https://code.visualstudio.com/">Visual Studio Code</a></p></li>
+<li><p><a class="reference external" href="https://git-scm.com/downloads">Git</a></p></li>
+</ul>
+</section>
+<section id="dagens-indhold">
+<h2><span class="section-number">2.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<p>Mine undervisningsnoter kan i se her:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="materialer/notes/notes_python_1.html">Noter</a></p></li>
+</ul>
+<p>De sprogelementer vi kommer til at gennemgå kan i læse om her:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/python/default.asp">Python</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/default.asp">Python Home</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_intro.asp">Python Intro</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_getstarted.asp">Python Get Started</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_syntax.asp">Python Syntax</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_comments.asp">Python Comments</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables.asp">Python Variables</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables.asp">Python Variables</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_names.asp">Variable Names</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_multiple.asp">Assign Multiple Values</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_output.asp">Output Variables</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_global.asp">Global Variables</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_exercises.asp">Variable Exercises</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp">Python Data Types</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_numbers.asp">Python Numbers</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_casting.asp">Python Casting</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings.asp">Python Strings</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings.asp">Python Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_slicing.asp">String Slicing</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_modify.asp">Modify Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_concatenate.asp">Concatenate Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_format.asp">Format Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_escape.asp">Escape Characters</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_methods.asp">String Methods</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_booleans.asp">Python Booleans</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_operators.asp">Python Operators</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_conditions.asp">Python If…Else</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_functions.asp">Python Functions</a></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="hjemmearbejde">
+<h2><span class="section-number">2.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
+<p>Lav følgende 2 quizer om strings:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-strings/">Python Strings and Character Data Quiz (30 min)</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-split-strings/">Splitting, Concatenating, and Joining Strings in Python Quiz (30 min)</a></p></li>
+</ul>
+<p>Herefter skal i lave de følgende 7 øvelser:</p>
+<p><strong>TODO:</strong> Kort video med øvelsesgennemgang</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses1/exercises">Strings1 &amp; Strings2</a> (1 time)</p></li>
+</ul>
+<hr class="docutils" />
+<section id="materialer-samlet-oversigt-over-alle-materialer-pa-denne-side">
+<h3><span class="section-number">2.4.1. </span>Materialer (samlet oversigt over alle materialer på denne side)<a class="headerlink" href="#materialer-samlet-oversigt-over-alle-materialer-pa-denne-side" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="materialer/notes/notes_python_1.html">Noter</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/functions.html">Built-in Functions</a></p></li>
+<li><p><a class="reference external" href="https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses1">Kodeeksempler fra undervisningen</a></p></li>
+</ul>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/python/default.asp">Python</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/default.asp">Python Home</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_intro.asp">Python Intro</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_getstarted.asp">Python Get Started</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_syntax.asp">Python Syntax</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_comments.asp">Python Comments</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables.asp">Python Variables</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables.asp">Python Variables</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_names.asp">Variable Names</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_multiple.asp">Assign Multiple Values</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_output.asp">Output Variables</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_global.asp">Global Variables</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_variables_exercises.asp">Variable Exercises</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_datatypes.asp">Python Data Types</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_numbers.asp">Python Numbers</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_casting.asp">Python Casting</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings.asp">Python Strings</a></p>
+<ul>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings.asp">Python Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_slicing.asp">String Slicing</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_modify.asp">Modify Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_concatenate.asp">Concatenate Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_format.asp">Format Strings</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_escape.asp">Escape Characters</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_strings_methods.asp">String Methods</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_booleans.asp">Python Booleans</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_operators.asp">Python Operators</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_conditions.asp">Python If…Else</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/python_functions.asp">Python Functions</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="ovelser">
+<h4><span class="section-number">2.4.1.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-strings/">Python Strings and Character Data Quiz</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-split-strings/">Splitting, Concatenating, and Joining Strings in Python Quiz</a></p></li>
+<li><p><a class="reference external" href="https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses1/exercises">Strings1 &amp; Strings2</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="intro.html" class="btn btn-neutral float-left" title="1. Introduktion til SWA og Cloud" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="py_intro_2.html" class="btn btn-neutral float-right" title="3. Python - Datastrukture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
