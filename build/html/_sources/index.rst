@@ -81,11 +81,11 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    flask_2
    decorators
    oop_1
-   dokumentation
 
    orm
    
    test_1
+   dokumentation
    dag1
    swagger
    16 
