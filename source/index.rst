@@ -56,27 +56,13 @@ Vi skal desuden kigge på brugen af en
 som gør os i stand til at interageremed  en database gennem software objekter i stdet for sql queries.     
 En ORM gør det desuden nemt at skifte database uden at skulle ændre markant i sin kode, og er derved med til at gøre vores service mere skalerbare. 
 
-De samlede **læringsmål** for hele semesteret i Softwarearkitektur er:
 
-* Have viden om, kunne bruge og forklare brugen af forskellige programeringsparadigmer som Procedural, OOP, funktionel, declarativ –programering. 
-* Have teoretisk viden om Microservicearkitektur.  
-* Kunne udvikle software der følger en Microservice arkitektur. 
-* Kunne læse, skrive, forstå programdokumentation udvilet gennem swagger, readme filer, docstrings og MkDocs hosted på github pages.  
-* Selvstændigt kunne sætte sig ind i brugen af software gennem dets dokumentation 
-* Kunne udføre unittests af egen udviklet software 
-* Have en forståelse for konceptet Abstraktion inden for softwareudvikling 
-* Kende til, og kunne gøre brug af følgende Software designprincipper: SOLID, KISS, DRY og GRASP 
-* Kunne bruge et pythonic udviklingsmiljø herunder scriptfiler, interpretor og jupyter notebooks  
-* Kunne udvikle egne applikationer/api´er der interagerer med 3. parts apllikationer/api´er 
-* Kunne arbejde med forskellige relationelle databasetyper 
-* Kunne bruge SqlAlcemy (ORM) i forbundelse med database queries 
-* Kunne bruge python som programmeringssprog 
-* Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til at have gennem dette semester.
+De samlede læringsmål for hele semesteret i Softwarearkitektur er:
 
-Materiale
----------
 
 Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til at have gennem dette semester.
+
+
 
 .. toctree::
    :maxdepth: 2
@@ -95,11 +81,11 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    flask_2
    decorators
    oop_1
-   dokumentation
 
    orm
    
    test_1
+   dokumentation
    dag1
    swagger
    16 
