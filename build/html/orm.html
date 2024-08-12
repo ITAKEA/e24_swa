@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>12. Object Relational Mapper &mdash; ITA 2024 3. semester</title>
+  <title>11. Object Relational Mapper &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
@@ -31,7 +31,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="13. Softwaretests" href="test_1.html" />
+    <link rel="next" title="12. Softwaretests" href="test_1.html" />
     <link rel="prev" title="10. Python - OOP" href="oop_1.html" /> 
 </head>
 
@@ -65,17 +65,17 @@
 <li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask (dag 2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">9. Python  - Decorators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="oop_1.html">10. Python - OOP</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">11. Dokumentation</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">12. Object Relational Mapper</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">12.1. Læringsmål</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#forberedelse">12.2. Forberedelse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">12.3. Dagens indhold</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">12.4. Hjemmearbejde</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#materialer">12.5. Materialer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ovelser">12.6. Øvelser</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Object Relational Mapper</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">11.1. Læringsmål</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forberedelse">11.2. Forberedelse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">11.3. Dagens indhold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">11.4. Hjemmearbejde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materialer">11.5. Materialer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ovelser">11.6. Øvelser</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="test_1.html">13. Softwaretests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_1.html">12. Softwaretests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">13. Dokumentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dag1.html">14. Mikroservices med python, docker og Azure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="swagger.html">15. Swagger API dokumentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="16.html">16. Sidste dag med undervisning (16)</a></li>
@@ -97,7 +97,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">12. </span>Object Relational Mapper</li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Object Relational Mapper</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainorm.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -108,9 +108,9 @@
            <div itemprop="articleBody">
              
   <section id="object-relational-mapper">
-<h1><span class="section-number">12. </span>Object Relational Mapper<a class="headerlink" href="#object-relational-mapper" title="Link to this heading"></a></h1>
+<h1><span class="section-number">11. </span>Object Relational Mapper<a class="headerlink" href="#object-relational-mapper" title="Link to this heading"></a></h1>
 <section id="laeringsmal">
-<h2><span class="section-number">12.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Forstå hvad Object Relational Mapper (ORM) er</p></li>
 <li><p>Kunne implementerer SqlAlchemy i jeres flask services</p></li>
@@ -119,23 +119,23 @@
 </ul>
 </section>
 <section id="forberedelse">
-<h2><span class="section-number">12.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
 </section>
 <section id="dagens-indhold">
-<h2><span class="section-number">12.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 </section>
 <section id="hjemmearbejde">
-<h2><span class="section-number">12.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
 </section>
 <section id="materialer">
-<h2><span class="section-number">12.5. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.5. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=AKQ3XEDI9Mw">SQLAlchemy Turns Python Objects Into Database Entries</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=Qv02PxiK938">Video: Migrate SQLite Database to MySQL with Python</a> (20:04)</p></li>
 </ul>
 </section>
 <section id="ovelser">
-<h2><span class="section-number">12.6. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.6. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
 </section>
 </section>
 
@@ -144,7 +144,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="oop_1.html" class="btn btn-neutral float-left" title="10. Python - OOP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="test_1.html" class="btn btn-neutral float-right" title="13. Softwaretests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="test_1.html" class="btn btn-neutral float-right" title="12. Softwaretests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
