@@ -33,10 +33,9 @@ Og så skal i se denne 5 minuters video om at lære noget nyt:
 * [Advice for machine learning beginners | Andrej Karpathy and Lex Fridman](https://www.youtube.com/watch?v=I2ZK3ngNvvI)
     
 ## Dagens indhold
-Først mødes i med alle jeres undervisere dette semester.    
-I den sidste halvdel af dagen gennemgår vi så indholdet af dette fag, dette semester igennem disse [slides](materialer/introslides.html)     
-Herefter installerer vi og gennemgår brugen af [VSCode](https://code.visualstudio.com/download)    
-Til sidst kigger vi på et projekt der indeholder alt det i skal lære og arbejde med dette semester.
+I dag får i et overblik over hvad dette fag og faget Cloud går ud på [slides](materialer/introslides.html)     
+Herefter gennemgår brugen af [VSCode](https://code.visualstudio.com/download)    
+Til sidst kigger vi på et projekt der indeholder alt det i skal lære og arbejde med dette semester [IntroDemoProjekt]().
 
 ## Hjemmearbejde
 

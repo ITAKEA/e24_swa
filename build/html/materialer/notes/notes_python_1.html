@@ -130,11 +130,11 @@ Setup complete!
 </ul>
 <section id="Udviklingsmiljøet">
 <h3>Udviklingsmiljøet<a class="headerlink" href="#Udviklingsmiljøet" title="Link to this heading"></a></h3>
-<ul class="simple">
+<ol class="arabic simple">
 <li><p>Åben Interpretor</p></li>
 <li><p>Lav en script.py fil</p></li>
 <li><p>Lav en notebook.ipynb fil</p>
-<ul>
+<ul class="simple">
 <li><p>vælg et virtuelt environment</p>
 <ul>
 <li><p>.venv</p></li>
@@ -142,7 +142,7 @@ Setup complete!
 </li>
 </ul>
 </li>
-</ul>
+</ol>
 </section>
 <section id="Clone-dagens-kode">
 <h3>Clone dagens kode<a class="headerlink" href="#Clone-dagens-kode" title="Link to this heading"></a></h3>
@@ -705,11 +705,11 @@ draw_3d_vector(v3)
 <p>Så det er altså en liste indeholdende 3 lister.</p>
 <section id="Andre-billeder-kunne-være:">
 <h3>Andre billeder kunne være:<a class="headerlink" href="#Andre-billeder-kunne-være:" title="Link to this heading"></a></h3>
-<p><img alt="1af9cf97e89344a6a553243fbff35c7a" class="no-scaled-link" src="../../_images/vector1.jpg" style="width: 10%;" /></p>
+<p><img alt="50e3b74e92f341a89141383d97a68710" class="no-scaled-link" src="../../_images/vector1.jpg" style="width: 10%;" /></p>
 <p><strong>vecor1.jpg</strong> indeholder 3022 x 2662 pixels, dets Color space er ‘RGB’</p>
 <p><strong>tiny_checkerboard.png</strong> indeholder 3 x 3 pixels, dets Color Space er ‘Gray’</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import cv2
@@ -722,6 +722,58 @@ img = cv2.imread(&#39;../../_static/img/tiny_checkerboard.png&#39;)
 image_vector = img.flatten()
 
 mod = [i if i == 255 else 150 for i in list(image_vector)]
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>image_vector
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+array([255, 255, 255,   0,   0,   0, 255, 255, 255,   0,   0,   0, 255,
+       255, 255,   0,   0,   0, 255, 255, 255,   0,   0,   0, 255, 255,
+       255], dtype=uint8)
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import cv2
+import numpy as np
+
+# Load the image
+img = cv2.imread(&#39;../../_static/img/tiny_checkerboard.png&#39;)
+
+# Step 3: Flatten the image to create a vector
+image_vector = img.flatten()
+
+# Modify the vector
+mod = [i if i == 255 else 150 for i in image_vector]
+
+# Ensure the modified list is a numpy array
+mod_array = np.array(mod, dtype=np.uint8)
+
+# Reshape the modified array back to the original image shape
+original_shape = img.shape
+mod_image = mod_array.reshape(original_shape)
+
+# Save the new image
+cv2.imwrite(&#39;modified_image.png&#39;, mod_image)
+
+# Optionally, display the image using OpenCV (for validation)
+cv2.imshow(&#39;Modified Image&#39;, mod_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 </pre></div>
 </div>
 </div>

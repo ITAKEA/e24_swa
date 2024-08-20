@@ -19,9 +19,9 @@ I skal desuden have installeret:
 ## Dagens indhold
 Mine undervisningsnoter kan i se her:
 
-* [Noter](materialer/notes/notes_python_1.html)
+* [Noter](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/noter_fra_undervisningen/notes_python_1.ipynb)
 
-De sprogelementer vi kommer til at gennemgå kan i læse om her:
+De sprogelementer vi kommer til at gennemgå i dag kan i læse om her:
 
 
 - [Python](https://www.w3schools.com/python/default.asp)
@@ -60,15 +60,17 @@ Lav følgende 2 quizer om strings:
 * [Python Strings and Character Data Quiz (30 min)](https://realpython.com/quizzes/python-strings/)
 * [Splitting, Concatenating, and Joining Strings in Python Quiz (30 min)](https://realpython.com/quizzes/python-split-strings/)  
 
-Herefter skal i lave de følgende 7 øvelser:
+Quizerne indeholder forklaringer og links til hvor i kan læse om emnerne, så hvis der er spørgsmål i ikke kan svare på vil i kunne læse om det i det tilhørende materiale. 
 
-**TODO:** Kort video med øvelsesgennemgang
-* [Strings1 & Strings2](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses1/exercises) (1 time)
+Herefter skal i lave resten af String ovelserne som vi ikke nåede i klassen:
+
+* [Strings1](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string1.ipynb) (30 min)
+* [Strings2](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string2.ipynb) (30 min)
 
 ---
 ### Materialer (samlet oversigt over alle materialer på denne side)
 
-* [Noter](materialer/notes/notes_python_1.html)
+* [Noter](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/noter_fra_undervisningen/notes_python_1.ipynb)
 * [Built-in Functions](https://docs.python.org/3/library/functions.html)
 * [Kodeeksempler fra undervisningen](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses1)
 
@@ -107,7 +109,8 @@ Herefter skal i lave de følgende 7 øvelser:
 
 * [Python Strings and Character Data Quiz](https://realpython.com/quizzes/python-strings/)
 * [Splitting, Concatenating, and Joining Strings in Python Quiz](https://realpython.com/quizzes/python-split-strings/)  
-* [Strings1 & Strings2](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses1/exercises) 
+* [Strings1](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string1.ipynb) (30 min)
+* [Strings2](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string2.ipynb) (30 min)
 
 
 
