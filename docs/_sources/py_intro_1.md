@@ -5,6 +5,8 @@
 - Have et grundlæggende kendskab til, hvordan et Python-script er struktureret.  
 - Kunne arbejde med Strings, betingelser og funktioner.
 
+---
+
 ## Forberedelse
 Hvis i ikke har nået det endnu, skal i gennemgå denne tutorial inden dagens undervisning:
  
@@ -15,6 +17,7 @@ I skal desuden have installeret:
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git](https://git-scm.com/downloads)
 
+---
 
 ## Dagens indhold
 Mine undervisningsnoter kan i se her:
@@ -52,6 +55,8 @@ De sprogelementer vi kommer til at gennemgå i dag kan i læse om her:
   - [Python Operators](https://www.w3schools.com/python/python_operators.asp)
   - [Python If...Else](https://www.w3schools.com/python/python_conditions.asp)
   - [Python Functions](https://www.w3schools.com/python/python_functions.asp)
+
+---
 
 ## Hjemmearbejde
 
@@ -103,7 +108,7 @@ Herefter skal i lave resten af String ovelserne som vi ikke nåede i klassen:
   - [Python If...Else](https://www.w3schools.com/python/python_conditions.asp)
   - [Python Functions](https://www.w3schools.com/python/python_functions.asp)
 
-
+---
 
 #### Øvelser
 
