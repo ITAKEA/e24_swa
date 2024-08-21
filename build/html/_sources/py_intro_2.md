@@ -43,7 +43,7 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 * [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/)
 * [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/)
 * [Notebook list/tuples teachings notes from today](materialer/notes/noterlists_tuples.html)
-* [Noter sets/dicts](teachings notes from today](materialer/notes/notes_set_dicts.html)
+* [Noter sets/dicts](materialer/notes/notes_set_dicts.html)
 * [Code examples from teachings](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 
@@ -85,11 +85,12 @@ Hint: A list is a collection of the same type of data, a tuple is a record (e.g.
    
    <hr>
 
-### List & Tuples, Set, Dict exercises
+### List & Tuples, Set, Dict øvelser
 ---
-* `List & tuple exercises <exercises/lists/lists.rst>`_
-* `Set exercises <https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/sets.py>`_
-* `Dict exercises <https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/dict.py>`_
+* [list1](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/list1.ipynb)
+* [list2](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/list2.ipynb)
+* [Set](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/set.ipynb)
+* [Dictionary](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/dict.ipynb)
 
 #### quizes
 * [Lists and Tuples Quiz](https://realpython.com/quizzes/python-lists-tuples/)
