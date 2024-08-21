@@ -30,7 +30,7 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 ---
 * [Noter list/tuples](notebooks/noterlists_tuples.ipynb)
 * [Noter sets/dicts](notebooks/notes_set_dicts.ipynb)
-* [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/python2)
+* [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 ## Hjemmearbejde
 ---
