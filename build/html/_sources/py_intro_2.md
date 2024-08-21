@@ -17,7 +17,7 @@ I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arb
 Før vi mødes i klassen skal du have:
 
 * Skimmed denne artikkel: [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/) (15 min)
-* Skimmed denne artikkel: [Sets in Python] (https://realpython.com/python-sets/) (15 min)
+* Skimmed denne artikkel: [Sets in Python](https://realpython.com/python-sets/) (15 min)
 * Skimmed denne artikkel: [Dictionaries in Python](https://realpython.com/python-dicts/) (15 min)
 
 For at checke om du har den rigtige forståelse skal du lave disse quizes:
@@ -28,9 +28,9 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 ## Dagens indhold
 ---
-* [Noter list/tuples] (teachings notes from today](notebooks/noterlists_tuples.ipynb)
-* [Noter sets/dicts](teachings notes from today](notebooks/notes_set_dicts.ipynb>)
-* [Kodeeksempler fra undervisningen](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2)
+* [Noter list/tuples](notebooks/noterlists_tuples.ipynb)
+* [Noter sets/dicts](notebooks/notes_set_dicts.ipynb)
+* [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/python2)
 
 ## Hjemmearbejde
 ---
