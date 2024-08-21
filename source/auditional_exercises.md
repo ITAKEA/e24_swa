@@ -4,7 +4,7 @@ Til dig der gerne vil have lidt extra øvelser som passer til de emner vi har v�
 (Øvelserne opdateres jævnligt gennem hele forløbet.)
 
 
-Skriv denne prompt in i ChatGpt (eller lign. LLM).     
+Skriv denne prompt i ChatGpt (eller lign. LLM).     
 Bliv ved med øvelserne indtil du føler dig sikker i emnet.
 
 
