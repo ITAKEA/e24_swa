@@ -28,8 +28,8 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 ## Dagens indhold
 ---
-* [Noter list/tuples](notes/noterlists_tuples.html)
-* [Noter sets/dicts](notes/notes_set_dicts.html)
+* [Noter list/tuples](materialer/notes/noterlists_tuples.html)
+* [Noter sets/dicts](materialer/notes/notes_set_dicts.html)
 * [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 ## Hjemmearbejde
@@ -42,8 +42,8 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 * [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/)
 * [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/)
-* [Notebook list/tuples teachings notes from today](notes/noterlists_tuples.html)
-* [Noter sets/dicts](teachings notes from today](notes/notes_set_dicts.html)
+* [Notebook list/tuples teachings notes from today](materialer/notes/noterlists_tuples.html)
+* [Noter sets/dicts](teachings notes from today](materialer/notes/notes_set_dicts.html)
 * [Code examples from teachings](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 
