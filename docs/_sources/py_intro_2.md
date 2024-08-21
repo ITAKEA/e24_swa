@@ -72,9 +72,9 @@ Figure out more on your own and practice this a lot!
 
 ### Ex 1.1: Is it a tuple or a list?
 ---
-| The following data should be presented as either a list or a tuple, or as a combination of both.    
-| Your job is to choose the right one. 
-| Hint: A list is a collection of the same type of data, a tuple is a record (e.g. in a database a **record** is called a **row**)
+The following data should be presented as either a list or a tuple, or as a combination of both.      
+Your job is to choose the right one.     
+Hint: A list is a collection of the same type of data, a tuple is a record (e.g. in a database a **record** is called a **row**)     
 
 1. Claus, 51, male, clbo@kea.dk, 31011970-1313
 2. Bmw, Toyota, Hyundai, Skoda, Fiat, Volvo
@@ -92,5 +92,5 @@ Figure out more on your own and practice this a lot!
 * `Dict exercises <https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/dict.py>`_
 
 #### quizes
-* `Lists and Tuples Quiz <https://realpython.com/quizzes/python-lists-tuples/>`_
-* `"while" Loops Quiz <https://realpython.com/quizzes/python-while-loop/>`_
+* [Lists and Tuples Quiz](https://realpython.com/quizzes/python-lists-tuples/)
+* ["while" Loops Quiz](https://realpython.com/quizzes/python-while-loop/)
