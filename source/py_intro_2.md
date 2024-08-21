@@ -5,7 +5,7 @@ Efter i dag vil i være i stand til at oprette  Listes og Tupler, tilgå deres e
 I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arbejde med Dictionaries og forstå dens key : Value struktur.
 
 ## Læringsmål
-        
+---        
 - Arbejde med lister, tuples
     - Arbejde med deres indeks
     - Bruge slicing/udsnit-syntaksen
@@ -13,6 +13,7 @@ I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arb
 - Læse fra filer og skrive til filer ved hjælp af den indbyggede "open" funktion.
 
 ## Forberedelse
+---
 Før vi mødes i klassen skal du have:
 
 * Skimmed denne artikkel: [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/) (15 min)
@@ -26,16 +27,18 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 * [Python Lists and Tuples Quiz](https://realpython.com/quizzes/python-lists-tuples/) (15 min) 
 
 ## Dagens indhold
+---
 * [Noter list/tuples] (teachings notes from today](notebooks/noterlists_tuples.ipynb)
 * [Noter sets/dicts](teachings notes from today](notebooks/notes_set_dicts.ipynb>)
 * [Kodeeksempler fra undervisningen](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2)
 
 ## Hjemmearbejde
+---
 * Du skal lave øvelserne herunder færdige. 
 
 
 ## Materialer
-
+---
 
 * [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/)
 * [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/)
@@ -44,10 +47,10 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 * [Code examples from teachings](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2)
 
 
-## Øvelser
-
-### Ex 0.1: Slicing
-
+### Øvelser
+---
+#### Ex 0.1: Slicing
+---
 By using the slicing syntax change the following collections.
 
 After slicing:
@@ -68,7 +71,7 @@ Figure out more on your own and practice this a lot!
    <hr>
 
 ### Ex 1.1: Is it a tuple or a list?
-
+---
 | The following data should be presented as either a list or a tuple, or as a combination of both.    
 | Your job is to choose the right one. 
 | Hint: A list is a collection of the same type of data, a tuple is a record (e.g. in a database a **record** is called a **row**)
@@ -82,15 +85,12 @@ Figure out more on your own and practice this a lot!
    
    <hr>
 
-List & Tuples, Set, Dict exercises
-----------------------------------
-
+### List & Tuples, Set, Dict exercises
+---
 * `List & tuple exercises <exercises/lists/lists.rst>`_
 * `Set exercises <https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/sets.py>`_
 * `Dict exercises <https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/dict.py>`_
 
-------
-quizes
-------
+#### quizes
 * `Lists and Tuples Quiz <https://realpython.com/quizzes/python-lists-tuples/>`_
 * `"while" Loops Quiz <https://realpython.com/quizzes/python-while-loop/>`_
