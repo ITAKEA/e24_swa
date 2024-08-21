@@ -60,6 +60,14 @@ html_context = {
 }
 
 html_theme_options = {
-    "repository_url": "https://github.com/ITAKEA/e24_swa.git",
-    "use_repository_button": True,
+    "display_github": True,  # Integrate GitHub
+    "github_user": "ITAKEA",  # Username
+    "github_repo": "e24_swa",  # Repo name
+    "github_version": "master",  # Version
+    "conf_py_path": "/source/",  # Path in the checkout to the docs root
 }
+
+#html_theme_options = {
+#    "repository_url": "https://github.com/ITAKEA/e24_swa.git",
+#    "use_repository_button": True,
+#}
