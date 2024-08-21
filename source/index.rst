@@ -64,20 +64,18 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
 
    py_intro_1
    py_intro_2
-   py_intro_4
    py_intro_3
-
-
+   
    introduktion_til_rest_api
    flask
    flask_2
    decorators
 
    jwt
+   microservices
    test_1
-   dokumentation
-   dag1
+   dokumentation   
    swagger
-   16 
+
    eksamensprojekt
    auditional_exercises
