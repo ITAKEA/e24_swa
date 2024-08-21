@@ -37,7 +37,7 @@ Vi kommer derfor  desuden til at bruge en del tid på dokumentering af kode og a
 
 Hvis kode skal være pålidelig, altså at vi kan være sikre på at det ikke fejler når vi sætter det i produktion, bliver vi nød til at teste det. Som teknik til dette kommer vi til at arbejde med Software testing gennem
 
-* Unittests
+* Doctests
 
 Det overordnede arkitektoniske rammeværktøj på dette semester bliver **Microservices**.     
 Microservices er som ordet hendtyder små programmer (services) der hver især tager sig af en lille del af den samlede helhed et system skal udføre.     
@@ -48,14 +48,6 @@ For at dette kommer til at fungerer skal i lære at bruge et Web Framework der h
 * Flask 
   
 og som i vores tilfælde leverer API endpoints.
-
-Vi skal desuden kigge på brugen af en 
-
-* Object Relational Mapper (ORM) 
-
-som gør os i stand til at interageremed  en database gennem software objekter i stdet for sql queries.     
-En ORM gør det desuden nemt at skifte database uden at skulle ændre markant i sin kode, og er derved med til at gøre vores service mere skalerbare. 
-
 
 De samlede læringsmål for hele semesteret i Softwarearkitektur er:
 
@@ -80,10 +72,8 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    flask
    flask_2
    decorators
-   oop_1
 
-   orm
-   
+   jwt
    test_1
    dokumentation
    dag1
