@@ -1,4 +1,6 @@
-# Mikroservices med python, docker og Azure
+# Mikroservices
+
+![](_static/img/microsevices_quote.png)
 
 Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som host
 * [How To Build and Deploy Microservices With Python](https://kinsta.com/blog/python-microservices/)
@@ -13,9 +15,5 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 
 * [Video: What are Microservices?](https://www.youtube.com/watch?v=CdBtNQZH8a4)
 * [Microservices (Martin Fowler)](https://martinfowler.com/articles/microservices.html)
-* [Video: Microservices • Martin Fowler • GOTO 2014](https://www.youtube.com/watch?v=wgdBVIX9ifA)
 
-
-$$
-|\vec{AB}| = \sqrt{(b_1 - a_1)^2 + (b_2 - a_2)^2}
-$$
+<!-- * [Video: Microservices • Martin Fowler • GOTO 2014](https://www.youtube.com/watch?v=wgdBVIX9ifA)-->
