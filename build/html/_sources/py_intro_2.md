@@ -44,7 +44,7 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 * [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/)
 * [Notebook list/tuples teachings notes from today](notebooks/noterlists_tuples.ipynb)
 * [Noter sets/dicts](teachings notes from today](notebooks/notes_set_dicts.ipynb>)
-* [Code examples from teachings](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2)
+* [Code examples from teachings](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 
 ### Øvelser
