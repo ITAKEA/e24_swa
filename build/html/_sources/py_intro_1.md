@@ -22,7 +22,7 @@ I skal desuden have installeret:
 ## Dagens indhold
 Mine undervisningsnoter kan i se her:
 
-* [Noter](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/noter_fra_undervisningen/notes_python_1.ipynb)
+* [Noter](materialer/notes/notes_python_1.html)
 
 De sprogelementer vi kommer til at arbejde med i dag kan i læse om her (brug det som et opslagsværk):
 
