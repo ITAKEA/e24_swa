@@ -24,7 +24,7 @@ Mine undervisningsnoter kan i se her:
 
 * [Noter](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/noter_fra_undervisningen/notes_python_1.ipynb)
 
-De sprogelementer vi kommer til at gennemgå i dag kan i læse om her:
+De sprogelementer vi kommer til at arbejde med i dag kan i læse om her (brug det som et opslagsværk):
 
 
 - [Python](https://www.w3schools.com/python/default.asp)
