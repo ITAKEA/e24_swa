@@ -17,6 +17,8 @@ I skal desuden have installeret:
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git](https://git-scm.com/downloads)
 
+Og i må gerne spørge jeres favorit LLM om hvad **Microservices** er for en størrelse.
+
 ---
 
 ## Dagens indhold
