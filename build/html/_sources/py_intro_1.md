@@ -17,6 +17,8 @@ I skal desuden have installeret:
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git](https://git-scm.com/downloads)
 
+Og i må gerne spørge jeres favorit LLM om hvad **Microservices** er for en størrelse.
+
 ---
 
 ## Dagens indhold
@@ -77,7 +79,7 @@ Herefter skal i lave resten af String ovelserne som vi ikke nåede i klassen:
 
 * [Noter](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/noter_fra_undervisningen/notes_python_1.ipynb)
 * [Built-in Functions](https://docs.python.org/3/library/functions.html)
-* [Kodeeksempler fra undervisningen](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses1)
+* [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24)
 
 - [Python](https://www.w3schools.com/python/default.asp)
   - [Python Home](https://www.w3schools.com/python/default.asp)
