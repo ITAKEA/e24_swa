@@ -373,32 +373,49 @@ print(&#39;Hej med dig &#39; + name)
 Hej med dig Claus
 </pre></div></div>
 </div>
+</section>
 <section id="Øvelse:-plat-eller-krone-med-brugerinput">
-<h4>Øvelse: plat eller krone med brugerinput<a class="headerlink" href="#Øvelse:-plat-eller-krone-med-brugerinput" title="Link to this heading"></a></h4>
-<p>Brug datatyper, build in functions, if/else til at løse opgaven.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<h3>Øvelse: plat eller krone med brugerinput<a class="headerlink" href="#Øvelse:-plat-eller-krone-med-brugerinput" title="Link to this heading"></a></h3>
+<ol class="arabic simple">
+<li><p>Spørg en bruger om han/hun vil starte med plat eller krone.</p></li>
+<li><p>Spørg herefter om brugeren vil gå videre eller stoppe.</p></li>
+<li><p>Hvis han/hun vil stoppe, skal værdien printes ud og programmet stoppe</p>
+<ul class="simple">
+<li><p>hvis han/hun vil gå videre skal værdien ændres, printes ud og programmet skal stoppe.</p></li>
+</ul>
+</li>
+</ol>
+<p>Brug kun:</p>
+<ul class="simple">
+<li><p>datatyper</p>
+<ul>
+<li><p>bool</p></li>
+<li><p>int</p></li>
+<li><p>float</p></li>
+<li><p>str</p></li>
+</ul>
+</li>
+<li><p>build in functions (<a class="reference external" href="https://docs.python.org/3/library/functions.html">https://docs.python.org/3/library/functions.html</a>)</p>
+<ul>
+<li><p>bool()</p></li>
+<li><p>int()</p></li>
+<li><p>float()</p></li>
+<li><p>print()</p></li>
+<li><p>input()</p></li>
+<li><p>type()</p></li>
+</ul>
+</li>
+<li><p>if/else</p></li>
+</ul>
+<p>til at løse opgaven.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = bool(int(input(&#39;Plat (0) eller Krone (1)? : &#39;)))
-print(f&#39;Du valgte {x}&#39;)
-y = input(&#39;Vil du gå videre? (y/n): &#39;)
-if y == &#39;y&#39;:
-    x = not x
-print(f&#39;Du har valgt at slutte med {x}&#39;)
-<br/></pre></div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Du valgte False
-Du har valgt at slutte med False
-</pre></div></div>
-</div>
-</section>
 </section>
 </section>
 <section id="Et-mere-komplekst-program-(sequence-types)">
@@ -589,87 +606,6 @@ draw_3d_vector([1, 1, 1])
 </div>
 </div>
 </section>
-<section id="Functions">
-<h2>Functions<a class="headerlink" href="#Functions" title="Link to this heading"></a></h2>
-<p>Udfør en handling = kald en function</p>
-<p>Eksempler:</p>
-<ul class="simple">
-<li><p>plus 2 vectorer sammen</p>
-<ul>
-<li><p>feks. et bolds position beskrevet vha af en vektor.</p></li>
-<li><p>tyngdekraften beskrevet ved en vektor</p></li>
-<li><p>plus sammen giver det nye punkt hvor bolden befinder sig.</p></li>
-<li><p>feks. en bold i frit fald</p></li>
-</ul>
-</li>
-</ul>
-<p>Genemgå:</p>
-<ul class="simple">
-<li><p><strong>f()</strong> har navnet <strong>f</strong> og eksekveres af <strong>()</strong></p></li>
-</ul>
-<p><strong>Liniers ligning</strong></p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>f(x) = ax + b
-
-eller:
-
-y = ax + b
-</pre></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = 5 # hældning
-b = 2 # y - skæringspunkt
-
-def f(x):
-    return a*x + b
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from vector_drawing import draw_line
-draw_line(f) # variablenavnet f (fra f())
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/materialer_notes_notes_python_1_47_0.png" src="../../_images/materialer_notes_notes_python_1_47_0.png" />
-</div>
-</div>
-<ul class="simple">
-<li><p>2 vectorer</p></li>
-</ul>
-<hr class="docutils" />
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add(v1, v2):
-    return v1[0]+v2[0], v1[1]+v2[1], v1[2]+v2[2]
-
-v1 = [0,0,-9.8] # tyngdekraften
-v2 = [2,3,0]
-v3 = add(v1, v2)
-
-draw_3d_vector(v3)
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<img alt="../../_images/materialer_notes_notes_python_1_49_0.png" src="../../_images/materialer_notes_notes_python_1_49_0.png" />
-</div>
-</div>
-</section>
 <section id="Billedebehandling-med-python-og-vektorer">
 <h2>Billedebehandling med python og vektorer<a class="headerlink" href="#Billedebehandling-med-python-og-vektorer" title="Link to this heading"></a></h2>
 <div class="line-block">
@@ -684,7 +620,7 @@ draw_3d_vector(v3)
 <p>Så det er altså en liste indeholdende 3 lister.</p>
 <section id="Andre-billeder-kunne-være:">
 <h3>Andre billeder kunne være:<a class="headerlink" href="#Andre-billeder-kunne-være:" title="Link to this heading"></a></h3>
-<p><img alt="faa08de2813143219da5fd0c828767cb" class="no-scaled-link" src="../../_images/vector1.jpg" style="width: 10%;" /></p>
+<p><img alt="cb74ae9e63034078b167e9cedc4bc30c" class="no-scaled-link" src="../../_images/vector1.jpg" style="width: 10%;" /></p>
 <p><strong>vecor1.jpg</strong> indeholder 3022 x 2662 pixels, dets Color space er ‘RGB’</p>
 <p><strong>tiny_checkerboard.png</strong> indeholder 3 x 3 pixels, dets Color Space er ‘Gray’</p>
 <div class="nbinput nblast docutils container">
@@ -705,6 +641,51 @@ mod = [i if i == 255 else 150 for i in list(image_vector)]
 </div>
 </div>
 </section>
+</section>
+<section id="Funktioner">
+<h2>Funktioner<a class="headerlink" href="#Funktioner" title="Link to this heading"></a></h2>
+<p>Udfør en handling = kald en function</p>
+<p>Genemgå:</p>
+<ul class="simple">
+<li><p><strong>f()</strong> har navnet <strong>f</strong> og eksekveres af <strong>()</strong></p></li>
+<li><p>Funktionsværdierne -&gt; y-værdierne -&gt; returværdierne</p></li>
+</ul>
+<p><strong>Liniers ligning</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>f(x) = ax + b
+
+eller:
+
+y = ax + b
+</pre></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a = 5 # hældning
+b = 2 # y - skæringspunkt
+
+def f(x):
+    return a*x + b
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from vector_drawing import draw_line
+draw_line(f) # variablenavnet f (fra f())
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="../../_images/materialer_notes_notes_python_1_53_0.png" src="../../_images/materialer_notes_notes_python_1_53_0.png" />
+</div>
+</div>
 </section>
 <section id="Opsummering">
 <h2>Opsummering<a class="headerlink" href="#Opsummering" title="Link to this heading"></a></h2>
