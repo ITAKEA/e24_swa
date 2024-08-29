@@ -13,22 +13,34 @@
 * Kunne lave kode der gør brug af pythons ```requests``` module.
 
 ## Forberedelse
-Se denne video og udfør det som han viser. Du skal være opmærksom på at det er **.py** filer han arbejder med og ikke **.ipynb** filer. 
-* [Importing Your Own Python Modules Properly](https://www.youtube.com/watch?v=GxCXiSkm6no)    
-(Lav en note til dig selv med skridtene der skal til for at lave en "package")
+Se følgende videoer om moduler og pakker,, og læs dokumentet om at arbejde med filer.    
+
+* [Moduler og pakker i python 1 (egne moduler)](https://youtu.be/miGblWWfsvY) (8:37)
+* [Moduler og pakker i python 2 (indbyggede)](https://youtu.be/sEvWF1YLxXs) (6:12)
+* [Moduler og pakker i python 3 (indbyggede)](https://youtu.be/wbEWDsj3vIg) (8:20)
+* [Working with files in Python](https://python-elective-kea.github.io/spring2024/notebooks/files.html)
 
 ## Dagen i dag
-Import numpy, pandas og relater det til datastrukture.    
-
+Ud over at kunne importere moduler skal i også arbejde med at bruge disse moduler.     
+Vi kommer til at arbejde med: 
+* ```OS``` modulet
+* ```subprocess``` modulet
+* ```requests``` modulet
 
 ## Hjemmearbejde
 
 ## Materialer
 * [Working with files in Python](https://python-elective-kea.github.io/spring2024/notebooks/files.html)
-* [Importing Your Own Python Modules Properly](https://www.youtube.com/watch?v=GxCXiSkm6no)
+* [Moduler og pakker i python 1 (egne moduler)](https://youtu.be/miGblWWfsvY) (8:37)
+* [Moduler og pakker i python 2 (indbyggede)](https://youtu.be/sEvWF1YLxXs) (6:12)
+* [Moduler og pakker i python 3 (indbyggede)](https://youtu.be/wbEWDsj3vIg) (8:20)
+
+
 ## Øvelser
 
 ### Øv 1: Download filer
 I denne øvelse skal du lave et script som kan downloaded filer fra nettet og gemme dem i en mappe på din computer.
 
-a. Lav et modul (.py fil) som downloader denne fil
+**Lav et modul (.py fil) som:**     
+* Opretter en 
+* downloader denne fil
