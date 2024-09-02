@@ -10,7 +10,7 @@ I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arb
     - Arbejde med deres indeks
     - Bruge slicing/udsnit-syntaksen
 - Kende de vigtigste forskelle mellem lister og tuples
-- Læse fra filer og skrive til filer ved hjælp af den indbyggede "open" funktion.
+<!-- - Læse fra filer og skrive til filer ved hjælp af den indbyggede "open" funktion. -->
 
 ## Forberedelse
 ---
@@ -19,6 +19,7 @@ Før vi mødes i klassen skal du have:
 * Skimmed denne artikkel: [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/) (15 min)
 * Skimmed denne artikkel: [Sets in Python](https://realpython.com/python-sets/) (15 min)
 * Skimmed denne artikkel: [Dictionaries in Python](https://realpython.com/python-dicts/) (15 min)
+* Skimmed denne artikkel: [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/) (15 min)
 
 For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
@@ -42,8 +43,8 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 * [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/)
 * [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/)
-* [Notebook list/tuples teachings notes from today](materialer/notes/noterlists_tuples.html)
-* [Noter sets/dicts](materialer/notes/notes_set_dicts.html)
+<!-- * [Notebook list/tuples teachings notes from today](materialer/notes/noterlists_tuples.html)
+* [Noter sets/dicts](materialer/notes/notes_set_dicts.html) -->
 * [Code examples from teachings](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 
