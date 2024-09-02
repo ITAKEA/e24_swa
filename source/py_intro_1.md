@@ -115,7 +115,7 @@ _(disse øvelser skal som udgangspunkt laves uden brug af LLM´er)_
 
 #### Øvelser
 
-* [Python Strings and Character Data Quiz](https://realpython.com/quizzes/python-strings/)
+* [Python Strings and Character Data Quiz](https://realpython.com/quizzes/python-strings/) [(løsninger på øvelserne)](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python1/exercises/solutions)
 * [Splitting, Concatenating, and Joining Strings in Python Quiz](https://realpython.com/quizzes/python-split-strings/)  
 * [Strings1](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string1.ipynb) (30 min)
 * [Strings2](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string2.ipynb) (30 min)
