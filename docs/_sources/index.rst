@@ -1,10 +1,10 @@
-SoftwareArkitektur ITA 3. semester
-==================================
+SoftwareArkitektur & Cloud, ITA 3. semester
+===========================================
 
-Materialet på denne side er kompendiet til faget Softwarearkitektur på ITA uddannelsens 3. semester på KEA.  
+Materialet på denne side er kompendiet til faget Softwarearkitektur og faget Cloud på ITA uddannelsens 3. semester på KEA.  
 
-Læringsmålene  
--------------
+Læringsmålene (SoftwareArkitektur)  
+----------------------------------
 Software arkitektur refererer til det overordnede strukturelle design af et software system (applikation), som definerer dets hovedkomponenter og deres interaktion med hinanden. 
 
 En veldefineret og velstruktureret softwarearkitektur er vigtigt, da det sikrer systemets pålidelighed, skalerbarhed og vedligeholdelse og en god arkitektur fremmer derved muligheden for fejlretning og fremtidige udvidelser.    
@@ -50,6 +50,37 @@ For at dette kommer til at fungerer skal i lære at bruge et Web Framework der h
 og som i vores tilfælde leverer API endpoints.
 
 De samlede læringsmål for hele semesteret i Softwarearkitektur er:
+------------------------------------------------------------------
+
+* Have viden om, kunne bruge og forklare brugen af forskellige programeringsparadigmer som Procedural, OOP, funktionel, declarativ –programering. 
+* Have teoretisk viden om Microservicearkitektur.  
+* Kunne udvikle software der følger en Microservice arkitektur. 
+* Kunne læse, skrive, forstå programdokumentation udvilet gennem swagger, readme filer, docstrings og MkDocs hosted på github pages.  
+* Selvstændigt kunne sætte sig ind i brugen af software gennem dets dokumentation 
+* Have en forståelse for konceptet Abstraktion inden for softwareudvikling 
+* Kende til, og kunne gøre brug af følgende Software designprincipper: SOLID, KISS, DRY og GRASP 
+* Kunne bruge et pythonic udviklingsmiljø herunder scriptfiler, interpretor og jupyter notebooks  
+* Kunne udvikle egne applikationer/api´er der interagerer med 3. parts apllikationer/api´er 
+* Kunne arbejde med en Sqlite relationel database 
+* Kunne bruge python som programmeringssprog 
+
+
+
+Læringsmålene (Cloud)
+---------------------
+
+* Kunne bruge Azure Cloud Platform gennem https://portal.azure.com  
+* Have en grundlæggende forståelse for Linux og kunne arbejde med en linux maskine gennem terminalen. 
+* Have viden om forskelle og ligheder ved Iaas, Paas, Saas (services) og kunne identificere disse på Azure  
+* Have en overordnet forståelse for hvad Github Actions er 
+* Forstå grundlæggende Docker koncepter som Image, Container 
+* Kunne arbejde med Docker images og Containers gennem Docker Desktop 
+* Kunne skrive og forstå docker kommandoer i terminalen som eksempelvis run, build, pull, push, images, ps 
+* Kunne forstå og skrive en Dockerfil  
+* Forstå sammenhængen i en CI/CD situation mellem Github, Azure Web App og Docker Hub  
+* Lave prisberegninger via Azure Prisberegner for anvendelse af cloud-teknologi til idriftsættelse af en konkret applikation og formidle prisberegninger til interessenter. 
+* Kunne udvikle microservices vha. Docker og cloud teknologier 
+
 
 
 Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til at have gennem dette semester.
@@ -64,6 +95,7 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
 
    py_intro_1
    py_intro_2
+   linux_1
    py_intro_3
    
    introduktion_til_rest_api
