@@ -17,7 +17,7 @@ I skal desuden have installeret:
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Git](https://git-scm.com/downloads)
 
-Og i må gerne spørge jeres favorit LLM om hvad **Microservices** er for en størrelse.
+Og så må i gerne spørge jeres favorit LLM om hvad **Microservices** er for en størrelse.
 
 ---
 
@@ -70,7 +70,7 @@ Lav følgende 2 quizer om strings:
 Quizerne indeholder forklaringer og links til hvor i kan læse om emnerne, så hvis der er spørgsmål i ikke kan svare på vil i kunne læse om det i det tilhørende materiale. 
 
 Herefter skal i lave resten af String øvelserne som vi ikke nåede i klassen:    
-_(disse øvelser skal laves uden brug af LLM´er)_
+_(disse øvelser skal som udgangspunkt laves uden brug af LLM´er)_
 
 * [Strings1](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string1.ipynb) (30 min)
 * [Strings2](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string2.ipynb) (30 min)
@@ -115,7 +115,7 @@ _(disse øvelser skal laves uden brug af LLM´er)_
 
 #### Øvelser
 
-* [Python Strings and Character Data Quiz](https://realpython.com/quizzes/python-strings/)
+* [Python Strings and Character Data Quiz](https://realpython.com/quizzes/python-strings/) [(løsninger på øvelserne)](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python1/exercises/solutions)
 * [Splitting, Concatenating, and Joining Strings in Python Quiz](https://realpython.com/quizzes/python-split-strings/)  
 * [Strings1](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string1.ipynb) (30 min)
 * [Strings2](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python1/exercises/string2.ipynb) (30 min)
