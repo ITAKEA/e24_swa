@@ -8,8 +8,9 @@ I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arb
 ---        
 - Arbejde med lister, tuples
     - Arbejde med deres indeks
-    - Bruge slicing/udsnit-syntaksen
-- Kende de vigtigste forskelle mellem lister og tuples
+    - Bruge slicing syntaksen
+- Kende de vigtigste forskelle mellem lister, tuples, sets og dictionaries
+- Kunne arbejde med sortering af datastrukture
 <!-- - Læse fra filer og skrive til filer ved hjælp af den indbyggede "open" funktion. -->
 
 ## Forberedelse
@@ -29,8 +30,9 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 ## Dagens indhold
 ---
-* [Noter list/tuples](materialer/notes/noterlists_tuples.html)
-* [Noter sets/dicts](materialer/notes/notes_set_dicts.html)
+<!-- * [Noter list/tuples](materialer/notes/noterlists_tuples.html)
+* [Noter sets/dicts](materialer/notes/notes_set_dicts.html) -->
+
 * [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 ## Hjemmearbejde
