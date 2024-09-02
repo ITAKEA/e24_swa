@@ -11,7 +11,6 @@ I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arb
     - Bruge slicing syntaksen
 - Kende de vigtigste forskelle mellem lister, tuples, sets og dictionaries
 - Kunne arbejde med sortering af datastrukture
-<!-- - Læse fra filer og skrive til filer ved hjælp af den indbyggede "open" funktion. -->
 
 ## Forberedelse
 ---
@@ -30,10 +29,11 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 ## Dagens indhold
 ---
-<!-- * [Noter list/tuples](materialer/notes/noterlists_tuples.html)
-* [Noter sets/dicts](materialer/notes/notes_set_dicts.html) -->
 
-* [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
+Vi starter med denne [opvarmningsøvelse](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/warm_up.ipynb), som omhandler de emner i har læst om som forberedelse til indervisningen. 
+
+Herefter arbejder vi med øvelerne til i dag.
+
 
 ## Hjemmearbejde
 ---
@@ -45,9 +45,7 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 * [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/)
 * [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/)
-<!-- * [Notebook list/tuples teachings notes from today](materialer/notes/noterlists_tuples.html)
-* [Noter sets/dicts](materialer/notes/notes_set_dicts.html) -->
-* [Code examples from teachings](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
+* [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 
 ### Øvelser
