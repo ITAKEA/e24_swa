@@ -17,20 +17,20 @@ I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arb
 Før vi mødes i klassen skal du have:
 
 * Skimmed denne artikkel: [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/) (15 min)
-* Skimmed denne artikkel: [Sets in Python] (https://realpython.com/python-sets/) (15 min)
+* Skimmed denne artikkel: [Sets in Python](https://realpython.com/python-sets/) (15 min)
 * Skimmed denne artikkel: [Dictionaries in Python](https://realpython.com/python-dicts/) (15 min)
 
 For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
-* [Python Dictionaries Quiz](https://realpython.com/quizzes/python-dicts/)(15 min)
-* [Python Sets Quiz](https://realpython.com/quizzes/python-sets/) (15 min)
 * [Python Lists and Tuples Quiz](https://realpython.com/quizzes/python-lists-tuples/) (15 min) 
+* [Python Sets Quiz](https://realpython.com/quizzes/python-sets/) (15 min)
+* [Python Dictionaries Quiz](https://realpython.com/quizzes/python-dicts/)(15 min)
 
 ## Dagens indhold
 ---
-* [Noter list/tuples] (teachings notes from today](notebooks/noterlists_tuples.ipynb)
-* [Noter sets/dicts](teachings notes from today](notebooks/notes_set_dicts.ipynb>)
-* [Kodeeksempler fra undervisningen](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2)
+* [Noter list/tuples](materialer/notes/noterlists_tuples.html)
+* [Noter sets/dicts](materialer/notes/notes_set_dicts.html)
+* [Kodeeksempler fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 ## Hjemmearbejde
 ---
@@ -42,9 +42,9 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
 * [Lists and Tuples in Python](https://realpython.com/python-lists-tuples/)
 * [How to Use sorted() and .sort() in Python](https://realpython.com/python-sort/)
-* [Notebook list/tuples teachings notes from today](notebooks/noterlists_tuples.ipynb)
-* [Noter sets/dicts](teachings notes from today](notebooks/notes_set_dicts.ipynb>)
-* [Code examples from teachings](https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/tree/master/ses2)
+* [Notebook list/tuples teachings notes from today](materialer/notes/noterlists_tuples.html)
+* [Noter sets/dicts](materialer/notes/notes_set_dicts.html)
+* [Code examples from teachings](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python2)
 
 
 ### Øvelser
@@ -72,9 +72,9 @@ Figure out more on your own and practice this a lot!
 
 ### Ex 1.1: Is it a tuple or a list?
 ---
-| The following data should be presented as either a list or a tuple, or as a combination of both.    
-| Your job is to choose the right one. 
-| Hint: A list is a collection of the same type of data, a tuple is a record (e.g. in a database a **record** is called a **row**)
+The following data should be presented as either a list or a tuple, or as a combination of both.      
+Your job is to choose the right one.     
+Hint: A list is a collection of the same type of data, a tuple is a record (e.g. in a database a **record** is called a **row**)     
 
 1. Claus, 51, male, clbo@kea.dk, 31011970-1313
 2. Bmw, Toyota, Hyundai, Skoda, Fiat, Volvo
@@ -85,12 +85,13 @@ Figure out more on your own and practice this a lot!
    
    <hr>
 
-### List & Tuples, Set, Dict exercises
+### List & Tuples, Set, Dict øvelser
 ---
-* `List & tuple exercises <exercises/lists/lists.rst>`_
-* `Set exercises <https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/sets.py>`_
-* `Dict exercises <https://github.com/python-elective-kea/spring2024-code-examples-from-teachings/blob/master/ses2/exercises/dict.py>`_
+* [list1](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/list1.ipynb)
+* [list2](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/list2.ipynb)
+* [Set](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/set.ipynb)
+* [Dictionary](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/dict.ipynb)
 
 #### quizes
-* `Lists and Tuples Quiz <https://realpython.com/quizzes/python-lists-tuples/>`_
-* `"while" Loops Quiz <https://realpython.com/quizzes/python-while-loop/>`_
+* [Lists and Tuples Quiz](https://realpython.com/quizzes/python-lists-tuples/)
+* ["while" Loops Quiz](https://realpython.com/quizzes/python-while-loop/)
