@@ -11,7 +11,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'SoftwareArkitektur' 
+project = 'SoftwareArkitektur og Cloud' 
 copyright = '2024, Claus Bove'
 author = 'Claus Bove'
 #release = '1.0.0'
