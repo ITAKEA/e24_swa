@@ -22,9 +22,9 @@ Før vi mødes i klassen skal du have:
 
 For at checke om du har den rigtige forståelse skal du lave disse quizes:
 
-* [Python Dictionaries Quiz](https://realpython.com/quizzes/python-dicts/)(15 min)
-* [Python Sets Quiz](https://realpython.com/quizzes/python-sets/) (15 min)
 * [Python Lists and Tuples Quiz](https://realpython.com/quizzes/python-lists-tuples/) (15 min) 
+* [Python Sets Quiz](https://realpython.com/quizzes/python-sets/) (15 min)
+* [Python Dictionaries Quiz](https://realpython.com/quizzes/python-dicts/)(15 min)
 
 ## Dagens indhold
 ---
