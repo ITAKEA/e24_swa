@@ -11,7 +11,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'SoftwareArkitektur' 
+project = 'SoftwareArkitektur og Cloud' 
 copyright = '2024, Claus Bove'
 author = 'Claus Bove'
 #release = '1.0.0'
@@ -47,27 +47,19 @@ html_css_files = [
 
 html_context = {
     "display_github": True,
-    "github_url" : "https://github.com/ITAKEA/e24_swa/",
+    "github_url" : "https://github.com/ITAKEA/e2024_swa",
 
     # Set the following variables to generate the resulting github URL for each page. 
     # Format Template: https://{{ github_host|default("github.com") }}/{{ github_user }}
     #/{{ github_repo }}/blob/{{ github_version }}{{ conf_py_path }}{{ pagename }}{{ suffix }}
     #https://github.com/runawayhorse001/SphinxGithub/blob/master/doc/index.rst
     'github_user': 'itakea',
-    'github_repo': 'e24_swa',
+    'github_repo': 'e2024_swa',
     'github_version': 'master/source/' ,
 
 }
 
 html_theme_options = {
-    "display_github": True,  # Integrate GitHub
-    "github_user": "ITAKEA",  # Username
-    "github_repo": "e24_swa",  # Repo name
-    "github_version": "master",  # Version
-    "conf_py_path": "/source/",  # Path in the checkout to the docs root
+    "repository_url": "https://github.com/ITAKEA/e24_swa.git",
+    "use_repository_button": True,
 }
-
-#html_theme_options = {
-#    "repository_url": "https://github.com/ITAKEA/e24_swa.git",
-#    "use_repository_button": True,
-#}
