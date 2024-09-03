@@ -30,7 +30,11 @@ For at checke om du har den rigtige forståelse skal du lave disse quizes:
 ## Dagens indhold
 ---
 
-Vi starter med denne [opvarmningsøvelse](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/warm_up.ipynb), som omhandler de emner i har læst om som forberedelse til indervisningen. 
+Vi starter med denne: 
+
+* [opvarmningsøvelse](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/warmup/warm_up.ipynb) 
+
+som omhandler de emner i har læst om som forberedelse til indervisningen. 
 
 Herefter arbejder vi med øvelerne til i dag.
 
