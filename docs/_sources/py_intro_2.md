@@ -6,7 +6,7 @@ I vil kunne bruge Sets til at finde unikke verdier i en collection, og i vil arb
 
 ## Læringsmål
 ---        
-- Arbejde med lister, tuples
+- Arbejde med lister, tuples, dicts og sets
     - Arbejde med deres indeks
     - Bruge slicing syntaksen
 - Kende de vigtigste forskelle mellem lister, tuples, sets og dictionaries
