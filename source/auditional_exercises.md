@@ -4,7 +4,7 @@ Til dig der gerne vil have lidt extra øvelser som passer til de emner vi har v�
 (Øvelserne opdateres jævnligt gennem hele forløbet.)
 
 
-Skriv denne prompt i ChatGpt (eller lign. LLM).     
+Skriv denne prompt in i ChatGpt (eller lign. LLM).     
 Bliv ved med øvelserne indtil du føler dig sikker i emnet.
 
 
@@ -24,3 +24,7 @@ You should give me one exercise at the time, and then evaluate my answer to the 
 and then give me another exercise that is either harder or easier based on the evaluation you did.
 I would like to have a list of all planets in our solar system as a base for this exercise.
 ```
+
+## Set lotto øvelse
+
+* [lotto øvelse](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/lotto/lotto.ipynb)
