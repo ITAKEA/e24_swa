@@ -25,7 +25,6 @@ Herefter se og følg følgende tutorials:
 * [the Linux File System explained in 1,233 seconds // Linux for Hackers // EP 2 (20:32)](https://www.youtube.com/watch?v=A3G-3hp88mo&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=2)
 * [HELP!! (for when you suck at Linux) // Linux for Hackers // EP3 (13:13)](https://www.youtube.com/watch?v=Y17KTiJLcyQ&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=3)
 
-Sidste semester i faget Agil Udvikling gennemgik i desuden [dette om terminal kommandoer](https://github.com/ITAKEA/Kea_IT-Arkitektur_Agil_Udvikling_2024_Spring/blob/main/00._Course_Material/02._Slides/01._Introduction/01._Introduction.md#terminal-commands). Det skal i evt. lige genopfriske.
 
 ## Dagens indhold
 I dag skal i lære at finde rundt i Linux styrresystemet.
