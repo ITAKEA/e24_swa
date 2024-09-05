@@ -23,7 +23,9 @@ Herefter se og følg følgende tutorials:
 
 * [Linux for Hackers // EP 1 (11:32)](https://www.youtube.com/watch?v=VbEx7B_PTOE&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL)
 * [the Linux File System explained in 1,233 seconds // Linux for Hackers // EP 2 (20:32)](https://www.youtube.com/watch?v=A3G-3hp88mo&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=2)
-* [HELP!! (for when you suck at Linux) // Linux for Hackers // EP3 (13:13)](https://www.youtube.com/watch?v=Y17KTiJLcyQ&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=3)
+
+(jeg har (lidt sent) fjernet den 3. video da den ikke er mega relevant lige nu. Hvis i gerne vil se den alligevel eller gense den er der et link i slutningen af video nummer 2).
+<!-- * [HELP!! (for when you suck at Linux) // Linux for Hackers // EP3 (13:13)](https://www.youtube.com/watch?v=Y17KTiJLcyQ&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=3) -->
 
 
 ## Dagens indhold
