@@ -62,8 +62,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#forberedelse">3.2. Forberedelse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">3.3. Dagens indhold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ovelser">3.4. Øvelser</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen">3.4.1. Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet">3.4.2. Øv1: Klon og arbejd med undervisningsrepositoriet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet">3.4.1. Øv1: Klon og arbejd med undervisningsrepositoriet</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#ov2-unix-command-ovelser">3.5. Øv2 Unix command øvelser</a></li>
@@ -137,12 +136,10 @@
 <section id="ovelser">
 <h2><span class="section-number">3.4. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
 <p><strong>Alle øvelser skal laves på jeres Linux maskine</strong></p>
-<section id="inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen">
-<h3><span class="section-number">3.4.1. </span>Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.<a class="headerlink" href="#inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen" title="Link to this heading"></a></h3>
+<p><strong>Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">--name=webtop-ubuntu-mate</span> <span class="pre">--security-opt</span> <span class="pre">seccomp=unconfined</span>&#160; <span class="pre">-e</span> <span class="pre">PUID=1000</span> <span class="pre">-e</span> <span class="pre">PGID=1000</span> <span class="pre">-e</span> <span class="pre">TZ=Etc/UTC</span> <span class="pre">-e</span> <span class="pre">SUBFOLDER=/</span>&#160; <span class="pre">-e</span> <span class="pre">TITLE=Teknologi</span>&#160; <span class="pre">-p</span> <span class="pre">3000:3000</span> <span class="pre">-p</span> <span class="pre">3001:3001</span> <span class="pre">-v</span> <span class="pre">~/webtop:/config</span> <span class="pre">-v</span> <span class="pre">/var/run/docker.sock:/var/run/docker.sock</span>&#160; <span class="pre">--shm-size=&quot;1gb&quot;</span>&#160; <span class="pre">--restart</span> <span class="pre">unless-stopped</span> <span class="pre">lscr.io/linuxserver/webtop:ubuntu-mate</span> </code></p>
-</section>
 <section id="ov1-klon-og-arbejd-med-undervisningsrepositoriet">
-<h3><span class="section-number">3.4.2. </span>Øv1: Klon og arbejd med undervisningsrepositoriet<a class="headerlink" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet" title="Link to this heading"></a></h3>
+<h3><span class="section-number">3.4.1. </span>Øv1: Klon og arbejd med undervisningsrepositoriet<a class="headerlink" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet" title="Link to this heading"></a></h3>
 <p>I denne øvelse skal I klone dette repository: https://github.com/ITAKEA/kode_fra_undervisning_e24.git.<br />Herefter skal I få det hele til at virke på jeres Linux-maskine, ligesom I fik det til at virke på jeres egen computer første gang, vi havde undervisning.</p>
 <p>Der er nogle enkelte regler, I skal følge:</p>
 <ul class="simple">
