@@ -10,6 +10,7 @@
 * Importere egne, build-in og 3. parts -moduler
 * Installere 3. parts moduler med ```pip```
 * Forstå hvad et 'virtual environment' er og kunne oprette dem fra kommandolinien og gennem VSCode gui.
+* Kunne arbejde med dependencies og requirements.txt filen
 * Kunne lave kode der gør brug af pythons ```requests``` module.
 
 ## Forberedelse
@@ -26,6 +27,8 @@ Vi kommer til at arbejde med:
 * ```OS``` modulet
 * ```subprocess``` modulet
 * ```requests``` modulet
+
+Desuden skal vi arbejde med program afhængigheder (dependencies) og hvordan vi deler disse med andre gennem requirements.txt filen.
 
 ## Hjemmearbejde
 
