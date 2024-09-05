@@ -62,7 +62,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#laeringsmal">4.1. Læringsmål</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#forberedelse">4.2. Forberedelse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">4.3. Dagens indhold</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">4.4. Hjemmearbejde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ovelser">4.4. Øvelser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen">4.4.1. Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet">4.4.2. Øv1: Klon og arbejd med undervisningsrepositoriet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ov2-unix-command-ovelser">4.5. Øv2 Unix command øvelser</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">5. Python modules</a></li>
@@ -138,10 +143,30 @@
 <h2><span class="section-number">4.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <p>I dag skal i lære at finde rundt i Linux styrresystemet.</p>
 <p>Vi kommer til at lege med systemet blandt andet igennem at bruge disse kommandoer: <a class="reference external" href="https://techkea.github.io/f23/materialer/unix_commands.html">Linux terminal commands and file system</a></p>
+<p>Herefter laver vi øvelsene herunder.</p>
 </section>
-<section id="hjemmearbejde">
-<h2><span class="section-number">4.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
-<p>(1 time)</p>
+<section id="ovelser">
+<h2><span class="section-number">4.4. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
+<p><strong>Alle øvelser skal laves på jeres Linux maskine</strong></p>
+<section id="inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen">
+<h3><span class="section-number">4.4.1. </span>Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.<a class="headerlink" href="#inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">--name=webtop-ubuntu-mate</span> <span class="pre">--security-opt</span> <span class="pre">seccomp=unconfined</span>&#160; <span class="pre">-e</span> <span class="pre">PUID=1000</span> <span class="pre">-e</span> <span class="pre">PGID=1000</span> <span class="pre">-e</span> <span class="pre">TZ=Etc/UTC</span> <span class="pre">-e</span> <span class="pre">SUBFOLDER=/</span>&#160; <span class="pre">-e</span> <span class="pre">TITLE=Teknologi</span>&#160; <span class="pre">-p</span> <span class="pre">3000:3000</span> <span class="pre">-p</span> <span class="pre">3001:3001</span> <span class="pre">-v</span> <span class="pre">~/webtop:/config</span> <span class="pre">-v</span> <span class="pre">/var/run/docker.sock:/var/run/docker.sock</span>&#160; <span class="pre">--shm-size=&quot;1gb&quot;</span>&#160; <span class="pre">--restart</span> <span class="pre">unless-stopped</span> <span class="pre">lscr.io/linuxserver/webtop:ubuntu-mate</span> </code></p>
+</section>
+<section id="ov1-klon-og-arbejd-med-undervisningsrepositoriet">
+<h3><span class="section-number">4.4.2. </span>Øv1: Klon og arbejd med undervisningsrepositoriet<a class="headerlink" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet" title="Link to this heading"></a></h3>
+<p>I denne øvelse skal I klone dette repository: https://github.com/ITAKEA/kode_fra_undervisning_e24.git.<br />Herefter skal I få det hele til at virke på jeres Linux-maskine, ligesom I fik det til at virke på jeres egen computer første gang, vi havde undervisning.</p>
+<p>Der er nogle enkelte regler, I skal følge:</p>
+<ul class="simple">
+<li><p>I må ikke arbejde direkte i master-branchen.</p></li>
+<li><p>I skal ikke bruge VSCode eller nogen anden editor.</p></li>
+<li><p>I skal åbne og redigere notebook-filerne i jeres browser. Det kan I gøre ved at bruge kommandoen <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>, som åbner den mappe, I befinder jer i, i et browser-vindue.</p></li>
+<li><p>For at kunne bruge denne kommando skal Jupyter installeres i din Python-installation.</p></li>
+<li><p>Det gør I med kommandoen <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyter</span></code> (mere om pip-kommandoen næste gang).</p></li>
+</ul>
+</section>
+</section>
+<section id="ov2-unix-command-ovelser">
+<h2><span class="section-number">4.5. </span>Øv2 Unix command øvelser<a class="headerlink" href="#ov2-unix-command-ovelser" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://techkea.github.io/f23/materialer/unix_exercises/unix_commands_exercises.html">Øvelse: Unix Command Exercises</a></p></li>
 </ul>
