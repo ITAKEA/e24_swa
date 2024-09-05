@@ -39,12 +39,13 @@ Herefter laver vi øvelsene herunder.
 ## Øvelser
 **Alle øvelser skal laves på jeres Linux maskine**    
 
-**Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.** 
+### Øv1: Slet din Linux container
+Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.     
 
 ```` docker run -d --name=webtop-ubuntu-mate --security-opt seccomp=unconfined  -e PUID=1000 -e PGID=1000 -e TZ=Etc/UTC -e SUBFOLDER=/  -e TITLE=Teknologi  -p 3000:3000 -p 3001:3001 -v ~/webtop:/config -v /var/run/docker.sock:/var/run/docker.sock  --shm-size="1gb"  --restart unless-stopped lscr.io/linuxserver/webtop:ubuntu-mate  ````
 
 
-### Øv1: Klon og arbejd med undervisningsrepositoriet
+### Øv2: Klon og arbejd med undervisningsrepositoriet
 I denne øvelse skal I klone dette repository: https://github.com/ITAKEA/kode_fra_undervisning_e24.git.    
 Herefter skal I få det hele til at virke på jeres Linux-maskine, ligesom I fik det til at virke på jeres egen computer første gang, vi havde undervisning.
 
@@ -56,7 +57,7 @@ Der er nogle enkelte regler, I skal følge:
 * For at kunne bruge denne kommando skal Jupyter installeres i din Python-installation.
 * Det gør I med kommandoen ```pip install jupyter``` (mere om pip-kommandoen næste gang).
 
-## Øv2 Unix command øvelser
+### Øv3: Unix command øvelser
 * [Øvelse: Unix Command Exercises](https://techkea.github.io/f23/materialer/unix_exercises/unix_commands_exercises.html)
 
 

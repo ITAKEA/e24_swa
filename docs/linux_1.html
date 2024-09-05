@@ -31,7 +31,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Linux OS II" href="linux_2.html" />
+    <link rel="next" title="5. Linux OS II" href="linux_2.html" />
     <link rel="prev" title="3. Python - Datastrukture" href="py_intro_2.html" /> 
 </head>
 
@@ -63,24 +63,26 @@
 <li class="toctree-l2"><a class="reference internal" href="#forberedelse">4.2. Forberedelse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">4.3. Dagens indhold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ovelser">4.4. Øvelser</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet">4.4.1. Øv1: Klon og arbejd med undervisningsrepositoriet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ov1-slet-din-linux-container">4.4.1. Øv1: Slet din Linux container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ov2-klon-og-arbejd-med-undervisningsrepositoriet">4.4.2. Øv2: Klon og arbejd med undervisningsrepositoriet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ov3-unix-command-ovelser">4.4.3. Øv3: Unix command øvelser</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#ov2-unix-command-ovelser">4.5. Øv2 Unix command øvelser</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">5. Python modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flask.html">7. Flask API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask (dag 2)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">9. Python  - Decorators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="jwt.html">10. Authorization med JWT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="microservices.html">11. Mikroservices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="test_1.html">12. Softwaretests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">13. Dokumentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="swagger.html">14. Swagger API dokumentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eksamensprojekt.html">15. Eksamens Projektperiode (17-24)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">16. Extra øvelser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux_2.html">5. Linux OS II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">6. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">7. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">8. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask_2.html">9. Flask (dag 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">10. Python  - Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jwt.html">11. Authorization med JWT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="microservices.html">12. Mikroservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test_1.html">13. Softwaretests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">14. Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swagger.html">15. Swagger API dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eksamensprojekt.html">16. Eksamens Projektperiode (17-24)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">17. Extra øvelser</a></li>
 </ul>
 
         </div>
@@ -147,10 +149,13 @@
 <section id="ovelser">
 <h2><span class="section-number">4.4. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
 <p><strong>Alle øvelser skal laves på jeres Linux maskine</strong></p>
-<p><strong>Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.</strong></p>
+<section id="ov1-slet-din-linux-container">
+<h3><span class="section-number">4.4.1. </span>Øv1: Slet din Linux container<a class="headerlink" href="#ov1-slet-din-linux-container" title="Link to this heading"></a></h3>
+<p>Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">--name=webtop-ubuntu-mate</span> <span class="pre">--security-opt</span> <span class="pre">seccomp=unconfined</span>&#160; <span class="pre">-e</span> <span class="pre">PUID=1000</span> <span class="pre">-e</span> <span class="pre">PGID=1000</span> <span class="pre">-e</span> <span class="pre">TZ=Etc/UTC</span> <span class="pre">-e</span> <span class="pre">SUBFOLDER=/</span>&#160; <span class="pre">-e</span> <span class="pre">TITLE=Teknologi</span>&#160; <span class="pre">-p</span> <span class="pre">3000:3000</span> <span class="pre">-p</span> <span class="pre">3001:3001</span> <span class="pre">-v</span> <span class="pre">~/webtop:/config</span> <span class="pre">-v</span> <span class="pre">/var/run/docker.sock:/var/run/docker.sock</span>&#160; <span class="pre">--shm-size=&quot;1gb&quot;</span>&#160; <span class="pre">--restart</span> <span class="pre">unless-stopped</span> <span class="pre">lscr.io/linuxserver/webtop:ubuntu-mate</span> </code></p>
-<section id="ov1-klon-og-arbejd-med-undervisningsrepositoriet">
-<h3><span class="section-number">4.4.1. </span>Øv1: Klon og arbejd med undervisningsrepositoriet<a class="headerlink" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet" title="Link to this heading"></a></h3>
+</section>
+<section id="ov2-klon-og-arbejd-med-undervisningsrepositoriet">
+<h3><span class="section-number">4.4.2. </span>Øv2: Klon og arbejd med undervisningsrepositoriet<a class="headerlink" href="#ov2-klon-og-arbejd-med-undervisningsrepositoriet" title="Link to this heading"></a></h3>
 <p>I denne øvelse skal I klone dette repository: https://github.com/ITAKEA/kode_fra_undervisning_e24.git.<br />Herefter skal I få det hele til at virke på jeres Linux-maskine, ligesom I fik det til at virke på jeres egen computer første gang, vi havde undervisning.</p>
 <p>Der er nogle enkelte regler, I skal følge:</p>
 <ul class="simple">
@@ -161,12 +166,12 @@
 <li><p>Det gør I med kommandoen <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyter</span></code> (mere om pip-kommandoen næste gang).</p></li>
 </ul>
 </section>
-</section>
-<section id="ov2-unix-command-ovelser">
-<h2><span class="section-number">4.5. </span>Øv2 Unix command øvelser<a class="headerlink" href="#ov2-unix-command-ovelser" title="Link to this heading"></a></h2>
+<section id="ov3-unix-command-ovelser">
+<h3><span class="section-number">4.4.3. </span>Øv3: Unix command øvelser<a class="headerlink" href="#ov3-unix-command-ovelser" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://techkea.github.io/f23/materialer/unix_exercises/unix_commands_exercises.html">Øvelse: Unix Command Exercises</a></p></li>
 </ul>
+</section>
 </section>
 </section>
 
@@ -175,7 +180,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="py_intro_2.html" class="btn btn-neutral float-left" title="3. Python - Datastrukture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="linux_2.html" class="btn btn-neutral float-right" title="Linux OS II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="linux_2.html" class="btn btn-neutral float-right" title="5. Linux OS II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
