@@ -58,3 +58,8 @@ Der er nogle enkelte regler, I skal følge:
 
 ## Øv2 Unix command øvelser
 * [Øvelse: Unix Command Exercises](https://techkea.github.io/f23/materialer/unix_exercises/unix_commands_exercises.html)
+
+
+
+
+
