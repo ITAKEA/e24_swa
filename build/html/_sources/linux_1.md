@@ -23,16 +23,43 @@ Herefter se og følg følgende tutorials:
 
 * [Linux for Hackers // EP 1 (11:32)](https://www.youtube.com/watch?v=VbEx7B_PTOE&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL)
 * [the Linux File System explained in 1,233 seconds // Linux for Hackers // EP 2 (20:32)](https://www.youtube.com/watch?v=A3G-3hp88mo&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=2)
-* [HELP!! (for when you suck at Linux) // Linux for Hackers // EP3 (13:13)](https://www.youtube.com/watch?v=Y17KTiJLcyQ&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=3)
 
-Sidste semester i faget Agil Udvikling gennemgik i desuden [dette om terminal kommandoer](https://github.com/ITAKEA/Kea_IT-Arkitektur_Agil_Udvikling_2024_Spring/blob/main/00._Course_Material/02._Slides/01._Introduction/01._Introduction.md#terminal-commands). Det skal i evt. lige genopfriske.
+(jeg har (lidt sent) fjernet den 3. video da den ikke er mega relevant lige nu. Hvis i gerne vil se den alligevel eller gense den er der et link i slutningen af video nummer 2).
+<!-- * [HELP!! (for when you suck at Linux) // Linux for Hackers // EP3 (13:13)](https://www.youtube.com/watch?v=Y17KTiJLcyQ&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=3) -->
+
 
 ## Dagens indhold
 I dag skal i lære at finde rundt i Linux styrresystemet.
 
 Vi kommer til at lege med systemet blandt andet igennem at bruge disse kommandoer: [Linux terminal commands and file system](https://techkea.github.io/f23/materialer/unix_commands.html)
 
-## Hjemmearbejde
-(1 time)
+Herefter laver vi øvelsene herunder.
+
+
+## Øvelser
+**Alle øvelser skal laves på jeres Linux maskine**    
+
+#### Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen. 
+
+``` docker run -d --name=webtop-ubuntu-mate --security-opt seccomp=unconfined  -e PUID=1000 -e PGID=1000 -e TZ=Etc/UTC -e SUBFOLDER=/  -e TITLE=Teknologi  -p 3000:3000 -p 3001:3001 -v ~/webtop:/config -v /var/run/docker.sock:/var/run/docker.sock  --shm-size="1gb"  --restart unless-stopped lscr.io/linuxserver/webtop:ubuntu-mate  ```
+
+
+### Øv1: Klon og arbejd med undervisningsrepositoriet
+I denne øvelse skal I klone dette repository: https://github.com/ITAKEA/kode_fra_undervisning_e24.git.    
+Herefter skal I få det hele til at virke på jeres Linux-maskine, ligesom I fik det til at virke på jeres egen computer første gang, vi havde undervisning.
+
+Der er nogle enkelte regler, I skal følge:
+
+* I må ikke arbejde direkte i master-branchen.
+* I skal ikke bruge VSCode eller nogen anden editor.
+* I skal åbne og redigere notebook-filerne i jeres browser. Det kan I gøre ved at bruge kommandoen ```jupyter-notebook```, som åbner den mappe, I befinder jer i, i et browser-vindue.
+* For at kunne bruge denne kommando skal Jupyter installeres i din Python-installation.
+* Det gør I med kommandoen ```pip install jupyter``` (mere om pip-kommandoen næste gang).
+
+## Øv2 Unix command øvelser
 * [Øvelse: Unix Command Exercises](https://techkea.github.io/f23/materialer/unix_exercises/unix_commands_exercises.html)
+
+
+
+
 

@@ -61,7 +61,12 @@
 <li class="toctree-l2"><a class="reference internal" href="#laeringsmal">3.1. Læringsmål</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#forberedelse">3.2. Forberedelse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">3.3. Dagens indhold</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">3.4. Hjemmearbejde</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ovelser">3.4. Øvelser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen">3.4.1. Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet">3.4.2. Øv1: Klon og arbejd med undervisningsrepositoriet</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#ov2-unix-command-ovelser">3.5. Øv2 Unix command øvelser</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="linux_2.html">4. Linux OS II</a></li>
@@ -120,18 +125,37 @@
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=VbEx7B_PTOE&amp;list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL">Linux for Hackers // EP 1 (11:32)</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=A3G-3hp88mo&amp;list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&amp;index=2">the Linux File System explained in 1,233 seconds // Linux for Hackers // EP 2 (20:32)</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=Y17KTiJLcyQ&amp;list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&amp;index=3">HELP!! (for when you suck at Linux) // Linux for Hackers // EP3 (13:13)</a></p></li>
 </ul>
-<p>Sidste semester i faget Agil Udvikling gennemgik i desuden <a class="reference external" href="https://github.com/ITAKEA/Kea_IT-Arkitektur_Agil_Udvikling_2024_Spring/blob/main/00._Course_Material/02._Slides/01._Introduction/01._Introduction.md#terminal-commands">dette om terminal kommandoer</a>. Det skal i evt. lige genopfriske.</p>
-</section>
+<p>(jeg har (lidt sent) fjernet den 3. video da den ikke er mega relevant lige nu. Hvis i gerne vil se den alligevel eller gense den er der et link i slutningen af video nummer 2).</p>
+<!-- * [HELP!! (for when you suck at Linux) // Linux for Hackers // EP3 (13:13)](https://www.youtube.com/watch?v=Y17KTiJLcyQ&list=PLIhvC56v63IJIujb5cyE13oLuyORZpdkL&index=3) --></section>
 <section id="dagens-indhold">
 <h2><span class="section-number">3.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <p>I dag skal i lære at finde rundt i Linux styrresystemet.</p>
 <p>Vi kommer til at lege med systemet blandt andet igennem at bruge disse kommandoer: <a class="reference external" href="https://techkea.github.io/f23/materialer/unix_commands.html">Linux terminal commands and file system</a></p>
+<p>Herefter laver vi øvelsene herunder.</p>
 </section>
-<section id="hjemmearbejde">
-<h2><span class="section-number">3.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
-<p>(1 time)</p>
+<section id="ovelser">
+<h2><span class="section-number">3.4. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
+<p><strong>Alle øvelser skal laves på jeres Linux maskine</strong></p>
+<section id="inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen">
+<h3><span class="section-number">3.4.1. </span>Inden i går i gang med disse øvelser skal i slette jeres Linux container, og tømme webtop/ mappen, og køre docker run kommaondoen igen.<a class="headerlink" href="#inden-i-gar-i-gang-med-disse-ovelser-skal-i-slette-jeres-linux-container-og-tomme-webtop-mappen-og-kore-docker-run-kommaondoen-igen" title="Link to this heading"></a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">--name=webtop-ubuntu-mate</span> <span class="pre">--security-opt</span> <span class="pre">seccomp=unconfined</span>&#160; <span class="pre">-e</span> <span class="pre">PUID=1000</span> <span class="pre">-e</span> <span class="pre">PGID=1000</span> <span class="pre">-e</span> <span class="pre">TZ=Etc/UTC</span> <span class="pre">-e</span> <span class="pre">SUBFOLDER=/</span>&#160; <span class="pre">-e</span> <span class="pre">TITLE=Teknologi</span>&#160; <span class="pre">-p</span> <span class="pre">3000:3000</span> <span class="pre">-p</span> <span class="pre">3001:3001</span> <span class="pre">-v</span> <span class="pre">~/webtop:/config</span> <span class="pre">-v</span> <span class="pre">/var/run/docker.sock:/var/run/docker.sock</span>&#160; <span class="pre">--shm-size=&quot;1gb&quot;</span>&#160; <span class="pre">--restart</span> <span class="pre">unless-stopped</span> <span class="pre">lscr.io/linuxserver/webtop:ubuntu-mate</span> </code></p>
+</section>
+<section id="ov1-klon-og-arbejd-med-undervisningsrepositoriet">
+<h3><span class="section-number">3.4.2. </span>Øv1: Klon og arbejd med undervisningsrepositoriet<a class="headerlink" href="#ov1-klon-og-arbejd-med-undervisningsrepositoriet" title="Link to this heading"></a></h3>
+<p>I denne øvelse skal I klone dette repository: https://github.com/ITAKEA/kode_fra_undervisning_e24.git.<br />Herefter skal I få det hele til at virke på jeres Linux-maskine, ligesom I fik det til at virke på jeres egen computer første gang, vi havde undervisning.</p>
+<p>Der er nogle enkelte regler, I skal følge:</p>
+<ul class="simple">
+<li><p>I må ikke arbejde direkte i master-branchen.</p></li>
+<li><p>I skal ikke bruge VSCode eller nogen anden editor.</p></li>
+<li><p>I skal åbne og redigere notebook-filerne i jeres browser. Det kan I gøre ved at bruge kommandoen <code class="docutils literal notranslate"><span class="pre">jupyter-notebook</span></code>, som åbner den mappe, I befinder jer i, i et browser-vindue.</p></li>
+<li><p>For at kunne bruge denne kommando skal Jupyter installeres i din Python-installation.</p></li>
+<li><p>Det gør I med kommandoen <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">jupyter</span></code> (mere om pip-kommandoen næste gang).</p></li>
+</ul>
+</section>
+</section>
+<section id="ov2-unix-command-ovelser">
+<h2><span class="section-number">3.5. </span>Øv2 Unix command øvelser<a class="headerlink" href="#ov2-unix-command-ovelser" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://techkea.github.io/f23/materialer/unix_exercises/unix_commands_exercises.html">Øvelse: Unix Command Exercises</a></p></li>
 </ul>
