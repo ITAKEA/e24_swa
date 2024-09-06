@@ -20,7 +20,7 @@ Hvis i ikke er blevet færdige, skal i lave øvelserne færdige efter timerne.
 ## Materialer
 
 * [Nano Text Editor Basics (pico) - How to Use Nano on Linux](https://www.youtube.com/watch?v=Jf0ZJZJ8jlI)
-* [Lecture 1: Course Overview + The Shell (2020)](https://www.youtube.com/watch?v=Z56Jmr9Z34Q) (noget af det manden snakker om har i været igennem, noget har i ikke) 
+* [Lecture 1: Course Overview + The Shell (2020)](https://www.youtube.com/watch?v=Z56Jmr9Z34Q) (48:16) (noget af det manden snakker om har i været igennem, noget har i ikke) 
 
 ### Øvelser
 
@@ -72,7 +72,7 @@ Python script kan gøres eksekverbare på samme måde, i stedet for stien til hv
 
 Hvad programmet konkret skal gøre bestemmer du selv.    
 
-Når du er færdig med dit script og du har fået det til at virke, skal du `push` é det til github og lave en installationsvejledning i dets readmefile, og aflevere et link til repositoriet på [Fronter](https://kea-fronter.itslearning.com/plans/courses/6741/plan/106947/element/1298786?BackDestination=0&BackData=%7B%22BackDestination%22%3A%220%22%7D&planner2-sb-collapsed=false).    
+Når du er færdig med dit script og du har fået det til at virke, skal du `push` é det til github og lave en installationsvejledning i dets readmefile, og aflevere et link til repositoriet på Fronter.    
 Så kigger vi på nogle af jeres programmer på fredag.     
 Når du aflevere må du gerne skrive hvis jeg må vise det i klassen. Hvis du ikke skriver noget regner jeg med at du helst vil være fri.
 
