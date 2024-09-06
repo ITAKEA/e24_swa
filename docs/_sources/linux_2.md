@@ -27,7 +27,7 @@ Hvis i ikke er blevet færdige, skal i lave øvelserne færdige efter timerne.
 #### Øvelse 1: Missing Semester
 Øvelserne herunder og den video i har set inden idag er taget fra MIT kurset [Missing Semester](https://missing.csail.mit.edu/2020/course-shell/) 
 Nogle af øvelserne er "gør dette" og andre øvelser er mere en opfordring til at undersøge emnet.     
-Der er refereret til `man` i øvelserne. Det virker ikke på jeres linux maskine, det fungere til gengæld fint i en LLM. Så bare skriv feks. `man touch` for at bruge `man`. 
+Der er refereret til `man` i øvelserne. Det virker ikke på jeres linux maskine, det fungere til gengæld fint i en Google søgning eller en LLM. Så bare skriv feks. `man touch`, eller `man chmod` for at bruge `man` kommandoen. 
 
 1. Create a new directory called `missing` under `/tmp`.
 1. Look up the `touch` program. The `man` program is your friend.
@@ -63,14 +63,16 @@ Der er refereret til `man` i øvelserne. Det virker ikke på jeres linux maskine
 
 #### Øvelse 2: lav dit eget Commandline program i python
 
-I denne øvelse skal du lave dit eget program, skrevet i python og eksekveret fra din Kommandolinie.    
-Du kender programmer som `ls`, `cd`, `pwd`, `tree` osv. Dit program skal kunne eksekveres på samme måde.
+I denne øvelse skal du lave dit eget program, skrevet i python og eksekveret fra din Kommandolinie på samme måde som `ls`, `cd` etc.    
+Du kender programmer som `ls`, `cd`, `pwd`, `tree` osv. og vi har set hvor henne på din linux computer de er placeret (feks. `/bin/ mappen`).     
+Dit program skal kunne eksekveres på samme måde.
 
 I den tidligere øvelse lavede du et `bash script` (pkt. 4), og du gjorde det eksekverbart med den første linie `#!/bin/sh`.     
 Python script kan gøres eksekverbare på samme måde, i stedet for stien til hvor `sh` er instaleret på maskinen, skal du skrive stien til hvor `python3` er installeret.
 
-Hvad programmet skal gøre bestemmer du selv.    
+Hvad programmet konkret skal gøre bestemmer du selv.    
 
-Når du er færdig med dit script og du har fået det til at virke, skal du `push` é det til github og laven en installationsvejledning i dets readmefile, og aflevere et link til repositoriet på [Fronter]().    
-Så kigger vi på nogle af jeres programmer på fredag.
+Når du er færdig med dit script og du har fået det til at virke, skal du `push` é det til github og lave en installationsvejledning i dets readmefile, og aflevere et link til repositoriet på [Fronter](https://kea-fronter.itslearning.com/plans/courses/6741/plan/106947/element/1298786?BackDestination=0&BackData=%7B%22BackDestination%22%3A%220%22%7D&planner2-sb-collapsed=false).    
+Så kigger vi på nogle af jeres programmer på fredag.     
+Når du aflevere må du gerne skrive hvis jeg må vise det i klassen. Hvis du ikke skriver noget regner jeg med at du helst vil være fri.
 
