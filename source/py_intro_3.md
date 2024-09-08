@@ -19,7 +19,7 @@ Se følgende videoer om moduler og pakker,, og læs dokumentet om at arbejde med
 * [Moduler og pakker i python 1 (egne moduler)](https://youtu.be/miGblWWfsvY) (8:37)
 * [Moduler og pakker i python 2 (indbyggede)](https://youtu.be/sEvWF1YLxXs) (6:12)
 * [Moduler og pakker i python 3 (indbyggede)](https://youtu.be/wbEWDsj3vIg) (8:20)
-* [Working with files in Python](https://python-elective-kea.github.io/spring2024/notebooks/files.html)
+* [Arbejd med filer i Python](materialer/filer.html)
 
 ## Dagen i dag
 Ud over at kunne importere moduler skal i også arbejde med at bruge disse moduler.     
