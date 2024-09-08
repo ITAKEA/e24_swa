@@ -107,9 +107,8 @@
 </div>
 <section id="Læs-fra-filer">
 <h2>Læs fra filer<a class="headerlink" href="#Læs-fra-filer" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Den basale måde</p></li>
-</ol>
+<section id="1.-Den-basale-måde">
+<h3>1. Den basale måde<a class="headerlink" href="#1.-Den-basale-måde" title="Link to this heading"></a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -128,9 +127,9 @@ f.read()
 &#39;An expert is a person who has made all the mistakes that can be made in a very narrow field.\nPrediction is very difficult, especially about the future.\nThose who are not shocked when they first come across quantum theory cannot possibly have understood it.&#39;
 </pre></div></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Med brug af <code class="docutils literal notranslate"><span class="pre">contextmanager</span> <span class="pre">protokollen</span></code></p></li>
-</ol>
+</section>
+<section id="2.-Med-brug-af-contextmanager-protokollen">
+<h3>2. Med brug af <code class="docutils literal notranslate"><span class="pre">contextmanager</span> <span class="pre">protokollen</span></code><a class="headerlink" href="#2.-Med-brug-af-contextmanager-protokollen" title="Link to this heading"></a></h3>
 <div class="line-block">
 <div class="line">Denne metode sørger for at lukke de filer man åbner igen. Dette er god stil at gøre og det forhindre desuden også en masse potitentille problemer og sikkerheds brister (som feks. memory leaks).</div>
 <div class="line">Denne metoder er altså den fortrukne.</div>
@@ -157,11 +156,11 @@ Those who are not shocked when they first come across quantum theory cannot poss
 </pre></div></div>
 </div>
 </section>
+</section>
 <section id="Skriv-til-filer">
 <h2>Skriv til filer<a class="headerlink" href="#Skriv-til-filer" title="Link to this heading"></a></h2>
-<ol class="arabic simple">
-<li><p>Den basale måde</p></li>
-</ol>
+<section id="id1">
+<h3>1. Den basale måde<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -180,9 +179,9 @@ f.write(&#39;Hello world!&#39;)
 12
 </pre></div></div>
 </div>
-<ol class="arabic simple" start="2">
-<li><p>Med brug af <code class="docutils literal notranslate"><span class="pre">contextmanager</span> <span class="pre">protokollen</span></code></p></li>
-</ol>
+</section>
+<section id="id2">
+<h3>2. Med brug af <code class="docutils literal notranslate"><span class="pre">contextmanager</span> <span class="pre">protokollen</span></code><a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
@@ -192,6 +191,7 @@ f.write(&#39;Hello world!&#39;)
 </pre></div>
 </div>
 </div>
+</section>
 </section>
 </section>
 
