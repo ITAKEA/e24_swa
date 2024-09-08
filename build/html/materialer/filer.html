@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arbejd med filer i Python &mdash; ITA 2024 3. semester</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=a5898925" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/scripts/sphinx-book-theme.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SoftwareArkitektur og Cloud
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. Introduktion til SWA og Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_1.html">2. Introduction til python (dag1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_2.html">3. Python - Datastrukture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux_1.html">4. Linux OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux_2.html">5. Linux OS II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_3.html">6. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduktion_til_rest_api.html">7. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flask.html">8. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flask_2.html">9. Flask (dag 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decorators.html">10. Python  - Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jwt.html">11. Authorization med JWT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../microservices.html">12. Mikroservices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../test_1.html">13. Softwaretests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dokumentation.html">14. Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../swagger.html">15. Swagger API dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../eksamensprojekt.html">16. Eksamens Projektperiode (17-24)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auditional_exercises.html">17. Extra øvelser</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SoftwareArkitektur og Cloud</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Arbejd med filer i Python</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/filer.ipynb" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="Arbejd-med-filer-i-Python">
+<h1>Arbejd med filer i Python<a class="headerlink" href="#Arbejd-med-filer-i-Python" title="Link to this heading"></a></h1>
+<div class="line-block">
+<div class="line">Her har du er overblik over hvordan man læser og skriver til filer i python.</div>
+<div class="line">Jeg viser to måder for at læse og tilsvarende 2 måder for at skrive.</div>
+</div>
+<section id="Læs-fra-filer">
+<h2>Læs fra filer<a class="headerlink" href="#Læs-fra-filer" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Den basale måde</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f = open(&#39;testfiles/bohr.txt&#39;, &#39;r&#39;)
+f.read()
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;An expert is a person who has made all the mistakes that can be made in a very narrow field.\nPrediction is very difficult, especially about the future.\nThose who are not shocked when they first come across quantum theory cannot possibly have understood it.&#39;
+</pre></div></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Med brug af <code class="docutils literal notranslate"><span class="pre">contextmanager</span> <span class="pre">protokollen</span></code>
+Denne metode sørger for at lukke de filer man åbner igen. Dette er god stil at gøre og det forhindre desuden også en masse potitentille problemer og sikkerheds brister (som feks. memory leaks).
+Denne metoder er altså den fortrukne.</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>with open(&#39;testfiles/bohr.txt&#39;, &#39;r&#39;) as f:
+    print(f.read())
+    # print(f.readline())
+    # print(f.readlines())
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+An expert is a person who has made all the mistakes that can be made in a very narrow field.
+Prediction is very difficult, especially about the future.
+Those who are not shocked when they first come across quantum theory cannot possibly have understood it.
+</pre></div></div>
+</div>
+</section>
+<section id="Skriv-til-filer">
+<h2>Skriv til filer<a class="headerlink" href="#Skriv-til-filer" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Den basale måde</p></li>
+</ol>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>f = open(&#39;testfiles/test.txt&#39;, &#39;w&#39;)
+f.write(&#39;Hello world!&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+12
+</pre></div></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Med brug af <code class="docutils literal notranslate"><span class="pre">contextmanager</span> <span class="pre">protokollen</span></code></p></li>
+</ol>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>with open(&#39;testfiles/test.txt&#39;, &#39;w&#39;) as f:
+    f.write(&#39;Hello world&#39;)
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
