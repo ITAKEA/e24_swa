@@ -58,7 +58,7 @@ Der er nogle enkelte regler, I skal følge:
 * Det gør I med kommandoen ```pip install jupyter``` (mere om pip-kommandoen næste gang).
 
 ### Øv3: Unix command øvelser
-* [Øvelse: Unix Command Exercises](https://techkea.github.io/f23/materialer/unix_exercises/unix_commands_exercises.html)
+* [Øvelse: Unix Command Exercises](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/linux1/exercises/unix_commands_exercises.md) - [løsning](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/linux1/exercises/solution/unix_ex_solutions.md)
 
 
 
