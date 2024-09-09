@@ -28,7 +28,7 @@ Vi kommer til at arbejde med:
 * ```subprocess``` modulet
 * ```requests``` modulet
 
-Desuden skal vi arbejde med program afhængigheder (dependencies) og hvordan vi deler disse med andre gennem requirements.txt filen.
+Desuden skal vi arbejde med program afhængigheder (dependencies) og hvordan vi deler disse med andre gennem `requirements.txt` filen.
 
 ## Hjemmearbejde
 
