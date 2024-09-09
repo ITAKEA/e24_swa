@@ -1,4 +1,5 @@
 # Python modules
+ I dag skal i arbejde med python kode andre folk har lavet og som i importerer og bruger i jeres egne applikationer. For at i kan det skal i vide lidt om moduler og packages, og i skal vide noget om hvad et virtuelt miljø er og hvordan i opretter det, installerer pakker i det og sørger for at holde styr på de installerede og håndterer jeres projekters requirements.
 
 ## Læringsmål
 
@@ -19,31 +20,63 @@ Se følgende videoer om moduler og pakker,, og læs dokumentet om at arbejde med
 * [Moduler og pakker i python 1 (egne moduler)](https://youtu.be/miGblWWfsvY) (8:37)
 * [Moduler og pakker i python 2 (indbyggede)](https://youtu.be/sEvWF1YLxXs) (6:12)
 * [Moduler og pakker i python 3 (3. parts)](https://youtu.be/wbEWDsj3vIg) (8:20)
-* [Arbejd med filer i Python](materialer/filer.html)
+* [Arbejd med filer i Python](materialer/filer.html) (5:00)
+* [Using Python's pip to Manage Your Projects' Dependencies](https://realpython.com/what-is-pip/) (45:00)
+    * Sørg for at forstå starten af hver afsnit i denne artikkel. Hen imod slutningen af hvert afsnit bliver det mere og mere detaljeret. Det er fint at i bare har skimmet det, og derved kan finde tilbage til det hvis i får brug for det. Så ... relativ god forståelse af hovedpointerne fra hvert afsnit, og overblik over resten.
 
 ## Dagen i dag
-Ud over at kunne importere moduler skal i også arbejde med at bruge disse moduler.     
-Vi kommer til at arbejde med: 
-* ```OS``` modulet
-* ```subprocess``` modulet
-* ```requests``` modulet
+Vi starter med en lille [quiz](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/opvarmning/moduler.ipynb) for at tjekke om i har forstået forberedelsesmaterialet.    
 
-Desuden skal vi arbejde med program afhængigheder (dependencies) og hvordan vi deler disse med andre gennem `requirements.txt` filen.
+Herefter laver vi en [øvelse/demo](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/requirements_demo/) der viser hvorfor vi skal bruge `requirements.txt` filen i vores projekter.     
 
-## Hjemmearbejde
+Herefter kigger vi på 3 moduler ```OS```, ```subprocess``` og ```requests```.   
+
 
 ## Materialer
 * [Arbejd med filer i Python](materialer/filer.html)
 * [Moduler og pakker i python 1 (egne moduler)](https://youtu.be/miGblWWfsvY) (8:37)
 * [Moduler og pakker i python 2 (indbyggede)](https://youtu.be/sEvWF1YLxXs) (6:12)
 * [Moduler og pakker i python 3 (3. parts)](https://youtu.be/wbEWDsj3vIg) (8:20)
-
+* [Python Module Index](https://docs.python.org/3/py-modindex.html) 
+* [Requests: HTTP for Humans™](https://docs.python-requests.org/en/latest/)
+* [Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp)
 
 ## Øvelser
 
 ### Øv 1: Download filer
-I denne øvelse skal du lave et script som kan downloaded filer fra nettet og gemme dem i en mappe på din computer.
+I denne øvelse skal du lave et script som kan læse filer fra nettet og gemme dem i en filer i en mappe på din computer.
 
 **Lav et modul (.py fil) som:**     
-* Opretter en 
-* downloader denne fil
+* Opretter en mappe på din computer
+* Læs [denne fil](https://itakea.github.io/e24_swa/py_intro_3.html) og gem den i mappen
+* Åbner filen i din browser
+
+Når det fungerer kan du se at der mangler stylesheets til siden:
+
+Ændre koden i dit script så det samtidigt
+* læser hvert stylesheet ([feks. dette](https://itakea.github.io/e24_swa/_static/css/custom.css?v=a5898925)) 
+* Ændrer `<link rel="stylesheet" type="text/css" >` attributterne på html siden til at pege på de filer du har downloaded.
+
+Øvelsen kan laves med det vi har været igennem indtil nu. Modulerne fra i dag, string og list manipulation (herunder slicing) etc.
+
+
+### Øv 2: Dataanalyse med Pandas
+
+I den næste øvelse skal du arbejde med biblioteket [Pandas](https://www.w3schools.com/python/pandas/default.asp). 
+
+Vi kommer til at bruge dette bibliotek løbende gennem dette semesteret, både i dette fag,  men også med Michael sammen med programmet Tableau. Men lige nu skal i bare lege med det. 
+
+I kan enten først kigge på denne simple tutorial [Pandas Tutorial](https://www.w3schools.com/python/pandas/default.asp), eller i kan  hoppe dirrekte til øvelsen herunder og så bruge tutorialen som opslagsværk. I bestemmer selv.
+
+* [Dataanalyse af San Fransisco crime data](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/Pandas_SF_Crime/exercise_pandas_sf.ipynb) 
+
+
+
+
+
+
+
+
+
+
+

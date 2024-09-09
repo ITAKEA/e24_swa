@@ -64,10 +64,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#laeringsmal">6.1. Læringsmål</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#forberedelse">6.2. Forberedelse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagen-i-dag">6.3. Dagen i dag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">6.4. Hjemmearbejde</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#materialer">6.5. Materialer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ovelser">6.6. Øvelser</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ov-1-download-filer">6.6.1. Øv 1: Download filer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materialer">6.4. Materialer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ovelser">6.5. Øvelser</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ov-1-download-filer">6.5.1. Øv 1: Download filer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ov-2-dataanalyse-med-pandas">6.5.2. Øv 2: Dataanalyse med Pandas</a></li>
 </ul>
 </li>
 </ul>
@@ -111,6 +111,7 @@
              
   <section id="python-modules">
 <h1><span class="section-number">6. </span>Python modules<a class="headerlink" href="#python-modules" title="Link to this heading"></a></h1>
+<p>I dag skal i arbejde med python kode andre folk har lavet og som i importerer og bruger i jeres egne applikationer. For at i kan det skal i vide lidt om moduler og packages, og i skal vide noget om hvad et virtuelt miljø er og hvordan i opretter det, installerer pakker i det og sørger for at holde styr på de installerede og håndterer jeres projekters requirements.</p>
 <section id="laeringsmal">
 <h2><span class="section-number">6.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
@@ -133,40 +134,58 @@
 <li><p><a class="reference external" href="https://youtu.be/miGblWWfsvY">Moduler og pakker i python 1 (egne moduler)</a> (8:37)</p></li>
 <li><p><a class="reference external" href="https://youtu.be/sEvWF1YLxXs">Moduler og pakker i python 2 (indbyggede)</a> (6:12)</p></li>
 <li><p><a class="reference external" href="https://youtu.be/wbEWDsj3vIg">Moduler og pakker i python 3 (3. parts)</a> (8:20)</p></li>
-<li><p><a class="reference external" href="materialer/filer.html">Arbejd med filer i Python</a></p></li>
+<li><p><a class="reference external" href="materialer/filer.html">Arbejd med filer i Python</a> (5:00)</p></li>
+<li><p><a class="reference external" href="https://realpython.com/what-is-pip/">Using Python’s pip to Manage Your Projects’ Dependencies</a> (45:00)</p>
+<ul>
+<li><p>Sørg for at forstå starten af hver afsnit i denne artikkel. Hen imod slutningen af hvert afsnit bliver det mere og mere detaljeret. Det er fint at i bare har skimmet det, og derved kan finde tilbage til det hvis i får brug for det. Så … relativ god forståelse af hovedpointerne fra hvert afsnit, og overblik over resten.</p></li>
+</ul>
+</li>
 </ul>
 </section>
 <section id="dagen-i-dag">
 <h2><span class="section-number">6.3. </span>Dagen i dag<a class="headerlink" href="#dagen-i-dag" title="Link to this heading"></a></h2>
-<p>Ud over at kunne importere moduler skal i også arbejde med at bruge disse moduler.<br />Vi kommer til at arbejde med:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">OS</span></code> modulet</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">subprocess</span></code> modulet</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">requests</span></code> modulet</p></li>
-</ul>
-<p>Desuden skal vi arbejde med program afhængigheder (dependencies) og hvordan vi deler disse med andre gennem <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> filen.</p>
-</section>
-<section id="hjemmearbejde">
-<h2><span class="section-number">6.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
+<p>Vi starter med en lille <a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/opvarmning/moduler.ipynb">quiz</a> for at tjekke om i har forstået forberedelsesmaterialet.</p>
+<p>Herefter laver vi en <a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/requirements_demo/">øvelse/demo</a> der viser hvorfor vi skal bruge <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> filen i vores projekter.</p>
+<p>Herefter kigger vi på 3 moduler <code class="docutils literal notranslate"><span class="pre">OS</span></code>, <code class="docutils literal notranslate"><span class="pre">subprocess</span></code> og <code class="docutils literal notranslate"><span class="pre">requests</span></code>.</p>
 </section>
 <section id="materialer">
-<h2><span class="section-number">6.5. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<h2><span class="section-number">6.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="materialer/filer.html">Arbejd med filer i Python</a></p></li>
 <li><p><a class="reference external" href="https://youtu.be/miGblWWfsvY">Moduler og pakker i python 1 (egne moduler)</a> (8:37)</p></li>
 <li><p><a class="reference external" href="https://youtu.be/sEvWF1YLxXs">Moduler og pakker i python 2 (indbyggede)</a> (6:12)</p></li>
 <li><p><a class="reference external" href="https://youtu.be/wbEWDsj3vIg">Moduler og pakker i python 3 (3. parts)</a> (8:20)</p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/py-modindex.html">Python Module Index</a></p></li>
+<li><p><a class="reference external" href="https://docs.python-requests.org/en/latest/">Requests: HTTP for Humans™</a></p></li>
+<li><p><a class="reference external" href="https://www.w3schools.com/python/pandas/default.asp">Pandas Tutorial</a></p></li>
 </ul>
 </section>
 <section id="ovelser">
-<h2><span class="section-number">6.6. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
+<h2><span class="section-number">6.5. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
 <section id="ov-1-download-filer">
-<h3><span class="section-number">6.6.1. </span>Øv 1: Download filer<a class="headerlink" href="#ov-1-download-filer" title="Link to this heading"></a></h3>
-<p>I denne øvelse skal du lave et script som kan downloaded filer fra nettet og gemme dem i en mappe på din computer.</p>
+<h3><span class="section-number">6.5.1. </span>Øv 1: Download filer<a class="headerlink" href="#ov-1-download-filer" title="Link to this heading"></a></h3>
+<p>I denne øvelse skal du lave et script som kan læse filer fra nettet og gemme dem i en filer i en mappe på din computer.</p>
 <p><strong>Lav et modul (.py fil) som:</strong></p>
 <ul class="simple">
-<li><p>Opretter en</p></li>
-<li><p>downloader denne fil</p></li>
+<li><p>Opretter en mappe på din computer</p></li>
+<li><p>Læs <a class="reference external" href="https://itakea.github.io/e24_swa/py_intro_3.html">denne fil</a> og gem den i mappen</p></li>
+<li><p>Åbner filen i din browser</p></li>
+</ul>
+<p>Når det fungerer kan du se at der mangler stylesheets til siden:</p>
+<p>Ændre koden i dit script så det samtidigt</p>
+<ul class="simple">
+<li><p>læser hvert stylesheet (<a class="reference external" href="https://itakea.github.io/e24_swa/_static/css/custom.css?v=a5898925">feks. dette</a>)</p></li>
+<li><p>Ændrer <code class="docutils literal notranslate"><span class="pre">&lt;link</span> <span class="pre">rel=&quot;stylesheet&quot;</span> <span class="pre">type=&quot;text/css&quot;</span> <span class="pre">&gt;</span></code> attributterne på html siden til at pege på de filer du har downloaded.</p></li>
+</ul>
+<p>Øvelsen kan laves med det vi har været igennem indtil nu. Modulerne fra i dag, string og list manipulation (herunder slicing) etc.</p>
+</section>
+<section id="ov-2-dataanalyse-med-pandas">
+<h3><span class="section-number">6.5.2. </span>Øv 2: Dataanalyse med Pandas<a class="headerlink" href="#ov-2-dataanalyse-med-pandas" title="Link to this heading"></a></h3>
+<p>I den næste øvelse skal du arbejde med biblioteket <a class="reference external" href="https://www.w3schools.com/python/pandas/default.asp">Pandas</a>.</p>
+<p>Vi kommer til at bruge dette bibliotek løbende gennem dette semesteret, både i dette fag,  men også med Michael sammen med programmet Tableau. Men lige nu skal i bare lege med det.</p>
+<p>I kan enten først kigge på denne simple tutorial <a class="reference external" href="https://www.w3schools.com/python/pandas/default.asp">Pandas Tutorial</a>, eller i kan  hoppe dirrekte til øvelsen herunder og så bruge tutorialen som opslagsværk. I bestemmer selv.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/Pandas_SF_Crime/exercise_pandas_sf.ipynb">Dataanalyse af San Fransisco crime data</a></p></li>
 </ul>
 </section>
 </section>
