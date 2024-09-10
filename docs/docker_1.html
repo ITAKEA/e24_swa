@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>11. Dokumentation &mdash; ITA 2024 3. semester</title>
+  <title>Docker &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
@@ -31,8 +31,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Azure prisberegning" href="price.html" />
-    <link rel="prev" title="10. Authorization med JWT" href="jwt.html" /> 
+    <link rel="next" title="Docker II" href="docker_2.html" />
+    <link rel="prev" title="8. Flask (dag 2)" href="flask_2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,7 +54,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">1. Introduction til python (dag1)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">2. Python - Datastrukture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux_1.html">3. Linux OS</a></li>
@@ -65,14 +65,7 @@
 <li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask (dag 2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">9. Python  - Decorators</a></li>
 <li class="toctree-l1"><a class="reference internal" href="jwt.html">10. Authorization med JWT</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Dokumentation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">11.1. Læringsmål</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#forberedelse">11.2. Forberedelse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dagen-i-dag">11.3. Dagen i dag</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hjemmearbejde">11.4. Hjemmearbejde</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#materialer">11.5. Materialer</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">11. Dokumentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="eksamensprojekt.html">12. Eksamens Projektperiode (17-24)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">13. Extra øvelser</a></li>
 </ul>
@@ -91,9 +84,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">11. </span>Dokumentation</li>
+      <li class="breadcrumb-item active">Docker</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ITAKEA/e24_swa.git/blob/maindokumentation.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/maindocker_1.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -101,57 +94,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="dokumentation">
-<h1><span class="section-number">11. </span>Dokumentation<a class="headerlink" href="#dokumentation" title="Link to this heading"></a></h1>
-<ul class="simple">
-<li><p><a class="reference external" href="https://realpython.com/documenting-python-code/">Documenting Python Code: A Complete Guide</a></p></li>
-<li><p><a class="reference external" href="https://docs.python-guide.org/writing/documentation/">Hichhiker guide to Python - Documentation</a></p></li>
-</ul>
+  <section id="docker">
+<h1>Docker<a class="headerlink" href="#docker" title="Link to this heading"></a></h1>
 <section id="laeringsmal">
-<h2><span class="section-number">11.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p>Docstring</p></li>
-<li><p>SwaggerIO</p></li>
-<li><p>Readme files</p></li>
-</ul>
+<h2>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 </section>
-<section id="forberedelse">
-<h2><span class="section-number">11.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<section id="forberedels">
+<h2>Forberedels<a class="headerlink" href="#forberedels" title="Link to this heading"></a></h2>
 </section>
-<section id="dagen-i-dag">
-<h2><span class="section-number">11.3. </span>Dagen i dag<a class="headerlink" href="#dagen-i-dag" title="Link to this heading"></a></h2>
-</section>
-<section id="hjemmearbejde">
-<h2><span class="section-number">11.4. </span>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
+<section id="dagens-indhold">
+<h2>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 </section>
 <section id="materialer">
-<h2><span class="section-number">11.5. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://realpython.com/readme-python-project/">Creating Great README Files for Your Python Projects</a></p></li>
-<li><p><a class="reference external" href="https://realpython.com/document-python-code-with-chatgpt/">Document Your Python Code and Projects With ChatGPT</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=nZttMg_n_s0">Video: Introduction to Sphinx Python Document Generation</a></p></li>
-<li><p><a class="reference external" href="https://itakea.github.io/swagger-docs-test/">Swagger docs itakea.github.io</a></p></li>
-</ul>
-<p>Google docstring style:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Greets a person by name.</span>
-
-<span class="sd">    Prints a personalized greeting message to the console.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        name: The person&#39;s name (str)</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        A greeting message (str)</span>
-
-<span class="sd">    Raises:</span>
-<span class="sd">        ValueError: If the input name is empty or None</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;Greetings, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">!&quot;</span>
-</pre></div>
-</div>
+<h2>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<section id="ovelser">
+<h3>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
+</section>
 </section>
 </section>
 
@@ -159,8 +117,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="jwt.html" class="btn btn-neutral float-left" title="10. Authorization med JWT" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="price.html" class="btn btn-neutral float-right" title="Azure prisberegning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="flask_2.html" class="btn btn-neutral float-left" title="8. Flask (dag 2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="docker_2.html" class="btn btn-neutral float-right" title="Docker II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
