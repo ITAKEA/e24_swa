@@ -91,8 +91,6 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    :maxdepth: 2
    :numbered:  
    
-   intro     
-
    py_intro_1
    py_intro_2
    linux_1
@@ -101,14 +99,22 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    
    introduktion_til_rest_api
    flask
+   
    flask_2
+   docker_1
+   docker_2
+
+   microservices_1
+   microservices_2
+
    decorators
 
    jwt
-   microservices
-   test_1
    dokumentation   
-   swagger
+   swagger_1
+   swagger_2
+
+   price
 
    eksamensprojekt
    auditional_exercises

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>10. Python - Decorators &mdash; ITA 2024 3. semester</title>
+  <title>9. Python - Decorators &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
@@ -31,8 +31,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="11. Authorization med JWT" href="jwt.html" />
-    <link rel="prev" title="9. Flask (dag 2)" href="flask_2.html" /> 
+    <link rel="next" title="10. Authorization med JWT" href="jwt.html" />
+    <link rel="prev" title="8. Flask (dag 2)" href="flask_2.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,36 +55,32 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="intro.html">1. Introduktion til SWA og Cloud</a></li>
-<li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">2. Introduction til python (dag1)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">3. Python - Datastrukture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linux_1.html">4. Linux OS</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linux_2.html">5. Linux OS II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">6. Python modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">7. En introduktion til REST API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flask.html">8. Flask API</a></li>
-<li class="toctree-l1"><a class="reference internal" href="flask_2.html">9. Flask (dag 2)</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">10. Python  - Decorators</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">10.1. Læringsmål</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#forberedelse">10.2. Forberedelse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">10.3. Dagens indhold</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#materiale">10.4. Materiale</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ovelser">10.4.1. Øvelser</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ov-4-analyser-denne-kode">10.4.1.1. Øv 4: Analyser denne kode</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ov-3-tutorial">10.4.1.2. Øv 3: Tutorial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">1. Introduction til python (dag1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">2. Python - Datastrukture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux_1.html">3. Linux OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux_2.html">4. Linux OS II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">5. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">7. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask (dag 2)</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Python  - Decorators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">9.1. Læringsmål</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forberedelse">9.2. Forberedelse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">9.3. Dagens indhold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materiale">9.4. Materiale</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ovelser">9.4.1. Øvelser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ov-4-analyser-denne-kode">9.4.1.1. Øv 4: Analyser denne kode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ov-3-tutorial">9.4.1.2. Øv 3: Tutorial</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="jwt.html">11. Authorization med JWT</a></li>
-<li class="toctree-l1"><a class="reference internal" href="microservices.html">12. Mikroservices</a></li>
-<li class="toctree-l1"><a class="reference internal" href="test_1.html">13. Softwaretests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">14. Dokumentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="swagger.html">15. Swagger API dokumentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="eksamensprojekt.html">16. Eksamens Projektperiode (17-24)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">17. Extra øvelser</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jwt.html">10. Authorization med JWT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dokumentation.html">11. Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="eksamensprojekt.html">12. Eksamens Projektperiode (17-24)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">13. Extra øvelser</a></li>
 </ul>
 
         </div>
@@ -101,7 +97,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">10. </span>Python  - Decorators</li>
+      <li class="breadcrumb-item active"><span class="section-number">9. </span>Python  - Decorators</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ITAKEA/e24_swa.git/blob/maindecorators.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -112,7 +108,7 @@
            <div itemprop="articleBody">
              
   <section id="python-decorators">
-<h1><span class="section-number">10. </span>Python  - Decorators<a class="headerlink" href="#python-decorators" title="Link to this heading"></a></h1>
+<h1><span class="section-number">9. </span>Python  - Decorators<a class="headerlink" href="#python-decorators" title="Link to this heading"></a></h1>
 <p>I har i jeres Flask applikationer set det lille ‘&#64;’ brugt over forskellige funktioner. I dag skal i lære hvad det er og hvordan i bruger det i jeres python programmer.</p>
 <p>I Flask applikationer ser i dette:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
@@ -123,13 +119,13 @@
 <p>Det er den pythonic måde at udbygge funktionalitet til eksisterende funktioner. En måde at følge DRY principperne, og en måde at følge Open/Closed princippet fra SOLID.</p>
 <p>Det er desværre også et super svært emne at forstå, men vi kaster os ud i det, og med en skridt for skridt tilgang er det som alt andet i livet muligt at mestre.</p>
 <section id="laeringsmal">
-<h2><span class="section-number">10.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Kunne forstå og bruge Open/Closed designprincippet i forhold til funktioner.</p></li>
 </ul>
 </section>
 <section id="forberedelse">
-<h2><span class="section-number">10.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
 <p>I skal læse og gennemgå de følgende 5 artikler/tutorials</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.bitecode.dev/p/xmas-decoration-part-1">Xmas decoration, part 1</a></p></li>
@@ -147,10 +143,10 @@
 <p>Så det er evt. en god ide at kigge denne artikkel igennem <a class="reference external" href="https://www.bitecode.dev/p/holding-references-on-classes-and">Holding references on classes and functions</a></p>
 </section>
 <section id="dagens-indhold">
-<h2><span class="section-number">10.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 </section>
 <section id="materiale">
-<h2><span class="section-number">10.4. </span>Materiale<a class="headerlink" href="#materiale" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.4. </span>Materiale<a class="headerlink" href="#materiale" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.bitecode.dev/p/xmas-decoration-part-1">Xmas decoration, part 1</a></p></li>
 <li><p><a class="reference external" href="https://www.bitecode.dev/p/xmas-decoration-part-2">Xmas decoration, part 2</a></p></li>
@@ -158,9 +154,9 @@
 <li><p><a class="reference external" href="https://realpython.com/primer-on-python-decorators/">primer-on-python-decorators</a></p></li>
 </ul>
 <section id="ovelser">
-<h3><span class="section-number">10.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
+<h3><span class="section-number">9.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
 <section id="ov-4-analyser-denne-kode">
-<h4><span class="section-number">10.4.1.1. </span>Øv 4: Analyser denne kode<a class="headerlink" href="#ov-4-analyser-denne-kode" title="Link to this heading"></a></h4>
+<h4><span class="section-number">9.4.1.1. </span>Øv 4: Analyser denne kode<a class="headerlink" href="#ov-4-analyser-denne-kode" title="Link to this heading"></a></h4>
 <p>Kig på følgende kodeeksempel og forklar hvad der foregår.<br />Du skal først kunne forklare det helt overordnet, altså hvad er resultatet af at køre denne kode.<br />Dernest skal du skrive en skridt for skridt forklaring af flowet i koden. Numerer alle væsentlige linier i kode med en beskrivelse af hvad der sker.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">request</span>
 <span class="kn">import</span> <span class="nn">sqlite3</span>
@@ -247,7 +243,7 @@
 </div>
 </section>
 <section id="ov-3-tutorial">
-<h4><span class="section-number">10.4.1.2. </span>Øv 3: Tutorial<a class="headerlink" href="#ov-3-tutorial" title="Link to this heading"></a></h4>
+<h4><span class="section-number">9.4.1.2. </span>Øv 3: Tutorial<a class="headerlink" href="#ov-3-tutorial" title="Link to this heading"></a></h4>
 <p>Se følgende video og skriv selv hans eksempler (i en jupyter notebook)</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://youtu.be/cKPlPJyQrt4?si=RgFuHWHpIqzUlMtE&amp;t=2841">What Does It Take To Be An Expert At Python? (decorators)</a> (Fra 47:20 til 1:06:31)</p></li>
@@ -261,8 +257,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="flask_2.html" class="btn btn-neutral float-left" title="9. Flask (dag 2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="jwt.html" class="btn btn-neutral float-right" title="11. Authorization med JWT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="flask_2.html" class="btn btn-neutral float-left" title="8. Flask (dag 2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="jwt.html" class="btn btn-neutral float-right" title="10. Authorization med JWT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
