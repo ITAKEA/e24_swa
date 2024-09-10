@@ -116,5 +116,4 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
 
    price
 
-   eksamensprojekt
    auditional_exercises
