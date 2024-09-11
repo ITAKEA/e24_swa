@@ -1,6 +1,11 @@
 # Authorization med JWT
 
 ## Læringsmål
+* Kunne forklare begrebet Authendication i forbindelse med en Microservice arkitektur
+* Kunne forklare begrebet Authorisation i forbindelse med en Microservice arkitektur
+
+
+
 
 ## Forberedelse
 
@@ -11,6 +16,11 @@
 
 
 ## Materialer
+* [JWT Authentication Explained](https://www.youtube.com/watch?v=iHNkGQyJxJs)
+* [JWT Debugger](https://jwt.io/#debugger-io)
+
+* [What is JWT? JSON Web Tokens Explained (Java Brains)](https://www.youtube.com/watch?v=soGRyl9ztjI)
+* [What is the structure of a JWT - Java Brains](https://www.youtube.com/watch?v=_XbXkVdoG_0)
 
 ### Øvelser
 
