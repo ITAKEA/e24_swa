@@ -44,7 +44,7 @@ Herefter kigger vi på 3 moduler ```OS```, ```subprocess``` og ```requests```.
 ## Øvelser
 
 ### Øv 1: Download filer
-I denne øvelse skal du lave et script som kan læse filer fra nettet og gemme dem i en filer i en mappe på din computer.
+I denne øvelse skal du lave et script som kan læse filer fra nettet og gemme dem i en fil i en mappe på din computer.
 
 **Lav et modul (.py fil) som:**     
 * Opretter en mappe på din computer
