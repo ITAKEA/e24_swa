@@ -57,7 +57,8 @@ Når det fungerer kan du se at der mangler stylesheets til siden:
 * læser hvert stylesheet ([feks. dette](https://itakea.github.io/e24_swa/_static/css/custom.css?v=a5898925)) 
 * Ændrer `<link rel="stylesheet" type="text/css" >` attributterne på html siden til at pege på de filer du har downloaded.
 
-Øvelsen kan laves med det vi har været igennem indtil nu. Modulerne fra i dag, string og list manipulation (herunder slicing) etc.
+Øvelsen skal laves med det vi har været igennem indtil nu. Modulerne fra i dag, string manipulation (herunder slicing) etc.    
+Hvis i spørger en ven, vil den sikkert foreslå en masse andre moduler (feks. `Beautifull Soup`). Det skal i ikke bruge til denne øvelse!
 
 
 ### Øv 2: Dataanalyse med Pandas
