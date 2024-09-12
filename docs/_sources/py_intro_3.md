@@ -29,7 +29,7 @@ Vi starter med en lille [quiz](https://github.com/ITAKEA/kode_fra_undervisning_e
 
 Herefter laver vi en [øvelse/demo](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/requirements_demo/) der viser hvorfor vi skal bruge `requirements.txt` filen i vores projekter.     
 
-Herefter kigger vi på 3 moduler ```OS```, ```subprocess``` og ```requests```.   
+Herefter kigger vi på 3 moduler ```OS```, ```subprocess``` og ```requests```, og til sidst modulet `pandas` som vi skal bruge til statestikberegninger og visualisering fremover.   
 
 
 ## Materialer
