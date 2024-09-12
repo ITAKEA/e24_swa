@@ -60,6 +60,7 @@ Når det fungerer kan du se at der mangler stylesheets til siden:
 Øvelsen skal laves med det vi har været igennem indtil nu. Modulerne fra i dag, string manipulation (herunder slicing) etc.    
 Hvis i spørger en ven, vil den sikkert foreslå en masse andre moduler (feks. `Beautifull Soup`). Det skal i ikke bruge til denne øvelse!
 
+I opfordres til at følge **KISS** designprincippet. **Keep it simple stupid**. Altså start med at lave det så simpelt som overhoved muligt. Lad vær med at ville tilføje alt muligt andet funktionalitet end det der står i kravene, og det der er allemest nødvendigt. 
 
 ### Øv 2: Dataanalyse med Pandas
 
