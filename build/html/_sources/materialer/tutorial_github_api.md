@@ -69,8 +69,7 @@ Bemærk: Hvis du ikke kan slette, feks pga admin rettigheder skal du kigge på d
 
 Dette svarer til hvad du gjorde i første del af denne øvelse. Der er altså nogen der kodet et plugin til VSCode og gemt den funktionalitet du lige har arbejdet med  bag nogle blå knapper.     
 
-Du skal nu se følgende tutorial: [Interacting With REST APIs and Python](https://realpython.com/courses/interacting-rest-apis-python/)
-    
-    * Du skal kun se den gratis del af videoerne (1-5)
+Du skal nu se følgende tutorial: [Interacting With REST APIs and Python](https://realpython.com/courses/interacting-rest-apis-python/)    
+(Du skal kun se den gratis del af videoerne (1-5))
 
 Herefter skal du nu vha. Python simpulere det flow du lige har brugt i VSCode. Det bliver måske ikke helt så brugervenligt og du har ikke et GUI lag oven over, men så lang tid at du bare får de forskellige trin til at virke, så er det godt.
