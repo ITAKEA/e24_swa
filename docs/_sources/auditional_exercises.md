@@ -25,6 +25,13 @@ and then give me another exercise that is either harder or easier based on the e
 I would like to have a list of all planets in our solar system as a base for this exercise.
 ```
 
+## String manipulation
+
+```
+I'm interested in practicing Python string manipulation, focusing on methods such as .find(), .replace(), and string slicing. I would like to receive one exercise at a time. After I solve each exercise, please evaluate my solution on a scale from 1 to 10. Based on your evaluation, provide me with another exercise that is either more challenging or simpler.
+
+```
+
 ## Set lotto øvelse
 
 * [lotto øvelse](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/python2/exercises/lotto/lotto.ipynb)
