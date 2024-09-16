@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>En introduktion til REST API &mdash; ITA 2024 3. semester</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="_static/css/custom.css?v=a5898925" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/scripts/sphinx-book-theme.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Extra øvelser" href="auditional_exercises.html" />
+    <link rel="prev" title="5. Python modules" href="py_intro_3.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            SoftwareArkitektur og Cloud
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">1. Introduction til python (dag1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">2. Python - Datastrukture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux_1.html">3. Linux OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux_2.html">4. Linux OS II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">5. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">6. Extra øvelser</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SoftwareArkitektur og Cloud</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">En introduktion til REST API</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainintroduktion_til_rest_api.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="en-introduktion-til-rest-api">
+<h1>En introduktion til REST API<a class="headerlink" href="#en-introduktion-til-rest-api" title="Link to this heading"></a></h1>
+<section id="laeringsmal">
+<h2>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<p>Når denne dag er slut, bør du kunne svare på disse spørgsmål:</p>
+<ul class="simple">
+<li><p>Hvad er fordelene ved at bruge et RESTful API?</p></li>
+<li><p>Hvad er ideen bag de følgende arkitektoniske begrænsninger, der anvendes af REST</p>
+<ul>
+<li><p>Uniform Interface</p></li>
+<li><p>Stateless</p></li>
+<li><p>Cacheable</p></li>
+<li><p>Client-Server</p></li>
+<li><p>Layered System</p></li>
+</ul>
+</li>
+<li><p>Hvad er JSON, hvilken struktur har den, og hvorfor passer JSON så godt sammen med REST</p></li>
+<li><p>Hvordan bruger man Postman til at teste en RESTful API?</p></li>
+<li><p>Hvordan bruger man dokumentationen til et API</p></li>
+<li><p>Hvordan og hvorfor skal jeg bruge API keys til authendication</p></li>
+<li><p>Hvorfor er Http statuskoder vigtige i forhold til REST API</p></li>
+</ul>
+</section>
+<section id="forberedelse">
+<h2>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Åben Chat-GPT og Copy / Paste spørgsmålene fra læringsmålene ovenover ind og læs svarene den kommer med (30 min)</p></li>
+<li><p>Hvis du ikke allerede har <strong><a class="reference external" href="https://www.postman.com/downloads/">Postman</a></strong> på din computer, skal du installere det før vi mødes i klassen (Der er ikke behov for at oprette en konto) (5 min)</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=fqX4BpIWu4s">Introduction to REST (22 min)</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=u7HWkKhIYbU">Architectural Constraints used by Rest (17 min)</a></p>
+<ul>
+<li><p>(5:50) Manden (Lars) snakker om localhost:8080/api/players. Dette projekt kommer vi ikke til at arbejde med dette semester, men i stedet med microservices.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="dagens-indhold">
+<h2>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<p>Vi starter med en gennemgang af <a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/python3/exercises/solutions">Øv 1: Download filer</a> øvelsen.
+Og <a class="reference external" href="#">Pandas øvelsen</a></p>
+<p>Herefter gennemgår vi kort i overskrifter af hvad i forventes at have lært derhjemme.</p>
+<p>Dette inkluddere disse sider:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="materialer/http.html"><span class="doc">Http protokollen</span></a></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="id1">
+<h2><img alt="../_static/img/JSON.png" src="../_static/img/JSON.png" /><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+</section>
+<section id="id2">
+<h2><img alt="../_static/img/Hvad_er_et_API.png" src="../_static/img/Hvad_er_et_API.png" /><a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+</section>
+<section id="id3">
+<h2><img alt="../_static/img/http_status.png" src="../_static/img/http_status.png" /><a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<p>Resten af dagen bliver med Ping/pong øvelser/gennemgang ved tavlen.</p>
+<ul class="simple">
+<li><p>Vi starter med: Tutorial: <a class="reference internal" href="materialer/tutorial_github_api.html"><span class="doc">Github API</span></a></p></li>
+<li><p>Se (og skriv) disse tutorial: <a class="reference external" href="https://realpython.com/courses/interacting-rest-apis-python/">Interacting With REST APIs and Python</a></p>
+<ul>
+<li><p>I skal kun se den gratis del af videoerne (1-5)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="materialer">
+<h2>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#"></a></p></li>
+</ul>
+<section id="ovelser">
+<h3>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
+<p><strong>Ex 1. Get, Post, Put, Patch og Delete</strong></p>
+<p>I denne øvelse skal i gøre brug af dette api <a class="reference external" href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a> og du skal bruge Postman til at lave dine forespørgelser.</p>
+<p>Du kan se nederst på siden hvilke resourcer der er tilrådeighed i dette API.</p>
+<ol class="simple">
+<li><p><strong>GET:</strong></p>
+<ul class="simple">
+<li><p>Hent alle brugere: <strong><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/users</span></code></strong></p></li>
+<li><p>Hent et bestemt indlæg: <strong><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
+<li><p>Hent kommentarer til et bestemt indlæg: <strong><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/posts/{id}/comments</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
+</ul>
+</li>
+<li><p><strong>POST:</strong></p>
+<ul class="simple">
+<li><p>Opret en ny bruger: <strong><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/users</span></code></strong></p></li>
+<li><p>Opret et nyt indlæg: <strong><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/posts</span></code></strong></p></li>
+<li><p>Opret en ny kommentar til et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/comments</span></code></strong></p></li>
+</ul>
+</li>
+<li><p><strong>PUT:</strong></p>
+<ul class="simple">
+<li><p>Opdater en brugers oplysninger: <strong><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/users/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede brugers ID)</p></li>
+<li><p>Opdater et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
+</ul>
+</li>
+<li><p><strong>PATCH:</strong></p>
+<ul class="simple">
+<li><p>Opdater en brugers delvise oplysninger: <strong><code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/users/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede brugers ID)</p></li>
+<li><p>Opdater delvist et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
+</ul>
+</li>
+<li><p><strong>DELETE:</strong></p>
+<ul class="simple">
+<li><p>Slet en bruger: <strong><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/users/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede brugers ID)</p></li>
+<li><p>Slet et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
+<li><p>Slet en kommentar: <strong><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/comments/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede kommentars ID)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="py_intro_3.html" class="btn btn-neutral float-left" title="5. Python modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="auditional_exercises.html" class="btn btn-neutral float-right" title="6. Extra øvelser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
