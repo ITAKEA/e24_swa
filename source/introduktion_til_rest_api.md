@@ -37,13 +37,6 @@ Dette inkluddere disse sider:
 
 * [Http protokollen](materialer/http.md) 
 
----
-![](../_static/img/JSON.png)
----
-![](../_static/img/Hvad_er_et_API.png)
---- 
-![](../_static/img/http_status.png)
----
 
 Resten af dagen bliver med Ping/pong øvelser/gennemgang ved tavlen.
 
