@@ -47,7 +47,7 @@ Dette inkluddere disse sider:
 
 Resten af dagen bliver med Ping/pong øvelser/gennemgang ved tavlen.
 
-* [Api øvelse 1](source/materialer/api_ovelse_1.md) 
+* [Api øvelse 1](materialer/api_ovelse_1.md) 
 * [Github API](materialer/tutorial_github_api.md)
 
 
