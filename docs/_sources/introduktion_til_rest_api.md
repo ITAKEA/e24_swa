@@ -29,7 +29,7 @@ Når denne dag er slut, bør du kunne svare på disse spørgsmål:
 
 ## Dagens indhold
 
-Vi starter dagen med en kort gennemgang i overskrifter af hvad i forventes at have lært derhjemme. Der er selvfølgelig mulighed for at uddybe nogle elementer hvis i ikke har forstået det helt endnu. 
+Vi starter dagen med en kort gennemgang i overskrifter af hvad i forventes at have lært derhjemme. 
 
 Herefter arbejder vi med følgende emner:
 
