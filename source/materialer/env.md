@@ -43,7 +43,6 @@ response = requests.get(url, headers=headers)
 
 print(response.json())
 ```
-```
 ## Skriv .env i din .gitignore
 For at undgå at du pusher dine miljøvariabler til Github skal du tilføje `.env` til din `.gitignore` fil.
 
