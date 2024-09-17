@@ -1,14 +1,13 @@
 # Miljøvariabler
 
-Dette er en kort beskrivelse af hvordan man arbejder med miljøvariabler i VSCode og med Python.    
+Dette er en kort beskrivelse af hvordan man arbejder med miljøvariabler i VSCode og Python.    
 
-```
 ## Opret en .env-fil
 
 I roden af dit projekt, opret en fil med navnet `.env`. I denne fil, definer du dine miljøvariabeler på denne måde:
 
 ```
-    GITHUB_ACCESS_TOKEN=dine_adgangstoken_her
+    GITHUB_ACCESS_TOKEN=din_adgangstoken_her
 ```
 
 ## Installer python-dotenv
@@ -21,7 +20,7 @@ Installer modulet  `python-dotenv`:
 
 ## Indlæs .env-filen i dit Python-script
 
-Brug `dotenv`-modulet til at indlæse værdierne fra din `.env`-fil ind i miljøvariabler. Her er et simpelt eksempel:
+Brug `dotenv`-modulet til at indlæse værdierne fra din `.env`-fil.
 
 ```python
 from dotenv import load_dotenv
