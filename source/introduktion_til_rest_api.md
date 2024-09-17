@@ -38,13 +38,18 @@ Dette inkluddere disse sider:
 * [Http protokollen](materialer/http.md) 
 
 
-Resten af dagen bliver med Ping/pong øvelser/gennemgang ved tavlen.
+Resten af dagen bliver med øvelser og lidt demo ved tavlen om Githubs api og miljøvariabler
 
 * [Api øvelse 1](materialer/api_ovelse_1.md) 
+* [Kode fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/restapi)
+* [Miljøvariabler](materialer/env.md)
 * [Github API](materialer/tutorial_github_api.md)
 
 
 ## Materialer
 
-### Øvelser
-
+* [Http protokollen](materialer/http.md) 
+* [Api øvelse 1](materialer/api_ovelse_1.md) 
+* [Github API](materialer/tutorial_github_api.md)
+* [Miljøvariabler](materialer/env.md)
+* [Kode fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/restapi)
