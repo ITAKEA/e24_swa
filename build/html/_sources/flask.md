@@ -31,6 +31,25 @@ Og evt denne:
 
 
 ## Øvelser
-Kig på følgende diagram og opret API´et der følger disse routes
+Kig på følgende diagram og opret et API der følger disse routes.
 
 ![](_static/img/Hvad_er_et_API.png)
+
+1. Api´et skal gemme sit data i en Sqlite database. 
+2. Hver student skal have følgende attributter:
+
+``` 
+    id, 
+    first_name, 
+    last_name, 
+    birth_date, 
+    gender, 
+    email, 
+    phonenumber, 
+    address, 
+    github_username
+``` 
+
+3. Man skal kunne se den enkelte studerendes public github repositories som en del af json schemaet i feks. `api/students` routen. 
+4. Hvis den studerende der vises er DIG, skal man også kunne se de private repositories.
+
