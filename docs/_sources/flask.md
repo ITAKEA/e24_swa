@@ -33,4 +33,4 @@ Og evt denne:
 ## Øvelser
 Kig på følgende diagram og opret API´et der følger disse routes
 
-![](_static/Hvad_er_et_API.png)
+![](_static/img/Hvad_er_et_API.png)
