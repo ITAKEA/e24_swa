@@ -36,7 +36,7 @@ Kig på følgende diagram og opret et API der følger disse routes.
 ![](_static/img/Hvad_er_et_API.png)
 
 1. Api´et skal gemme sit data i en Sqlite database. 
-2. Hver student skal have følgende attributter:
+2. Hver studerende skal have følgende attributter:
 
 ``` 
     id, 
