@@ -1,8 +1,10 @@
 # Flask API
-
+I skal i dag lære at bruge det python web framework der hedder Flask. Og i skal kunne arbejde med en Sqlite database.
+ 
 ## Læringsmål
 * Kunne oprette et rest API lavet med Flask
 * Kunne arbejde med en SqlLite database
+* Kunne inkludere api kald til eksterne api´er i en Flask applikation.
 
 ## Forberedelse
 * [Create A Python API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6RXjfM) (12:03)
