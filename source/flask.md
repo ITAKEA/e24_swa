@@ -27,10 +27,16 @@ Og evt denne:
 
 ## Dagens indhold
 
+* Vi starter sammen med live coding af øvelsen herunder, og i bliver langsomt sat løs på egen hånd. 
 
 
 ## Materialer
 
+* [Create A Python API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6RXjfM) (12:03)
+* [SQLite in Python || Python Tutorial || Learn Python Programming](https://www.youtube.com/watch?v=c8yHTlrs9EA)(10:10)
+* [Flask Documentation](https://flask.palletsprojects.com/en/3.0.x/) 
+* [sqlite3 — DB-API 2.0 interface for SQLite databases](https://docs.python.org/3/library/sqlite3.html)
+* [SQLite Tutorial](https://www.w3resource.com/sqlite/)
 
 ## Øvelser
 Kig på følgende diagram og opret et API der følger disse routes.
