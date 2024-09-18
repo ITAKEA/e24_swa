@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dropbox api exercise &mdash; ITA 2024 3. semester</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=a5898925" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/scripts/sphinx-book-theme.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SoftwareArkitektur og Cloud
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_1.html">1. Introduction til python (dag1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_2.html">2. Python - Datastrukture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux_1.html">3. Linux OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux_2.html">4. Linux OS II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_3.html">5. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flask.html">7. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auditional_exercises.html">8. Extra øvelser</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SoftwareArkitektur og Cloud</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Dropbox api exercise</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/dropboxapi.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dropbox-api-exercise">
+<h1>Dropbox api exercise<a class="headerlink" href="#dropbox-api-exercise" title="Link to this heading"></a></h1>
+<section id="ovelse-1-opsaetning">
+<h2>Øvelse 1: Opsætning<a class="headerlink" href="#ovelse-1-opsaetning" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Opret en konto på Dropbox.</p></li>
+<li><p>Gå derefter til https://www.dropbox.com/developers/apps og opret en App</p></li>
+<li><p>Generer en “Access Token” og skriv den ned.</p></li>
+<li><p>Åbn Postman</p></li>
+<li><p>Klik på ‘+’ ikonet for at oprette en ny anmodning.</p></li>
+<li><p>Indstil anmodningsmetoden til POST</p></li>
+<li><p>Indtast https://api.dropboxapi.com/2/files/list_folder</p></li>
+<li><p>Tilføj Headers: I afsnittet ‘Headers’ skal du tilføje følgende nøgle-værdi-par:</p></li>
+</ul>
+<blockquote>
+<div><p>Authorization: Bearer &lt;din_adgangstoken&gt;
+Content-Type: application/json</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Tilføj Body: I afsnittet ‘Body’ skal du vælge ‘raw’ og ‘JSON (application/json)’. Derefter skal du indtaste følgende JSON-objekt:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="p">{</span>    <span class="s2">&quot;path&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>    <span class="s2">&quot;recursive&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>    <span class="s2">&quot;include_media_info&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>    <span class="s2">&quot;include_deleted&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>    <span class="s2">&quot;include_has_explicit_shared_members&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>    <span class="s2">&quot;include_mounted_folders&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>    <span class="s2">&quot;include_non_downloadable_files&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">}</span> 
+</pre></div>
+</div>
+<p>Hvis alt er indstillet korrekt, vil du modtage en respons fra Dropbox API, der indeholder en liste over filer og mapper i den angivne mappe. og en statuskode 200 (OK)</p>
+<p>Du skal i det følgende bruge Dropbox Api Dokumentationen.</p>
+<p>Den finder du her: https://www.dropbox.com/developers/documentation/http/documentation</p>
+<p>Øvelse 2: Opret en mappe</p>
+<p>I Dropbox API-dokumentationen, find det endpoint, der giver dig mulighed for at oprette en ny mappe.
+Brug Postman til at sende den passende forespørgsel for at oprette en ny mappe med navnet “TestMappe”.
+Tjek din Dropbox for at se din nye mappe.
+Dokumentation: I din README-fil, angiv det anvendte endpoint (url) og HTTP-verb du har brugt. Beskriv desuden hvad du evt. har skrevet i body i dit request og det svar du har fået tilbage fra API’en. Beskriv desuden kort om dette flow er i overenstemmelse med princippet om “uniform interface” i REST principperne, og hvis ikke hvad der så kunne gøres bedre.
+Øvelse 3: Hent mappe detaljer</p>
+<p>Find det endpoint i dokumentationen, der giver detaljer om en specifik mappe.
+Vælg en mappe fra din Dropbox, noter dens sti, og brug Postman til at hente dens detaljer.
+Undersøg detaljerne i den returnerede JSON.
+Dokumentation: I din README, noter endpointet, HTTP-verbet, request body (vis nogen) og det response du har fået tilbage inkl. status kode. Beskriv desuden kort om dette flow er i overenstemmelse med princippet om “uniform interface” i REST principperne, og hvis ikke hvad der så kunne gøres bedre.
+Øvelse 4: Upload en fil</p>
+<p>Find det endpoint i dokumentationen, der giver dig mulighed for at uploade en fil.
+Brug Postman til at sende den passende forespørgsel for at uploade en fil til “TestMappe”.
+Tjek din “TestMappe” på Dropbox for at sikre, at filen er blevet uploadet.
+Dokumentation: I din README, beskriv endpointet, HTTP-verbet, og hvordan du uploadede filen.
+Øvelse 5: Slet en fil</p>
+<p>I dokumentationen skal du finde det endpoint, der giver dig mulighed for at slette en fil.
+Vælg en fil fra din “TestMappe”, noter dens sti, og brug Postman til at slette den.
+Tjek din “TestMappe” på Dropbox for at sikre, at filen er blevet slettet.
+Dokumentation: I din README, beskriv endpointet, HTTP-verbet, og stien på den fil, du slettede. Beskriv desuden kort om dette flow er i overenstemmelse med princippet om “uniform interface” i REST principperne, og hvis ikke hvad der så kunne gøres bedre.
+Øvelse 7: Søg efter filer</p>
+<p>Naviger til Dropbox API-dokumentationen og find endpointet for at søge efter filer.
+Brug Postman til at sende en forespørgsel for at søge efter filer, der indeholder ordet “test”. (hvis du ikke har nogle filer kan du oprette et par stykker først)
+Undersøg de returnerede filer, og se om søgningen gik godt (er der “test” i filen)
+Dokumentation: I din README, noter endpointet, HTTP-verbet, request body, response body og status kode. Beskriv desuden kort om dette flow er i overenstemmelse med princippet om “uniform interface” i REST principperne, og hvis ikke hvad der så kunne gøres bedre.
+Øvelse 8: Flyt en fil</p>
+<p>I dokumentationen skal du finde det endpoint, der giver dig mulighed for at flytte en fil.
+Vælg en fil, noter dens nuværende sti og den nye sti, og brug Postman til at flytte den.
+Tjek din Dropbox for at se, om filen er blevet flyttet til den nye placering.
+Dokumentation: Dokumenter endpointet, HTTP-verbet, request body, response body og status kode. Beskriv desuden kort om dette flow er i overenstemmelse med princippet om “uniform interface” i REST principperne, og hvis ikke hvad der så kunne gøres bedre.
+Øvelse 9: Kopier en fil</p>
+<p>Find det endpoint i dokumentationen, der giver dig mulighed for at kopiere en fil.
+Brug filen fra den forrige øvelse og brug Postman til at kopiere filen til en ny placering.
+Tjek din Dropbox for at sikre, at en kopi af filen er blevet oprettet på den nye placering.
+Dokumentation: I din README, beskriv endpointet, HTTP-verbet, request body, response body og status kode. Beskriv desuden kort om dette flow er i overenstemmelse med princippet om “uniform interface” i REST principperne, og hvis ikke hvad der så kunne gøres bedre.
+Øvelse 10: Brug JavaScript’s Fetch med Dropbox API</p>
+<p>Opret en simpel HTML-side med en knap.
+Når knappen klikkes, skal du bruge JavaScript’s fetch til at sende en GET-forespørgsel for at hente alle filer og mapper i din “TestMappe”.
+Vis filerne og mapperne på siden.
+Dokumentation: I dit repository inkluder den JavaScript-kode og html, du har skrevet.
+HUSK: du må ikke ligge din “Access Token” på github, så slet den inden du pusher din kode.
+Øvelse 11: Er https://api.dropboxapi.com/2/ Restfull or not?</p>
+<p>Beskriv til sidst kort hvad du tænker om API´et i forhold til REST “constraints”. Hvordan er det i feks. i forhold til “Uniform Interface” og hvad gør det for din oplevelse af at bruge API´et?</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
