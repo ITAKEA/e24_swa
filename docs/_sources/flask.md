@@ -43,11 +43,12 @@ Kig på følgende diagram og opret et API der følger disse routes.
 
 ![](_static/img/Hvad_er_et_API.png)
 
+1. I stedet for så lave det med Members. 
 1. Api´et skal gemme sit data i en Sqlite database. 
-2. Hver studerende skal have følgende attributter:
+2. Hver Member skal have følgende attributter:
 
 ``` 
-    id, 
+    id, (primær nøgle og skal auto incrementeres) 
     first_name, 
     last_name, 
     birth_date, 
@@ -55,9 +56,10 @@ Kig på følgende diagram og opret et API der følger disse routes.
     email, 
     phonenumber, 
     address, 
+    active,
     github_username
 ``` 
 
-3. Man skal kunne se den enkelte studerendes public github repositories som en del af json schemaet i feks. `api/students` routen. 
-4. Hvis den studerende der vises er DIG, skal man også kunne se de private repositories.
+3. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. `api/members` routen. 
+4. Hvis den member der vises er DIG, skal man også kunne se de private repositories.
 

@@ -150,10 +150,11 @@
 <p>Kig på følgende diagram og opret et API der følger disse routes.</p>
 <p><img alt="_images/Hvad_er_et_API.png" src="_images/Hvad_er_et_API.png" /></p>
 <ol class="simple">
+<li><p>I stedet for så lave det med Members.</p></li>
 <li><p>Api´et skal gemme sit data i en Sqlite database.</p></li>
-<li><p>Hver studerende skal have følgende attributter:</p></li>
+<li><p>Hver Member skal have følgende attributter:</p></li>
 </ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="nb">id</span><span class="p">,</span> 
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="nb">id</span><span class="p">,</span> <span class="p">(</span><span class="n">primær</span> <span class="n">nøgle</span> <span class="n">og</span> <span class="n">skal</span> <span class="n">auto</span> <span class="n">incrementeres</span><span class="p">)</span> 
     <span class="n">first_name</span><span class="p">,</span> 
     <span class="n">last_name</span><span class="p">,</span> 
     <span class="n">birth_date</span><span class="p">,</span> 
@@ -161,12 +162,13 @@
     <span class="n">email</span><span class="p">,</span> 
     <span class="n">phonenumber</span><span class="p">,</span> 
     <span class="n">address</span><span class="p">,</span> 
+    <span class="n">active</span><span class="p">,</span>
     <span class="n">github_username</span>
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Man skal kunne se den enkelte studerendes public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/students</span></code> routen.</p></li>
-<li><p>Hvis den studerende der vises er DIG, skal man også kunne se de private repositories.</p></li>
+<li><p>Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/members</span></code> routen.</p></li>
+<li><p>Hvis den member der vises er DIG, skal man også kunne se de private repositories.</p></li>
 </ol>
 </section>
 </section>
