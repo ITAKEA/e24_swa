@@ -3,10 +3,6 @@
 ## Læringsmål
 * Kunne oprette et rest API lavet med Flask
 * Kunne arbejde med en SqlLite database
-*  
-
-
-
 
 ## Forberedelse
 * [Create A Python API in 12 Minutes](https://www.youtube.com/watch?v=zsYIw6RXjfM) (12:03)
@@ -35,4 +31,6 @@ Og evt denne:
 
 
 ## Øvelser
+Kig på følgende diagram og opret API´et der følger disse routes
 
+![](_static/Hvad_er_et_API.png)
