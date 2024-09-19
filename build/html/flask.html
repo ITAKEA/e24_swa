@@ -170,8 +170,10 @@
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/members</span></code> routen (så det kan være at i skal ændre <code class="docutils literal notranslate"><span class="pre">github_username</span></code> på de 10 brugere til noget virkelligt).</p></li>
-<li><p>Hvis den member der vises er DIG, skal man også kunne se de private repositories.</p></li>
+<li><p>Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/members</span></code> routen (så det kan være at i skal ændre <code class="docutils literal notranslate"><span class="pre">github_username</span></code> på de 10 brugere til noget virkeligt).</p></li>
+<li><p>Hvis det member der vises er <strong>DIG</strong>, skal man også kunne se de private repositories.</p></li>
+<li><p>I skal sørge for at de rigtige http statuskoder returneres med <code class="docutils literal notranslate"><span class="pre">http</span> <span class="pre">responset</span></code>.</p></li>
+<li><p>I skal også sørge for at fange eventuelle fejl, som et forkert id, forkert json i body osv.</p></li>
 </ol>
 </section>
 </section>
