@@ -37,15 +37,17 @@ Og evt denne:
 * [Flask Documentation](https://flask.palletsprojects.com/en/3.0.x/) 
 * [sqlite3 — DB-API 2.0 interface for SQLite databases](https://docs.python.org/3/library/sqlite3.html)
 * [SQLite Tutorial](https://www.w3resource.com/sqlite/)
+* [List Comprehension || Python Tutorial || Learn Python Programming](https://www.youtube.com/watch?v=AhSvKGTh28Q)(7:42)
 
 ## Øvelser
 Kig på følgende diagram og opret et API der følger disse routes.
 
 ![](_static/img/Hvad_er_et_API.png)
 
-1. I stedet for så lave det med Members. 
-1. Api´et skal gemme sit data i en Sqlite database. 
-2. Hver Member skal have følgende attributter:
+1. I stedet for så lave det med `students` skal i lave det med `members`. 
+2. I skal som udgangspunkt læse [denne liste med dictionaries](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/flask1/data_dict.py) som jeres datakilde.
+1. Når i har fået det til at virke skal Api´et gemme og læse data i en Sqlite database. Det skal være det samme data som i listen, så i skal `INSERT` det i en tabel i databasen (`executemany`) 
+2. Hver Member skal altså have følgende attributter:
 
 ``` 
     id, (primær nøgle og skal auto incrementeres) 
@@ -56,10 +58,11 @@ Kig på følgende diagram og opret et API der følger disse routes.
     email, 
     phonenumber, 
     address, 
+    nationality,
     active,
     github_username
 ``` 
 
-3. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. `api/members` routen. 
+3. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. `api/members` routen (så det kan være at i skal ændre `github_username` på de 10 brugere til noget virkelligt). 
 4. Hvis den member der vises er DIG, skal man også kunne se de private repositories.
 

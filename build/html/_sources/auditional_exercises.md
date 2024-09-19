@@ -55,3 +55,12 @@ and then give me another exercise that is either harder or easier based on the e
 ## REST API
 
 * [Dropbox API](materialer/dropboxapi.md)
+
+## List Comprehensions
+
+```
+Kan du lære mig om Pythons List comprehensions.     
+Du skal inkludere øvelse i undervisningen som jeg svare på og du evaluerer og basere de følgende forklaringer og øvelser på denne evaluering.     
+Du må gerne relatere det til almindelige for loops.    
+```
+

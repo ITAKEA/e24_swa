@@ -143,6 +143,7 @@
 <li><p><a class="reference external" href="https://flask.palletsprojects.com/en/3.0.x/">Flask Documentation</a></p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/sqlite3.html">sqlite3 — DB-API 2.0 interface for SQLite databases</a></p></li>
 <li><p><a class="reference external" href="https://www.w3resource.com/sqlite/">SQLite Tutorial</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=AhSvKGTh28Q">List Comprehension || Python Tutorial || Learn Python Programming</a>(7:42)</p></li>
 </ul>
 </section>
 <section id="ovelser">
@@ -150,9 +151,10 @@
 <p>Kig på følgende diagram og opret et API der følger disse routes.</p>
 <p><img alt="_images/Hvad_er_et_API.png" src="_images/Hvad_er_et_API.png" /></p>
 <ol class="simple">
-<li><p>I stedet for så lave det med Members.</p></li>
-<li><p>Api´et skal gemme sit data i en Sqlite database.</p></li>
-<li><p>Hver Member skal have følgende attributter:</p></li>
+<li><p>I stedet for så lave det med <code class="docutils literal notranslate"><span class="pre">students</span></code> skal i lave det med <code class="docutils literal notranslate"><span class="pre">members</span></code>.</p></li>
+<li><p>I skal som udgangspunkt læse <a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/flask1/data_dict.py">denne liste med dictionaries</a> som jeres datakilde.</p></li>
+<li><p>Når i har fået det til at virke skal Api´et gemme og læse data i en Sqlite database. Det skal være det samme data som i listen, så i skal <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> det i en tabel i databasen (<code class="docutils literal notranslate"><span class="pre">executemany</span></code>)</p></li>
+<li><p>Hver Member skal altså have følgende attributter:</p></li>
 </ol>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="nb">id</span><span class="p">,</span> <span class="p">(</span><span class="n">primær</span> <span class="n">nøgle</span> <span class="n">og</span> <span class="n">skal</span> <span class="n">auto</span> <span class="n">incrementeres</span><span class="p">)</span> 
     <span class="n">first_name</span><span class="p">,</span> 
@@ -162,12 +164,13 @@
     <span class="n">email</span><span class="p">,</span> 
     <span class="n">phonenumber</span><span class="p">,</span> 
     <span class="n">address</span><span class="p">,</span> 
+    <span class="n">nationality</span><span class="p">,</span>
     <span class="n">active</span><span class="p">,</span>
     <span class="n">github_username</span>
 </pre></div>
 </div>
 <ol class="simple">
-<li><p>Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/members</span></code> routen.</p></li>
+<li><p>Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/members</span></code> routen (så det kan være at i skal ændre <code class="docutils literal notranslate"><span class="pre">github_username</span></code> på de 10 brugere til noget virkelligt).</p></li>
 <li><p>Hvis den member der vises er DIG, skal man også kunne se de private repositories.</p></li>
 </ol>
 </section>
