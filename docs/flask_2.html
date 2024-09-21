@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>7. Flask API &mdash; ITA 2024 3. semester</title>
+  <title>Flask API (dag 2) &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
@@ -31,8 +31,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Flask API (dag 2)" href="flask_2.html" />
-    <link rel="prev" title="6. En introduktion til REST API" href="introduktion_til_rest_api.html" /> 
+    <link rel="next" title="8. Extra øvelser" href="auditional_exercises.html" />
+    <link rel="prev" title="7. Flask API" href="flask.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -54,21 +54,14 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">1. Introduction til python (dag1)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">2. Python - Datastrukture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux_1.html">3. Linux OS</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux_2.html">4. Linux OS II</a></li>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_3.html">5. Python modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">7. Flask API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">7.1. Læringsmål</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#forberedelse">7.2. Forberedelse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">7.3. Dagens indhold</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#materialer">7.4. Materialer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ovelser">7.5. Øvelser</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="flask.html">7. Flask API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">8. Extra øvelser</a></li>
 </ul>
 
@@ -86,9 +79,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">7. </span>Flask API</li>
+      <li class="breadcrumb-item active">Flask API (dag 2)</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainflask.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainflask_2.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -96,11 +89,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="flask-api">
-<h1><span class="section-number">7. </span>Flask API<a class="headerlink" href="#flask-api" title="Link to this heading"></a></h1>
-<p>I skal i dag lære at bruge det python web framework der hedder Flask. Og i skal kunne arbejde med en Sqlite database.</p>
+  <section id="flask-api-dag-2">
+<h1>Flask API (dag 2)<a class="headerlink" href="#flask-api-dag-2" title="Link to this heading"></a></h1>
 <section id="laeringsmal">
-<h2><span class="section-number">7.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<h2>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Kunne oprette et rest API lavet med Flask</p></li>
 <li><p>Kunne arbejde med en SqlLite database</p></li>
@@ -108,46 +100,24 @@
 </ul>
 </section>
 <section id="forberedelse">
-<h2><span class="section-number">7.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=zsYIw6RXjfM">Create A Python API in 12 Minutes</a> (12:03)</p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=c8yHTlrs9EA">SQLite in Python || Python Tutorial || Learn Python Programming</a>(10:10)</p></li>
-</ul>
-<!--
-* [Python SQLite Tutorial: Build a Python project with a SQLite database](https://youtu.be/iXYeb2artTE?feature=shared&t=774)(23:00)
---><p>Skim følgende dokumentation for Flask og SqLite</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://flask.palletsprojects.com/en/3.0.x/">Flask Documentation</a></p>
-<ul>
-<li><p>obs: vi kommer ikke til at arbejde med html filer i dette semester.</p></li>
-</ul>
-</li>
-<li><p><a class="reference external" href="https://docs.python.org/3/library/sqlite3.html">sqlite3 — DB-API 2.0 interface for SQLite databases</a></p></li>
-</ul>
-<p>Og evt denne:</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.w3resource.com/sqlite/">SQLite Tutorial</a></p></li>
-</ul>
+<h2>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<p>Vi arbejder videre med emnet og øvelsen fra i fredags.<br />Så lav så meget af øvelsen som i kan her i weekenden.<br />I kommer til på mandag at være forskellige steder i denne øvelse, men det er ikke noget problem i får bare nogle forskellige opgaver.</p>
 </section>
 <section id="dagens-indhold">
-<h2><span class="section-number">7.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<h2>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<p>Vi arbejder videre med øvelsen fra i fredags.<br />I kan se den herunder.</p>
+</section>
+<section id="hjemmearbejde">
+<h2>Hjemmearbejde<a class="headerlink" href="#hjemmearbejde" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>Vi starter sammen med live coding af øvelsen herunder, og i bliver langsomt sat løs på egen hånd.</p></li>
+<li><p>Øvelsen skal være færdig og afleveres på <a class="reference external" href="https://kea-fronter.itslearning.com/plans/courses/6741/plan/103824/element/1305078?BackDestination=0&amp;BackData=%7B%22BackDestination%22%3A%220%22%7D&amp;planner2-sb-collapsed=false">fronter senest onsdag aften</a></p></li>
 </ul>
 </section>
-<section id="materialer">
-<h2><span class="section-number">7.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=zsYIw6RXjfM">Create A Python API in 12 Minutes</a> (12:03)</p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=c8yHTlrs9EA">SQLite in Python || Python Tutorial || Learn Python Programming</a>(10:10)</p></li>
-<li><p><a class="reference external" href="https://flask.palletsprojects.com/en/3.0.x/">Flask Documentation</a></p></li>
-<li><p><a class="reference external" href="https://docs.python.org/3/library/sqlite3.html">sqlite3 — DB-API 2.0 interface for SQLite databases</a></p></li>
-<li><p><a class="reference external" href="https://www.w3resource.com/sqlite/">SQLite Tutorial</a></p></li>
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=AhSvKGTh28Q">List Comprehension || Python Tutorial || Learn Python Programming</a>(7:42)</p></li>
-</ul>
+<section id="materiale">
+<h2>Materiale<a class="headerlink" href="#materiale" title="Link to this heading"></a></h2>
 </section>
 <section id="ovelser">
-<h2><span class="section-number">7.5. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
+<h2>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
 <p>Kig på følgende diagram og opret et API der følger disse routes.</p>
 <p><img alt="_images/Hvad_er_et_API.png" src="_images/Hvad_er_et_API.png" /></p>
 <ol class="simple">
@@ -183,8 +153,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="introduktion_til_rest_api.html" class="btn btn-neutral float-left" title="6. En introduktion til REST API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="flask_2.html" class="btn btn-neutral float-right" title="Flask API (dag 2)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="flask.html" class="btn btn-neutral float-left" title="7. Flask API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="auditional_exercises.html" class="btn btn-neutral float-right" title="8. Extra øvelser" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
