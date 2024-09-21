@@ -22,14 +22,14 @@ I kan se den herunder.
 ## Materiale
 
 ## Øvelser
-Kig på følgende diagram og opret et API der følger disse routes.
+**1. Kig på følgende diagram og opret et API der følger disse routes.**
 
 ![](_static/img/Hvad_er_et_API.png)
 
-1. I stedet for så lave det med `students` skal i lave det med `members`. 
-2. I skal som udgangspunkt læse [denne liste med dictionaries](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/flask1/data_dict.py) som jeres datakilde.
-1. Når i har fået det til at virke skal Api´et gemme og læse data i en Sqlite database. Det skal være det samme data som i listen, så i skal `INSERT` det i en tabel i databasen (`executemany`) 
-2. Hver Member skal altså have følgende attributter:
+**2. I stedet for så lave det med `students` skal i lave det med `members`.** 
+**3. I skal som udgangspunkt læse [denne liste med dictionaries](https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/flask1/data_dict.py) som jeres datakilde.**
+**4. Når i har fået det til at virke skal Api´et gemme og læse data i en Sqlite database. Det skal være det samme data som i listen, så i skal `INSERT` det i en tabel i databasen (`executemany`).**
+**5. Hver Member skal altså have følgende attributter:**
 
 ``` 
     id, (primær nøgle og skal auto incrementeres) 
@@ -45,9 +45,9 @@ Kig på følgende diagram og opret et API der følger disse routes.
     github_username
 ``` 
 
-3. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. `api/members` routen (så det kan være at i skal ændre `github_username` på de 10 brugere til noget virkeligt). 
-4. Hvis det member der vises er **DIG**, skal man også kunne se de private repositories.
-5. I skal sørge for at de rigtige http statuskoder returneres med `http responset`.
-6. Og Husk: der er regler for hvad der skal ske i et GIT POST, PUT, PATCH og DELETE request. De regler skal i følge. Her er det helt ok at spørge chatten om disse regler, men sørg for at skrive koden selv!
-7. I skal også sørge for at fange eventuelle fejl, som et forkert id, forkert json i body osv.
+**6. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. `api/members` routen (så det kan være at i skal ændre `github_username` på de 10 brugere til noget virkeligt).** 
+**7. Hvis det member der vises er **DIG**, skal man også kunne se de private repositories.**
+**8. I skal sørge for at de rigtige http statuskoder returneres med `http responset`.**
+**9. Og Husk: der er regler for hvad der skal ske i et GIT POST, PUT, PATCH og DELETE request. De regler skal i følge. Her er det helt ok at spørge chatten om disse regler, men sørg for at skrive koden selv!**
+**10. I skal også sørge for at fange eventuelle fejl, som et forkert id, forkert json i body osv.**
 

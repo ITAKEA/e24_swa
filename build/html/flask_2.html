@@ -127,14 +127,12 @@
 </section>
 <section id="ovelser">
 <h2><span class="section-number">8.6. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h2>
-<p>Kig på følgende diagram og opret et API der følger disse routes.</p>
+<p><strong>1. Kig på følgende diagram og opret et API der følger disse routes.</strong></p>
 <p><img alt="_images/Hvad_er_et_API.png" src="_images/Hvad_er_et_API.png" /></p>
-<ol class="simple">
-<li><p>I stedet for så lave det med <code class="docutils literal notranslate"><span class="pre">students</span></code> skal i lave det med <code class="docutils literal notranslate"><span class="pre">members</span></code>.</p></li>
-<li><p>I skal som udgangspunkt læse <a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/flask1/data_dict.py">denne liste med dictionaries</a> som jeres datakilde.</p></li>
-<li><p>Når i har fået det til at virke skal Api´et gemme og læse data i en Sqlite database. Det skal være det samme data som i listen, så i skal <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> det i en tabel i databasen (<code class="docutils literal notranslate"><span class="pre">executemany</span></code>)</p></li>
-<li><p>Hver Member skal altså have følgende attributter:</p></li>
-</ol>
+<p><strong>2. I stedet for så lave det med <code class="docutils literal notranslate"><span class="pre">students</span></code> skal i lave det med <code class="docutils literal notranslate"><span class="pre">members</span></code>.</strong>
+<strong>3. I skal som udgangspunkt læse <a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/blob/master/flask1/data_dict.py">denne liste med dictionaries</a> som jeres datakilde.</strong>
+<strong>4. Når i har fået det til at virke skal Api´et gemme og læse data i en Sqlite database. Det skal være det samme data som i listen, så i skal <code class="docutils literal notranslate"><span class="pre">INSERT</span></code> det i en tabel i databasen (<code class="docutils literal notranslate"><span class="pre">executemany</span></code>).</strong>
+<strong>5. Hver Member skal altså have følgende attributter:</strong></p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="nb">id</span><span class="p">,</span> <span class="p">(</span><span class="n">primær</span> <span class="n">nøgle</span> <span class="n">og</span> <span class="n">skal</span> <span class="n">auto</span> <span class="n">incrementeres</span><span class="p">)</span> 
     <span class="n">first_name</span><span class="p">,</span> 
     <span class="n">last_name</span><span class="p">,</span> 
@@ -148,13 +146,11 @@
     <span class="n">github_username</span>
 </pre></div>
 </div>
-<ol class="simple">
-<li><p>Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/members</span></code> routen (så det kan være at i skal ændre <code class="docutils literal notranslate"><span class="pre">github_username</span></code> på de 10 brugere til noget virkeligt).</p></li>
-<li><p>Hvis det member der vises er <strong>DIG</strong>, skal man også kunne se de private repositories.</p></li>
-<li><p>I skal sørge for at de rigtige http statuskoder returneres med <code class="docutils literal notranslate"><span class="pre">http</span> <span class="pre">responset</span></code>.</p></li>
-<li><p>Og Husk: der er regler for hvad der skal ske i et GIT POST, PUT, PATCH og DELETE request. De regler skal i følge. Her er det helt ok at spørge chatten om disse regler, men sørg for at skrive koden selv!</p></li>
-<li><p>I skal også sørge for at fange eventuelle fejl, som et forkert id, forkert json i body osv.</p></li>
-</ol>
+<p><strong>6. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. <code class="docutils literal notranslate"><span class="pre">api/members</span></code> routen (så det kan være at i skal ændre <code class="docutils literal notranslate"><span class="pre">github_username</span></code> på de 10 brugere til noget virkeligt).</strong>
+<strong>7. Hvis det member der vises er <strong>DIG</strong>, skal man også kunne se de private repositories.</strong>
+<strong>8. I skal sørge for at de rigtige http statuskoder returneres med <code class="docutils literal notranslate"><span class="pre">http</span> <span class="pre">responset</span></code>.</strong>
+<strong>9. Og Husk: der er regler for hvad der skal ske i et GIT POST, PUT, PATCH og DELETE request. De regler skal i følge. Her er det helt ok at spørge chatten om disse regler, men sørg for at skrive koden selv!</strong>
+<strong>10. I skal også sørge for at fange eventuelle fejl, som et forkert id, forkert json i body osv.</strong></p>
 </section>
 </section>
 
