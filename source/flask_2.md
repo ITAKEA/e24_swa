@@ -16,8 +16,11 @@ Vi arbejder videre med øvelsen fra i fredags.
 I kan se den herunder.  
 
 ## Hjemmearbejde
-* Øvelsen skal være færdig og afleveres på [fronter senest onsdag aften](https://kea-fronter.itslearning.com/plans/courses/6741/plan/103824/element/1305078?BackDestination=0&BackData=%7B%22BackDestination%22%3A%220%22%7D&planner2-sb-collapsed=false)
 
+Øvelsen skal være færdig og afleveres på 
+* [fronter senest onsdag aften](https://kea-fronter.itslearning.com/plans/courses/6741/plan/103824/element/1305078?BackDestination=0&BackData=%7B%22BackDestination%22%3A%220%22%7D&planner2-sb-collapsed=false)
+
+Aflever et link til et repository med koden, og en readmefil der beskriver hvad i har nået og hvad i ikke har nået af opgavens 10 punkter.
 
 ## Materiale
 
