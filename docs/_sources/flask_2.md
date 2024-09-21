@@ -48,7 +48,7 @@ Aflever et link til et repository med koden, og en readmefil der beskriver hvad 
     github_username
 ``` 
 
-**6. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. `api/members` routen (så det kan være at i skal ændre `github_username` på de 10 brugere til noget virkeligt). - (det burde være relativt simpelt en ad gangen gennem `PUT api/members`)**     
+**6. Man skal kunne se den enkelte members public github repositories som en del af json schemaet i feks. `api/members` routen (så det kan være at i skal ændre `github_username` på de 10 brugere til noget virkeligt). - (det burde være relativt simpelt; en ad gangen gennem: `PUT api/members`)**     
 **7. Hvis det member der vises er **DIG**, skal man også kunne se de private repositories.**    
 **8. I skal sørge for at de rigtige http statuskoder returneres med `http responset`.**    
 **9. Og Husk: der er regler for hvad der skal ske i et GIT POST, PUT, PATCH og DELETE request. De regler skal i følge. Her er det helt ok at spørge chatten om disse regler, men sørg for at skrive koden selv!**    
