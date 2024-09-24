@@ -102,11 +102,13 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    introduktion_til_rest_api
    flask
    flask_2
+   docker_1
+   docker_2
+
    decorators
 
    jwt
    microservices
-   test_1
    dokumentation   
    swagger
 
