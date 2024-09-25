@@ -16,7 +16,7 @@ De sidste 20 minutter er en introduktion til Linux, og det har vi jo haft.
 
 * [Docker Tutorial for Beginners](https://youtu.be/pTFZFxd4hOI?feature=shared&t=146) (27:54)
 
-I skal desuden køre disse 2 kommandoer i `gitbash` (windows) eller 00`terminalen` (Mac)
+I skal desuden køre disse 2 kommandoer i `gitbash` (windows) eller `terminalen` (Mac)
 
 * `docker pull ubuntu:latest` (Dette downloader et ubuntu linux image til din computer)
 * `docker pull nginx:latest` (Dette downloader et nginx webserver image til din computer)
@@ -30,7 +30,7 @@ Vi kommer til at bruge det i undervisningen, men for at undgå kø på skolens n
 
 Og vi snakker udfra dette [Docker CheatSheet](materialer/docker_cheatsheet.md)
 
-* Og så ... bliver i sluppet løs på egen hånd med øvelserne herunder. 
+* Og så ... øvelserne herunder. 
 
 ## Materialer
 
