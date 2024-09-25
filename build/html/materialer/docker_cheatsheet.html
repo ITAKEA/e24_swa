@@ -92,19 +92,50 @@
              
   <section id="docker-cheatsheet">
 <h1>Docker Cheatsheet<a class="headerlink" href="#docker-cheatsheet" title="Link to this heading"></a></h1>
-<p><strong>Start en ny Container fra et Image</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">IMAGE</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">Ubuntu</span></code></p>
+<p><strong>Start en Container fra et Image</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">ubuntu</span></code> (Ubuntu er Image navnet)</p>
+</div></blockquote>
 <p><strong>Adgang til container gennem terminalen</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">Ubuntu</span></code></p>
-<ul class="simple">
-<li><p>-i = interactive</p></li>
-<li><p>-t = Teletypewriter (terminalen)</p></li>
-</ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">ubuntu</span></code><br />-i : interactive<br />-t : Teletypewriter (terminalen)</p>
+</div></blockquote>
 <p><strong>Adgang til container gennem http protokollen (browseren, Postman etc.)</strong></p>
-<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">[host_port]:[container_port]</span> <span class="pre">IMAGE</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code></p>
-<ul class="simple">
-<li><p>-p = port mapping</p></li>
-</ul>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">[host_port]:[container_port]</span> <span class="pre">IMAGE</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code><br />-p : port mapping</p>
+</div></blockquote>
+<p><strong>Download et image</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">ubuntu</span></code></p>
+</div></blockquote>
+<p><strong>Delete en container når den slukkes</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--rm</span>&#160; <span class="pre">Ubuntu</span></code><br />–rm : remove (after close)</p>
+</div></blockquote>
+<p><strong>Kør container så den ikke blokerer terminalen</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">nginx</span></code><br />-d : detached</p>
+</div></blockquote>
+<p><strong>Tilføj miljøvariabler</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-env</span> <span class="pre">GITHUB_TOKEN=xyz123dkajh</span></code><br />-env : environement</p>
+</div></blockquote>
+<section id="ekstra">
+<h2><strong>Ekstra</strong><a class="headerlink" href="#ekstra" title="Link to this heading"></a></h2>
+<p><strong>Del en mappe fra host til container</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/host/path:/container/path</span></code>
+<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/user/clbo/flaskapp:/app</span></code></p>
+</div></blockquote>
+<p><strong>Push et image til docker hub</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">login</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">IMAGE</span></code></p>
+</div></blockquote>
+<p><strong>Git container et navn</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">min_container</span> <span class="pre">ubuntu</span></code><br />–name : containernavn</p>
+</div></blockquote>
+</section>
 </section>
 
 

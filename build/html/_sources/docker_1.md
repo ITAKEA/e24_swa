@@ -3,9 +3,12 @@
 ## Læringsmål
 
 * Forstå hvad docker er og hvad vi skal bruge det til.
-* Have en forståelse for hvad Images, Containers og dockerfiles er og hvordan de relaterer sig til hinanden.
+* Have en forståelse for hvad Images, Containers og Dockerfiles er og hvordan de relaterer sig til hinanden.
 * Kunne bygge et docker image med `docker build`, og kunne forstå og bruge flags som `--name`
 * Kunne køre en docker container med `docker run`, og kunne forstå og bruge flags som `-it -rm -p -d --name --env`
+* Kunne skrive og bruge en Dockerfil med kommandoerne `FROM, COPY, WORKDIR, RUN, CMD`    
+* Kunne bygge et docker image med `docker build ...`    
+* Kunne arbejde med et Github workflow der inkludere en Dockerfil.    
 
 ## Forberedels
 
@@ -26,10 +29,8 @@ Vi kommer til at bruge det i undervisningen, men for at undgå kø på skolens n
 ## Dagens indhold
 
 * Vi starter med en [quiz]() for at teste jeres forståelse af emnet.
-* Herefter laver vi en Hello World python/docker applikation sammen.
-
-Og vi snakker udfra dette [Docker CheatSheet](materialer/docker_cheatsheet.md)
-
+* Herefter snakker vi udfra dette [Docker CheatSheet](materialer/docker_cheatsheet.md)
+* Og laver dernæst en Hello World python/docker applikation sammen.
 * Og så ... øvelserne herunder. 
 
 ## Materialer
@@ -38,3 +39,17 @@ Og vi snakker udfra dette [Docker CheatSheet](materialer/docker_cheatsheet.md)
 * [Docker CheatSheet](materialer/docker_cheatsheet.md)
 
 ### Øvelser
+
+#### Øv 1: Lav en ny startside til din nginx server
+
+Kør kommandoen: `docker run -it --rm -p 8080:80 nginx`    
+
+I vil kunne se hvor html filen er placeret i filsystemet her : https://hub.docker.com/_/nginx   
+
+
+
+
+
+
+
+

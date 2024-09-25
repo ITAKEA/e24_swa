@@ -68,7 +68,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#forberedels">9.2. Forberedels</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">9.3. Dagens indhold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#materialer">9.4. Materialer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ovelser">9.4.1. Øvelser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ovelser">9.4.1. Øvelser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ov-1-lav-en-ny-startside-til-din-nginx-server">9.4.1.1. Øv 1: Lav en ny startside til din nginx server</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -107,9 +110,12 @@
 <h2><span class="section-number">9.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Forstå hvad docker er og hvad vi skal bruge det til.</p></li>
-<li><p>Have en forståelse for hvad Images, Containers og dockerfiles er og hvordan de relaterer sig til hinanden.</p></li>
+<li><p>Have en forståelse for hvad Images, Containers og Dockerfiles er og hvordan de relaterer sig til hinanden.</p></li>
 <li><p>Kunne bygge et docker image med <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>, og kunne forstå og bruge flags som <code class="docutils literal notranslate"><span class="pre">--name</span></code></p></li>
 <li><p>Kunne køre en docker container med <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>, og kunne forstå og bruge flags som <code class="docutils literal notranslate"><span class="pre">-it</span> <span class="pre">-rm</span> <span class="pre">-p</span> <span class="pre">-d</span> <span class="pre">--name</span> <span class="pre">--env</span></code></p></li>
+<li><p>Kunne skrive og bruge en Dockerfil med kommandoerne <code class="docutils literal notranslate"><span class="pre">FROM,</span> <span class="pre">COPY,</span> <span class="pre">WORKDIR,</span> <span class="pre">RUN,</span> <span class="pre">CMD</span></code></p></li>
+<li><p>Kunne bygge et docker image med <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span> <span class="pre">...</span></code></p></li>
+<li><p>Kunne arbejde med et Github workflow der inkludere en Dockerfil.</p></li>
 </ul>
 </section>
 <section id="forberedels">
@@ -129,10 +135,8 @@
 <h2><span class="section-number">9.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Vi starter med en <a class="reference external" href="#">quiz</a> for at teste jeres forståelse af emnet.</p></li>
-<li><p>Herefter laver vi en Hello World python/docker applikation sammen.</p></li>
-</ul>
-<p>Og vi snakker udfra dette <a class="reference internal" href="materialer/docker_cheatsheet.html"><span class="doc">Docker CheatSheet</span></a></p>
-<ul class="simple">
+<li><p>Herefter snakker vi udfra dette <a class="reference internal" href="materialer/docker_cheatsheet.html"><span class="doc">Docker CheatSheet</span></a></p></li>
+<li><p>Og laver dernæst en Hello World python/docker applikation sammen.</p></li>
 <li><p>Og så … øvelserne herunder.</p></li>
 </ul>
 </section>
@@ -144,6 +148,11 @@
 </ul>
 <section id="ovelser">
 <h3><span class="section-number">9.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
+<section id="ov-1-lav-en-ny-startside-til-din-nginx-server">
+<h4><span class="section-number">9.4.1.1. </span>Øv 1: Lav en ny startside til din nginx server<a class="headerlink" href="#ov-1-lav-en-ny-startside-til-din-nginx-server" title="Link to this heading"></a></h4>
+<p>Kør kommandoen: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--rm</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code></p>
+<p>I vil kunne se hvor html filen er placeret i filsystemet her : https://hub.docker.com/_/nginx</p>
+</section>
 </section>
 </section>
 </section>
