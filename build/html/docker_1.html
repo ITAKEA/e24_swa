@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docker &mdash; ITA 2024 3. semester</title>
+  <title>9. Docker &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
@@ -31,7 +31,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Docker II" href="docker_2.html" />
+    <link rel="next" title="10. Docker II" href="docker_2.html" />
     <link rel="prev" title="8. Flask API (dag 2)" href="flask_2.html" /> 
 </head>
 
@@ -54,7 +54,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">1. Introduction til python (dag1)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">2. Python - Datastrukture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux_1.html">3. Linux OS</a></li>
@@ -63,7 +63,18 @@
 <li class="toctree-l1"><a class="reference internal" href="introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask.html">7. Flask API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask API (dag 2)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">9. Extra øvelser</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">9. Docker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">9.1. Læringsmål</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forberedels">9.2. Forberedels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">9.3. Dagens indhold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materialer">9.4. Materialer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ovelser">9.4.1. Øvelser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docker_2.html">10. Docker II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">11. Extra øvelser</a></li>
 </ul>
 
         </div>
@@ -80,7 +91,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Docker</li>
+      <li class="breadcrumb-item active"><span class="section-number">9. </span>Docker</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ITAKEA/e24_swa.git/blob/maindocker_1.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -91,38 +102,48 @@
            <div itemprop="articleBody">
              
   <section id="docker">
-<h1>Docker<a class="headerlink" href="#docker" title="Link to this heading"></a></h1>
+<h1><span class="section-number">9. </span>Docker<a class="headerlink" href="#docker" title="Link to this heading"></a></h1>
 <section id="laeringsmal">
-<h2>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Forstå hvad docker er og hvad vi skal bruge det til.</p></li>
-<li></li>
+<li><p>Have en forståelse for hvad Images, Containers og dockerfiles er og hvordan de relaterer sig til hinanden.</p></li>
+<li><p>Kunne bygge et docker image med <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span></code>, og kunne forstå og bruge flags som <code class="docutils literal notranslate"><span class="pre">--name</span></code></p></li>
+<li><p>Kunne køre en docker container med <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>, og kunne forstå og bruge flags som <code class="docutils literal notranslate"><span class="pre">-it</span> <span class="pre">-rm</span> <span class="pre">-p</span> <span class="pre">-d</span> <span class="pre">--name</span> <span class="pre">--env</span></code></p></li>
 </ul>
 </section>
 <section id="forberedels">
-<h2>Forberedels<a class="headerlink" href="#forberedels" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.2. </span>Forberedels<a class="headerlink" href="#forberedels" title="Link to this heading"></a></h2>
+<p>Se de første ca. 28 minutter af denne video.<br />Jeg har sat videoen til at starte 2:26 fra start, da det første ikke er relevant for jer.<br />Fra 11:54 til 15:29 snakker manden on installation af docker. Det behøver i ikke at se, da i allerede har Docker installeret.<br />De sidste 20 minutter er en introduktion til Linux, og det har vi jo haft.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=pTFZFxd4hOI">Docker Tutorial for Beginners</a>(27:54)</p>
-<ul>
-<li><p>(se de første 28 minutter af denne video)</p></li>
-<li><p>(de sidste 20 minutter er en introduktion til Linux, og det har vi jo haft)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/pTFZFxd4hOI?feature=shared&amp;t=146">Docker Tutorial for Beginners</a> (27:54)</p></li>
 </ul>
-</li>
+<p>I skal desuden køre disse 2 kommandoer i <code class="docutils literal notranslate"><span class="pre">gitbash</span></code> (windows) eller 00<code class="docutils literal notranslate"><span class="pre">terminalen</span></code> (Mac)</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">ubuntu:latest</span></code> (Dette downloader et ubuntu linux image til din computer)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">nginx:latest</span></code> (Dette downloader et nginx webserver image til din computer)</p></li>
 </ul>
+<p>Vi kommer til at bruge det i undervisningen, men for at undgå kø på skolens netværk skal i gøre det inden vi mødes.</p>
 </section>
 <section id="dagens-indhold">
-<h2>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Vi starter med en <a class="reference external" href="#">quiz</a> for at teste jeres forståelse af emnet.</p></li>
+<li><p>Herefter laver vi en Hello World python/docker applikation sammen.</p></li>
+</ul>
+<p>Og vi snakker udfra dette <a class="reference internal" href="materialer/docker_cheatsheet.html"><span class="doc">Docker CheatSheet</span></a></p>
+<ul class="simple">
+<li><p>Og så … bliver i sluppet løs på egen hånd med øvelserne herunder.</p></li>
 </ul>
 </section>
 <section id="materialer">
-<h2>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<h2><span class="section-number">9.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=pTFZFxd4hOI">Docker Tutorial for Beginners</a>(27:54)</p></li>
+<li><p><a class="reference external" href="https://youtu.be/pTFZFxd4hOI?feature=shared&amp;t=146">Docker Tutorial for Beginners</a> (27:54)</p></li>
+<li><p><a class="reference internal" href="materialer/docker_cheatsheet.html"><span class="doc">Docker CheatSheet</span></a></p></li>
 </ul>
 <section id="ovelser">
-<h3>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
+<h3><span class="section-number">9.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
 </section>
 </section>
 </section>
@@ -132,7 +153,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="flask_2.html" class="btn btn-neutral float-left" title="8. Flask API (dag 2)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="docker_2.html" class="btn btn-neutral float-right" title="Docker II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="docker_2.html" class="btn btn-neutral float-right" title="10. Docker II" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

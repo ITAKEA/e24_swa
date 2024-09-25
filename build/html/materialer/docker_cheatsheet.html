@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ex 1. Get, Post, Put, Patch og Delete** &mdash; ITA 2024 3. semester</title>
+  <title>Docker Cheatsheet &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
@@ -80,9 +80,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Ex 1. Get, Post, Put, Patch og Delete**</li>
+      <li class="breadcrumb-item active">Docker Cheatsheet</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/api_ovelse_1.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/docker_cheatsheet.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -90,45 +90,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="ex-1-get-post-put-patch-og-delete">
-<h1>Ex 1. Get, Post, Put, Patch og Delete**<a class="headerlink" href="#ex-1-get-post-put-patch-og-delete" title="Link to this heading"></a></h1>
-<p>I denne øvelse skal i gøre brug af dette api <a class="reference external" href="https://jsonplaceholder.typicode.com/">https://jsonplaceholder.typicode.com/</a> og du skal bruge Postman til at lave dine forespørgelser.</p>
-<p>Du kan se nederst på siden hvilke resourcer der er tilrådeighed i dette API.</p>
-<ol class="simple">
-<li><p><strong>GET:</strong></p>
+  <section id="docker-cheatsheet">
+<h1>Docker Cheatsheet<a class="headerlink" href="#docker-cheatsheet" title="Link to this heading"></a></h1>
+<section id="run-en-ny-container">
+<h2>Run en ny container<a class="headerlink" href="#run-en-ny-container" title="Link to this heading"></a></h2>
+</section>
+<section id="start-en-ny-container-fra-et-image">
+<h2>Start en ny Container fra et Image<a class="headerlink" href="#start-en-ny-container-fra-et-image" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">IMAGE</span></code>
+<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">Ubuntu</span></code></p>
+</section>
+<section id="adgang-til-container-gennem-terminalen">
+<h2>Adgang til container gennem terminalen<a class="headerlink" href="#adgang-til-container-gennem-terminalen" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">Ubuntu</span></code></p>
 <ul class="simple">
-<li><p>Hent alle brugere: <strong><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/users</span></code></strong></p></li>
-<li><p>Hent et bestemt indlæg: <strong><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
-<li><p>Hent kommentarer til et bestemt indlæg: <strong><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/posts/{id}/comments</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
+<li><p>-i = interactive</p></li>
+<li><p>-t = Teletypewriter (terminalen)</p></li>
 </ul>
-</li>
-<li><p><strong>POST:</strong></p>
+</section>
+<section id="adgang-til-container-gennem-http-protokollen-browseren-postman-etc">
+<h2>Adgang til container gennem http protokollen (browseren, Postman etc.)<a class="headerlink" href="#adgang-til-container-gennem-http-protokollen-browseren-postman-etc" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">[host_port]:[container_port]</span> <span class="pre">IMAGE</span></code>
+<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code></p>
 <ul class="simple">
-<li><p>Opret en ny bruger: <strong><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/users</span></code></strong></p></li>
-<li><p>Opret et nyt indlæg: <strong><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/posts</span></code></strong></p></li>
-<li><p>Opret en ny kommentar til et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/comments</span></code></strong></p></li>
+<li><p>-p = port mapping</p></li>
 </ul>
-</li>
-<li><p><strong>PUT:</strong></p>
-<ul class="simple">
-<li><p>Opdater en brugers oplysninger: <strong><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/users/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede brugers ID)</p></li>
-<li><p>Opdater et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">PUT</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
-</ul>
-</li>
-<li><p><strong>PATCH:</strong></p>
-<ul class="simple">
-<li><p>Opdater en brugers delvise oplysninger: <strong><code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/users/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede brugers ID)</p></li>
-<li><p>Opdater delvist et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">PATCH</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
-</ul>
-</li>
-<li><p><strong>DELETE:</strong></p>
-<ul class="simple">
-<li><p>Slet en bruger: <strong><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/users/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede brugers ID)</p></li>
-<li><p>Slet et indlæg: <strong><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/posts/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med det ønskede indlægs ID)</p></li>
-<li><p>Slet en kommentar: <strong><code class="docutils literal notranslate"><span class="pre">DELETE</span> <span class="pre">/comments/{id}</span></code></strong> (erstat <strong><code class="docutils literal notranslate"><span class="pre">{id}</span></code></strong> med den ønskede kommentars ID)</p></li>
-</ul>
-</li>
-</ol>
+</section>
 </section>
 
 
