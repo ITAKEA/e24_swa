@@ -84,8 +84,8 @@ Hvis det virker kan du i din browser se den fantastiske applikation som jeres fa
 
 Hvis i går ind i containeren gennem terminalen i Docker Desktop, kan i desuden se alle de filer der er i imaged.     
 
-[Koden på Github kan i også finde her](https://github.com/ITAKEA/flask_crud_demo/tree/master)
-
+* [Koden på Github kan i også finde her](https://github.com/ITAKEA/flask_crud_demo/tree/master)
+* [Image på dockerhub kan i finde her](https://hub.docker.com/r/clbo/flask_crud_demo)
  
     
 #### Øv 4: Lav en Dockerfil og et Image
