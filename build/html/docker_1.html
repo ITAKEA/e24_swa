@@ -70,6 +70,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#materialer">9.4. Materialer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ovelser">9.4.1. Øvelser</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ov-1-lav-en-ny-startside-til-din-nginx-server">9.4.1.1. Øv 1: Lav en ny startside til din nginx server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ov-2-aendre-portnummer-pa-din-nginx-server">9.4.1.2. Øv 2: Ændre portnummer på din nginx server</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ov-3-pull-og-kor-en-rigtig-app">9.4.1.3. Øv 3: Pull og kør en rigtig app :)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ov-4-lav-en-dockerfil-og-et-image">9.4.1.4. Øv 4: Lav en Dockerfil og et Image</a></li>
 </ul>
 </li>
 </ul>
@@ -106,6 +109,7 @@
              
   <section id="docker">
 <h1><span class="section-number">9. </span>Docker<a class="headerlink" href="#docker" title="Link to this heading"></a></h1>
+<p>I dag og næste gang skal vi arbejde med docker.</p>
 <section id="laeringsmal">
 <h2><span class="section-number">9.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
@@ -134,7 +138,7 @@
 <section id="dagens-indhold">
 <h2><span class="section-number">9.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>Vi starter med en <a class="reference external" href="#">quiz</a> for at teste jeres forståelse af emnet.</p></li>
+<li><p>Vi starter med en Michael agtig quiz for at teste jeres forståelse af emnet.</p></li>
 <li><p>Herefter snakker vi udfra dette <a class="reference internal" href="materialer/docker_cheatsheet.html"><span class="doc">Docker CheatSheet</span></a></p></li>
 <li><p>Og laver dernæst en Hello World python/docker applikation sammen.</p></li>
 <li><p>Og så … øvelserne herunder.</p></li>
@@ -150,8 +154,38 @@
 <h3><span class="section-number">9.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
 <section id="ov-1-lav-en-ny-startside-til-din-nginx-server">
 <h4><span class="section-number">9.4.1.1. </span>Øv 1: Lav en ny startside til din nginx server<a class="headerlink" href="#ov-1-lav-en-ny-startside-til-din-nginx-server" title="Link to this heading"></a></h4>
-<p>Kør kommandoen: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--rm</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code></p>
+<p>Kør kommandoen: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--rm</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code> for at starte din nginx webserver.<br />Hvis du går til <code class="docutils literal notranslate"><span class="pre">http://localhost:8080</span></code> kan du se denne side:</p>
+<p><img alt="_images/nginx.png" src="_images/nginx.png" /></p>
+<p><strong>Du skal ændre den så den viser din egen html startside. Feks sådan en:</strong></p>
+<p><img alt="_images/nginx_docker.png" src="_images/nginx_docker.png" /></p>
 <p>I vil kunne se hvor html filen er placeret i filsystemet her : https://hub.docker.com/_/nginx</p>
+<p>HINT: I kender til Linux OS, og i har før redigeret i tekstfiler gennem terminalen.</p>
+</section>
+<hr class="docutils" />
+<section id="ov-2-aendre-portnummer-pa-din-nginx-server">
+<h4><span class="section-number">9.4.1.2. </span>Øv 2: Ændre portnummer på din nginx server<a class="headerlink" href="#ov-2-aendre-portnummer-pa-din-nginx-server" title="Link to this heading"></a></h4>
+<p>Stop din nginx server container og start den igen men nu så du kan se den via denne url:</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://localhost:9000</span></code></p>
+<p>Stop din nginx server container og start den igen men nu så du kan se den via denne url:</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://localhost</span></code></p>
+</section>
+<section id="ov-3-pull-og-kor-en-rigtig-app">
+<h4><span class="section-number">9.4.1.3. </span>Øv 3: Pull og kør en rigtig app :)<a class="headerlink" href="#ov-3-pull-og-kor-en-rigtig-app" title="Link to this heading"></a></h4>
+<p>Åben din gitbash, eller terminal. Kør kommandoen:</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--rm</span> <span class="pre">-p</span> <span class="pre">5000:5000</span> <span class="pre">clbo/flask_crud_demo:0.1.0</span></code></p>
+<p>Hvis det virker kan du i din browser se den fantastiske applikation som jeres fantastiske underviser har lavet.</p>
+<p><code class="docutils literal notranslate"><span class="pre">http://localhost:5000</span></code></p>
+<p>Hvis i går ind i containeren gennem terminalen i Docker Desktop, kan i desuden se alle de filer der er i imaged.</p>
+<p><a class="reference external" href="https://github.com/ITAKEA/flask_crud_demo/tree/master">Koden på Github kan i også finde her</a></p>
+</section>
+<section id="ov-4-lav-en-dockerfil-og-et-image">
+<h4><span class="section-number">9.4.1.4. </span>Øv 4: Lav en Dockerfil og et Image<a class="headerlink" href="#ov-4-lav-en-dockerfil-og-et-image" title="Link to this heading"></a></h4>
+<p>I skal nu lave et docker image som indeholder det flask api projekt som i afleverede i onsdags.</p>
+<ul class="simple">
+<li><p>Det betyder at I i jeres projekt skal tilføje en Dockerfil.</p></li>
+<li><p>Når i har gjort det skal i lave et image udfra den Dockerfil.</p></li>
+<li><p>Og så skal i køre jeres applikation ved at skrive <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">.............</span></code></p></li>
+</ul>
 </section>
 </section>
 </section>

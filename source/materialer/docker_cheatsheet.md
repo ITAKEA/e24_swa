@@ -25,11 +25,22 @@
 > `docker run --rm  Ubuntu`    
 > --rm : remove (after close)
 
-**Kør container så den ikke blokerer terminalen**
+**Se en liste over Images**
 
-> `docker run -d nginx`    
-> -d : detached
+> `docker images`
 
+**Slet et image**
+
+> `docker rmi <id_til_image>`    
+
+**Se en liste over Containers**
+
+> `docker ps`     
+
+og ikke kørende containers     
+
+> `docker ps -a`    
+> -a : all    
 
 **Tilføj miljøvariabler**
 
@@ -39,6 +50,11 @@
 
 **Ekstra**    
 ---
+
+**Kør container så den ikke blokerer terminalen**
+
+> `docker run -d nginx`    
+> -d : detached
 
 **Del en mappe fra host til container**    
 
@@ -51,7 +67,7 @@
 > `docker login`    
 > `docker push IMAGE`
 
-**Git container et navn**        
+**Giv din container et navn**        
 
 > `docker run --name min_container ubuntu`    
 > --name : containernavn

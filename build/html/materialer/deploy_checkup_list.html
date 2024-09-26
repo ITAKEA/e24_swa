@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Docker Cheatsheet &mdash; ITA 2024 3. semester</title>
+  <title>Checkliste inde du deployer din Flask app. &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
@@ -80,9 +80,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Docker Cheatsheet</li>
+      <li class="breadcrumb-item active">Checkliste inde du deployer din Flask app.</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/docker_cheatsheet.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/deploy_checkup_list.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -90,67 +90,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="docker-cheatsheet">
-<h1>Docker Cheatsheet<a class="headerlink" href="#docker-cheatsheet" title="Link to this heading"></a></h1>
-<p><strong>Start en Container fra et Image</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">ubuntu</span></code> (Ubuntu er Image navnet)</p>
-</div></blockquote>
-<p><strong>Adgang til container gennem terminalen</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">ubuntu</span></code><br />-i : interactive<br />-t : Teletypewriter (terminalen)</p>
-</div></blockquote>
-<p><strong>Adgang til container gennem http protokollen (browseren, Postman etc.)</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">[host_port]:[container_port]</span> <span class="pre">IMAGE</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code><br />-p : port mapping</p>
-</div></blockquote>
-<p><strong>Download et image</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">ubuntu</span></code></p>
-</div></blockquote>
-<p><strong>Delete en container når den slukkes</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--rm</span>&#160; <span class="pre">Ubuntu</span></code><br />–rm : remove (after close)</p>
-</div></blockquote>
-<p><strong>Se en liste over Images</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">images</span></code></p>
-</div></blockquote>
-<p><strong>Slet et image</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rmi</span> <span class="pre">&lt;id_til_image&gt;</span></code></p>
-</div></blockquote>
-<p><strong>Se en liste over Containers</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code></p>
-</div></blockquote>
-<p>og ikke kørende containers</p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span> <span class="pre">-a</span></code><br />-a : all</p>
-</div></blockquote>
-<p><strong>Tilføj miljøvariabler</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-env</span> <span class="pre">GITHUB_TOKEN=xyz123dkajh</span></code><br />-env : environement</p>
-</div></blockquote>
-<section id="ekstra">
-<h2><strong>Ekstra</strong><a class="headerlink" href="#ekstra" title="Link to this heading"></a></h2>
-<p><strong>Kør container så den ikke blokerer terminalen</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">nginx</span></code><br />-d : detached</p>
-</div></blockquote>
-<p><strong>Del en mappe fra host til container</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/host/path:/container/path</span></code>
-<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/user/clbo/flaskapp:/app</span></code></p>
-</div></blockquote>
-<p><strong>Push et image til docker hub</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">login</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">IMAGE</span></code></p>
-</div></blockquote>
-<p><strong>Giv din container et navn</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">min_container</span> <span class="pre">ubuntu</span></code><br />–name : containernavn</p>
-</div></blockquote>
+  <section id="checkliste-inde-du-deployer-din-flask-app">
+<h1>Checkliste inde du deployer din Flask app.<a class="headerlink" href="#checkliste-inde-du-deployer-din-flask-app" title="Link to this heading"></a></h1>
+<section id="cors">
+<h2>Cors<a class="headerlink" href="#cors" title="Link to this heading"></a></h2>
+<p>Husk at give browsere tilladelse til at tilgå dine endpoints.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">flask_cors</span> <span class="kn">import</span> <span class="n">CORS</span>
+<span class="n">CORS</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="serverens-ip-adresse">
+<h2>Serverens ip adresse<a class="headerlink" href="#serverens-ip-adresse" title="Link to this heading"></a></h2>
+<p>i din app.run metode skal du skrive:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">HOST</span><span class="o">=</span><span class="mf">0.0.0.0</span><span class="p">)</span>
+
+
+<span class="p">)</span>
+</pre></div>
+</div>
 </section>
 </section>
 

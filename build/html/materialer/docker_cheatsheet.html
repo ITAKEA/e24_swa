@@ -112,9 +112,21 @@
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--rm</span>&#160; <span class="pre">Ubuntu</span></code><br />–rm : remove (after close)</p>
 </div></blockquote>
-<p><strong>Kør container så den ikke blokerer terminalen</strong></p>
+<p><strong>Se en liste over Images</strong></p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">nginx</span></code><br />-d : detached</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">images</span></code></p>
+</div></blockquote>
+<p><strong>Slet et image</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">rmi</span> <span class="pre">&lt;id_til_image&gt;</span></code></p>
+</div></blockquote>
+<p><strong>Se en liste over Containers</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code></p>
+</div></blockquote>
+<p>og ikke kørende containers</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span> <span class="pre">-a</span></code><br />-a : all</p>
 </div></blockquote>
 <p><strong>Tilføj miljøvariabler</strong></p>
 <blockquote>
@@ -122,6 +134,10 @@
 </div></blockquote>
 <section id="ekstra">
 <h2><strong>Ekstra</strong><a class="headerlink" href="#ekstra" title="Link to this heading"></a></h2>
+<p><strong>Kør container så den ikke blokerer terminalen</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">nginx</span></code><br />-d : detached</p>
+</div></blockquote>
 <p><strong>Del en mappe fra host til container</strong></p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/host/path:/container/path</span></code>
@@ -131,7 +147,7 @@
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">login</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">IMAGE</span></code></p>
 </div></blockquote>
-<p><strong>Git container et navn</strong></p>
+<p><strong>Giv din container et navn</strong></p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">min_container</span> <span class="pre">ubuntu</span></code><br />–name : containernavn</p>
 </div></blockquote>
