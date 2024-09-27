@@ -16,9 +16,6 @@
 >  `docker run -p 8080:80 nginx`    
 >  -p : port mapping    
 
-**Download et image**    
-
-> `docker pull ubuntu`    
 
 **Delete en container når den slukkes**
 
@@ -41,6 +38,10 @@ og ikke kørende containers
 
 > `docker ps -a`    
 > -a : all    
+
+**Download et image**    
+
+> `docker pull ubuntu`    
 
 **Tilføj miljøvariabler**
 
