@@ -86,6 +86,16 @@ Hvis i går ind i containeren gennem terminalen i Docker Desktop, kan i desuden 
 
 * [Koden på Github kan i også finde her](https://github.com/ITAKEA/flask_crud_demo/tree/master)
 * [Image på dockerhub kan i finde her](https://hub.docker.com/r/clbo/flask_crud_demo)
+
+#### Øv 3a: Clone fra github og build et image
+
+Clon dette repsotiroy:
+
+* [Koden på Github kan i også finde her](https://github.com/ITAKEA/flask_crud_demo/tree/master)
+
+* Build et image udfra dets Dockerfil.    
+* Kør en container 
+* Se det i browseren
  
     
 #### Øv 4: Lav en Dockerfil og et Image
