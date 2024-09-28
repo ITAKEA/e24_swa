@@ -110,6 +110,8 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    decorators
 
    jwt
+   azure_1
+   azure_2
    dokumentation   
    swagger_1
    swagger_2
