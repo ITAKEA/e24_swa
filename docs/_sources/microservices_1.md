@@ -7,6 +7,8 @@
 ## Læringsmål
 
 ## Dagens indhold
+* [Use persistent shared storage](https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux&tabs=debian#use-persistent-shared-storage)
+
 ## Materialer
 Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som host
 * [How To Build and Deploy Microservices With Python](https://kinsta.com/blog/python-microservices/)
