@@ -66,11 +66,12 @@
 <li class="toctree-l1"><a class="reference internal" href="docker_1.html">9. Docker</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">10. Docker II</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#laeringsmal">10.1. Læringsmål</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#forberedels">10.2. Forberedels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#forberedelse">10.2. Forberedelse</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">10.3. Dagens indhold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#materialer">10.4. Materialer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ovelser">10.4.1. Øvelser</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ov-1-gem-din-database-i-home-data">10.4.1.1. Øv 1: Gem din database i /home/data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ov-1-kor-en-mysql-container">10.4.1.1. Øv 1: Kør en mysql container</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ov-2-gem-din-database-i-home-data">10.4.1.2. Øv 2: Gem din database i /home/data</a></li>
 </ul>
 </li>
 </ul>
@@ -106,35 +107,84 @@
              
   <section id="docker-ii">
 <h1><span class="section-number">10. </span>Docker II<a class="headerlink" href="#docker-ii" title="Link to this heading"></a></h1>
+<p>Idag skal vi arbejde videre med docker.<br />Vi skal kigge på environement variabler, både på jeres egne computere og i jeres docker images og containers.<br />Vi skal desuden kigge på hvordan vi kan arbejde med persistent data (data som ikke forsvinder ved en update af feks. et image).
+I skal desuden kunne pushe jeres images til dockerhub.</p>
+<p>OBS: Til jer der ikke var der i fredags: sørg for at forstå materialet og øvelserne fra <a class="reference external" href="https://itakea.github.io/e24_swa/docker_1.html">docker 1 dagen</a>.</p>
 <section id="laeringsmal">
 <h2><span class="section-number">10.1. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>Kunne bruge environement variables sammen med docker images</p></li>
-<li></li>
+<li><p>Kunne bruge environement variables sammen med docker images og containers.</p></li>
+<li><p>Kunne forstå hvad et docker volume er og hvad det kan bruges til.</p></li>
+<li><p>Kunne pushe images til DockerHub.</p></li>
 </ul>
 </section>
-<section id="forberedels">
-<h2><span class="section-number">10.2. </span>Forberedels<a class="headerlink" href="#forberedels" title="Link to this heading"></a></h2>
-<ul class="simple">
+<section id="forberedelse">
+<h2><span class="section-number">10.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
+<ol class="simple">
+<li><p>Sørg for at have lavet øvelserne fra i fredags.</p></li>
 <li><p><a class="reference external" href="https://hub.docker.com/">Opret en konto på DockerHub</a></p></li>
-</ul>
-<p>Sørg for at have lavet øvelse 3 og 3a fra i fredags</p>
-<ul class="simple">
-<li><p><a class="reference external" href="https://itakea.github.io/e24_swa/docker_1.html#ov-3-pull-og-kor-en-rigtig-app">Øvelse 3 og 3a</a></p></li>
-</ul>
+<li><p><a class="reference external" href="https://docs.docker.com/reference/dockerfile/">Skim denne ‘Dockerfile reference’ igennem</a></p></li>
+<li><p><a class="reference internal" href="materialer/docker_cheatsheet.html"><span class="doc">Kig på dette docker Cheatsheet fra sidst, og under dag 2 for de ting vi skal arbejde med i dag</span></a></p></li>
+<li><p>Undersøg hvad “Environment Variabler” er.</p></li>
+<li><p>Undersøg hvordan man arbejder med “Persistance Data” i et docker image.</p></li>
+<li><p><a class="reference external" href="https://hub.docker.com/_/mysql/">Læs afsnittet “Where to Store Data” i denne documentation</a></p></li>
+</ol>
 </section>
 <section id="dagens-indhold">
 <h2><span class="section-number">10.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>Vi skal kigge på at arbejde i development og produktion mode vha. environment variabler</p></li>
+<li><p>Recap fra sidst</p>
+<ul>
+<li><p>-it, -p</p></li>
+<li><p>–rm, -d</p></li>
+<li><p>pip freeze -&gt; requirements.txt</p></li>
+<li><p>docker Image</p>
+<ul>
+<li><p>docker build</p></li>
 </ul>
+</li>
+</ul>
+</li>
+<li><p>Vi kigger herefter på:</p>
+<ul>
+<li><p>environment variabler</p></li>
+<li><p>Dev vs. prod environemnet</p></li>
+<li><p>persistens og docker volumes</p></li>
+<li><p>Dele images på DockerHub</p></li>
+</ul>
+</li>
+</ul>
+<p>Vi bruger denne kode som udgangspunkt for dagen: <a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/docker">Kode fra undervisningen</a></p>
 </section>
 <section id="materialer">
 <h2><span class="section-number">10.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://hub.docker.com/">Opret en konto på DockerHub</a></p></li>
+<li><p><a class="reference external" href="https://docs.docker.com/reference/dockerfile/">Dockerfile reference</a></p></li>
+<li><p><a class="reference internal" href="materialer/docker_cheatsheet.html"><span class="doc">Docker Cheatshee</span></a></p></li>
+<li><p><a class="reference external" href="https://hub.docker.com/_/mysql/">Læs afsnittet “Where to Store Data” i denne documentation</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/docker">Kode fra undervisningen</a></p></li>
+</ul>
 <section id="ovelser">
 <h3><span class="section-number">10.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
-<section id="ov-1-gem-din-database-i-home-data">
-<h4><span class="section-number">10.4.1.1. </span>Øv 1: Gem din database i /home/data<a class="headerlink" href="#ov-1-gem-din-database-i-home-data" title="Link to this heading"></a></h4>
+<section id="ov-1-kor-en-mysql-container">
+<h4><span class="section-number">10.4.1.1. </span>Øv 1: Kør en mysql container<a class="headerlink" href="#ov-1-kor-en-mysql-container" title="Link to this heading"></a></h4>
+<p>Med denne run kommando som udgangspunkt skal du starte en Mysql container</p>
+<p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span>&#160; <span class="pre">--name</span> <span class="pre">some-mysql</span> <span class="pre">-v</span> <span class="pre">/my/own/datadir:/var/lib/mysql</span> <span class="pre">-e</span> <span class="pre">MYSQL_ROOT_PASSWORD=my-secret-pw</span> <span class="pre">-d</span> <span class="pre">mysql</span></code></p>
+<ul class="simple">
+<li><p>Du skal ændre <code class="docutils literal notranslate"><span class="pre">/my/own/datadir</span></code> til noget der passer med dig.</p></li>
+<li><p>Du skal sørge for at have terminal adgang til containeren.</p></li>
+<li><p>Du skal sørge for at have åbnet port 3306 til containeren.</p></li>
+<li><p>Du skal tilføje <code class="docutils literal notranslate"><span class="pre">--rm</span></code> for at slette containeren når den stopes.</p></li>
+<li><p>Du kan evt. ændre password.</p></li>
+<li><p>Når alt fungerer skal du enten åbene Mysql Workbench, eller en tilsvarende GUI og forbinde til Mysql Containeren.</p></li>
+<li><p>Du skal lave en database, en tabel og indsætte lidt data.</p></li>
+<li><p>Herefter skal du slukke din container.</p></li>
+</ul>
+<p>Kør herefter en ny container med run kommandoen, forbind til den, og se at din database, tabel og data stadig er der.</p>
+</section>
+<section id="ov-2-gem-din-database-i-home-data">
+<h4><span class="section-number">10.4.1.2. </span>Øv 2: Gem din database i /home/data<a class="headerlink" href="#ov-2-gem-din-database-i-home-data" title="Link to this heading"></a></h4>
 </section>
 </section>
 </section>

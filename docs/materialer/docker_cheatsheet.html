@@ -104,10 +104,6 @@
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">[host_port]:[container_port]</span> <span class="pre">IMAGE</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-p</span> <span class="pre">8080:80</span> <span class="pre">nginx</span></code><br />-p : port mapping</p>
 </div></blockquote>
-<p><strong>Delete en container når den slukkes</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--rm</span>&#160; <span class="pre">Ubuntu</span></code><br />–rm : remove (after close)</p>
-</div></blockquote>
 <p><strong>Se en liste over Images</strong></p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">images</span></code></p>
@@ -128,28 +124,31 @@
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">pull</span> <span class="pre">ubuntu</span></code></p>
 </div></blockquote>
-<p><strong>Tilføj miljøvariabler</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-env</span> <span class="pre">GITHUB_TOKEN=xyz123dkajh</span></code><br />-env : environement</p>
-</div></blockquote>
-<section id="ekstra">
-<h2><strong>Ekstra</strong><a class="headerlink" href="#ekstra" title="Link to this heading"></a></h2>
 <p><strong>Kør container så den ikke blokerer terminalen</strong></p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-d</span> <span class="pre">nginx</span></code><br />-d : detached</p>
 </div></blockquote>
+<hr class="docutils" />
+<section id="fra-dag-2">
+<h2>Fra dag 2<a class="headerlink" href="#fra-dag-2" title="Link to this heading"></a></h2>
+<hr class="docutils" />
+<p><strong>Delete en container når den slukkes</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--rm</span>&#160; <span class="pre">Ubuntu</span></code><br />–rm : remove (after close)</p>
+</div></blockquote>
+<p><strong>Tilføj miljøvariabler</strong></p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-env</span> <span class="pre">GITHUB_TOKEN=xyz123dkajh</span></code><br />-env : environement</p>
+</div></blockquote>
 <p><strong>Del en mappe fra host til container</strong></p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/host/path:/container/path</span></code>
-<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/user/clbo/flaskapp:/app</span></code></p>
+<code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-v</span> <span class="pre">/user/clbo/flaskapp:/app</span></code>
+<code class="docutils literal notranslate"><span class="pre">-v</span> <span class="pre">:</span> <span class="pre">volume</span></code></p>
 </div></blockquote>
 <p><strong>Push et image til docker hub</strong></p>
 <blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">login</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">IMAGE</span></code></p>
-</div></blockquote>
-<p><strong>Giv din container et navn</strong></p>
-<blockquote>
-<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">min_container</span> <span class="pre">ubuntu</span></code><br />–name : containernavn</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">login</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">USERNAME/IMAGE</span></code></p>
 </div></blockquote>
 </section>
 </section>

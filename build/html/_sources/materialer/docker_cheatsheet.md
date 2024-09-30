@@ -17,10 +17,6 @@
 >  -p : port mapping    
 
 
-**Delete en container når den slukkes**
-
-> `docker run --rm  Ubuntu`    
-> --rm : remove (after close)
 
 **Se en liste over Images**
 
@@ -43,36 +39,33 @@ og ikke kørende containers
 
 > `docker pull ubuntu`    
 
+**Kør container så den ikke blokerer terminalen**
+
+> `docker run -d nginx`    
+> -d : detached
+
+---
+## Fra dag 2
+---
+
+**Delete en container når den slukkes**
+
+> `docker run --rm  Ubuntu`    
+> --rm : remove (after close)
+
 **Tilføj miljøvariabler**
 
 > `docker run -env GITHUB_TOKEN=xyz123dkajh`    
 > -env : environement
 
 
-**Ekstra**    
----
-
-**Kør container så den ikke blokerer terminalen**
-
-> `docker run -d nginx`    
-> -d : detached
-
 **Del en mappe fra host til container**    
 
 > `docker run -v /host/path:/container/path`
 > `docker run -v /user/clbo/flaskapp:/app`
-
+> `-v : volume`  
 
 **Push et image til docker hub**    
 
 > `docker login`    
-> `docker push IMAGE`
-
-**Giv din container et navn**        
-
-> `docker run --name min_container ubuntu`    
-> --name : containernavn
-
-
-
-
+> `docker push USERNAME/IMAGE`
