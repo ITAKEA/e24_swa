@@ -46,18 +46,18 @@ Vi bruger denne kode som udgangspunkt for dagen: [Kode fra undervisningen](https
 
 ### Øvelser
 
-#### Øv 1: Kør en mysql container
+#### Øv 1: mysql container med persistent data (volume)
 Med denne run kommando som udgangspunkt skal du starte en Mysql container
 
 `docker run  --name some-mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql`   
 
-* Du skal ændre `/my/own/datadir` til noget der passer med dig.
+* Du skal ændre `/my/own/datadir` til noget der passer med mappestrukturen på din computer.
 * Du skal sørge for at have terminal adgang til containeren.   
+* Du skal sørge for at container slettes når den lukkes.
 * Du skal sørge for at have åbnet port 3306 til containeren.
-* Du skal tilføje `--rm` for at slette containeren når den stopes. 
 * Du kan evt. ændre password.
 
-* Når alt fungerer skal du enten åbene Mysql Workbench, eller en tilsvarende GUI og forbinde til Mysql Containeren. 
+* Når alt fungerer skal du åbene Mysql Workbench, eller en tilsvarende GUI og forbinde til Mysql Containeren. 
 * Du skal lave en database, en tabel og indsætte lidt data.
 * Herefter skal du slukke din container.
 

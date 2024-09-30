@@ -70,7 +70,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">10.3. Dagens indhold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#materialer">10.4. Materialer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ovelser">10.4.1. Øvelser</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#ov-1-kor-en-mysql-container">10.4.1.1. Øv 1: Kør en mysql container</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ov-1-mysql-container-med-persistent-data-volume">10.4.1.1. Øv 1: mysql container med persistent data (volume)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#ov-2-gem-din-database-i-home-data">10.4.1.2. Øv 2: Gem din database i /home/data</a></li>
 </ul>
 </li>
@@ -167,17 +167,17 @@ I skal desuden kunne pushe jeres images til dockerhub.</p>
 </ul>
 <section id="ovelser">
 <h3><span class="section-number">10.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
-<section id="ov-1-kor-en-mysql-container">
-<h4><span class="section-number">10.4.1.1. </span>Øv 1: Kør en mysql container<a class="headerlink" href="#ov-1-kor-en-mysql-container" title="Link to this heading"></a></h4>
+<section id="ov-1-mysql-container-med-persistent-data-volume">
+<h4><span class="section-number">10.4.1.1. </span>Øv 1: mysql container med persistent data (volume)<a class="headerlink" href="#ov-1-mysql-container-med-persistent-data-volume" title="Link to this heading"></a></h4>
 <p>Med denne run kommando som udgangspunkt skal du starte en Mysql container</p>
 <p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span>&#160; <span class="pre">--name</span> <span class="pre">some-mysql</span> <span class="pre">-v</span> <span class="pre">/my/own/datadir:/var/lib/mysql</span> <span class="pre">-e</span> <span class="pre">MYSQL_ROOT_PASSWORD=my-secret-pw</span> <span class="pre">-d</span> <span class="pre">mysql</span></code></p>
 <ul class="simple">
-<li><p>Du skal ændre <code class="docutils literal notranslate"><span class="pre">/my/own/datadir</span></code> til noget der passer med dig.</p></li>
+<li><p>Du skal ændre <code class="docutils literal notranslate"><span class="pre">/my/own/datadir</span></code> til noget der passer med mappestrukturen på din computer.</p></li>
 <li><p>Du skal sørge for at have terminal adgang til containeren.</p></li>
+<li><p>Du skal sørge for at container slettes når den lukkes.</p></li>
 <li><p>Du skal sørge for at have åbnet port 3306 til containeren.</p></li>
-<li><p>Du skal tilføje <code class="docutils literal notranslate"><span class="pre">--rm</span></code> for at slette containeren når den stopes.</p></li>
 <li><p>Du kan evt. ændre password.</p></li>
-<li><p>Når alt fungerer skal du enten åbene Mysql Workbench, eller en tilsvarende GUI og forbinde til Mysql Containeren.</p></li>
+<li><p>Når alt fungerer skal du åbene Mysql Workbench, eller en tilsvarende GUI og forbinde til Mysql Containeren.</p></li>
 <li><p>Du skal lave en database, en tabel og indsætte lidt data.</p></li>
 <li><p>Herefter skal du slukke din container.</p></li>
 </ul>
