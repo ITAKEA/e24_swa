@@ -105,10 +105,9 @@ Listen af sider herunder og i venstre side, svare til de lektioner vi kommer til
    docker_1
    docker_2
 
-   decorators
+   microservices_1
+   microservices_2
 
-   jwt
-   microservices
    dokumentation   
    swagger
 
