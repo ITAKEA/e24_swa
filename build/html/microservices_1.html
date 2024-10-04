@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Microservices 1 &mdash; ITA 2024 3. semester</title>
+  <title>11. Microservices 1 &mdash; ITA 2024 3. semester</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
@@ -31,7 +31,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Microservices 2" href="microservices_2.html" />
+    <link rel="next" title="12. Microservices 2" href="microservices_2.html" />
     <link rel="prev" title="10. Docker II" href="docker_2.html" /> 
 </head>
 
@@ -54,7 +54,7 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="py_intro_1.html">1. Introduction til python (dag1)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="py_intro_2.html">2. Python - Datastrukture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linux_1.html">3. Linux OS</a></li>
@@ -65,7 +65,18 @@
 <li class="toctree-l1"><a class="reference internal" href="flask_2.html">8. Flask API (dag 2)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker_1.html">9. Docker</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docker_2.html">10. Docker II</a></li>
-<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">11. Extra øvelser</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Microservices 1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#forberedels">11.1. Forberedels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#laeringsmal">11.2. Læringsmål</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">11.3. Dagens indhold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materialer">11.4. Materialer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ovelser">11.4.1. Øvelser</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="microservices_2.html">12. Microservices 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auditional_exercises.html">13. Extra øvelser</a></li>
 </ul>
 
         </div>
@@ -82,7 +93,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Microservices 1</li>
+      <li class="breadcrumb-item active"><span class="section-number">11. </span>Microservices 1</li>
       <li class="wy-breadcrumbs-aside">
               <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmicroservices_1.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
@@ -93,10 +104,10 @@
            <div itemprop="articleBody">
              
   <section id="microservices-1">
-<h1>Microservices 1<a class="headerlink" href="#microservices-1" title="Link to this heading"></a></h1>
+<h1><span class="section-number">11. </span>Microservices 1<a class="headerlink" href="#microservices-1" title="Link to this heading"></a></h1>
 <p><img alt="_images/microsevices_quote.png" src="_images/microsevices_quote.png" /></p>
 <section id="forberedels">
-<h2>Forberedels<a class="headerlink" href="#forberedels" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.1. </span>Forberedels<a class="headerlink" href="#forberedels" title="Link to this heading"></a></h2>
 <p>Se denne video for at få en forståelse for hvad Microservices er:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=CdBtNQZH8a4">Video: What are Microservices?</a> (6:37)</p></li>
@@ -107,19 +118,19 @@
 </ul>
 </section>
 <section id="laeringsmal">
-<h2>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.2. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Have viden om grundprincipperne i hvad en Microservice arkitektur er</p></li>
 <li><p>Kunne bygge 2 microservices der arbejder sammen gennem et JSON API</p></li>
 </ul>
 </section>
 <section id="dagens-indhold">
-<h2>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <p>Vi starter dagen med en gennemgang af hvordan i kan vha. environment variabler, docker volumens kan opnå persistens på tværs af jeres docker images og containers. (det som vi skulle have lavet sidste onsdag).</p>
 <p>Herefter kigger vi på nogle elementer der skal til for at</p>
 </section>
 <section id="materialer">
-<h2>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<h2><span class="section-number">11.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="materialer/routes.html"><span class="doc">Query parametre</span></a></p></li>
 </ul>
@@ -137,7 +148,7 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 <li><p><a class="reference external" href="https://martinfowler.com/articles/microservices.html">Microservices (Martin Fowler)</a></p></li>
 </ul>
 <!-- * [Video: Microservices • Martin Fowler • GOTO 2014](https://www.youtube.com/watch?v=wgdBVIX9ifA)--><section id="ovelser">
-<h3>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
+<h3><span class="section-number">11.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
 </section>
 </section>
 </section>
@@ -147,7 +158,7 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="docker_2.html" class="btn btn-neutral float-left" title="10. Docker II" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="microservices_2.html" class="btn btn-neutral float-right" title="Microservices 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="microservices_2.html" class="btn btn-neutral float-right" title="12. Microservices 2" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
