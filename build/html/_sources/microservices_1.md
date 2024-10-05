@@ -42,7 +42,7 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 
 
 ### Øvelser
-#### Øv 1: Shopping Site Microservices
+#### Shopping Site Microservices
 Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.    
 Vi har sammen lavet XXX og I skal nu lave 2 stykker yderligere plus et API GATEWAY.    
 
