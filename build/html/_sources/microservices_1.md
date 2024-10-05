@@ -51,7 +51,7 @@ I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge 
 Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være afhængig af de andre services.
 
 **Docker**
-Jeres services skal kunne køre i en docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.    
+Jeres services skal kunne køre i hver deres docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.    
 
 **Grupper**
 Det vil være meget fint hvis i arbejder sammen i grupper og hver gruppe står for én Service af det samlede system. Det i skal være enige om inden i satrter er endpoints på jeres api´er. Altså hvad kan jeres service bruges til?

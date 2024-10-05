@@ -61,11 +61,11 @@ og ikke kørende containers
 
 **Del en mappe fra host til container**    
 
-> `docker run -v /host/path:/container/path`
-> `docker run -v /user/clbo/flaskapp:/app`
-> `-v : volume`  
+> `docker run -v /host/path:/container/path`    
+> `docker run -v /user/clbo/flaskapp:/app`    
+> `-v : volume`      
 
 **Push et image til docker hub**    
 
 > `docker login`    
-> `docker push USERNAME/IMAGE`
+> `docker push USERNAME/IMAGE`    
