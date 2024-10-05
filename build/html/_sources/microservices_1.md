@@ -4,23 +4,21 @@
 
 ## Forberedels
 
-Se denne video for at få en forståelse for hvad Microservices er:    
+Se de 2 videoer og læs artiklen:    
 * [Video: What are Microservices?](https://www.youtube.com/watch?v=CdBtNQZH8a4) (6:37)
-
-Læs denne artikkel:
 * [Microservices (Martin Fowler)](https://martinfowler.com/articles/microservices.html) (30:00)   
-
+* [What is API gateway really all about? Java Brains - Brain Bytes](https://www.youtube.com/watch?v=1vjOv_f9L8I) (8:55)
 
 ## Læringsmål
 * Have viden om grundprincipperne i hvad en Microservice arkitektur er
-* Kunne bygge 2 microservices der arbejder sammen gennem et JSON API
+* Kunne bygge microservices der arbejder sammen gennem et JSON API
+* Kunne forstå konceptet om et API GATEWAY
 
 ## Dagens indhold
 
 Vi starter dagen med en gennemgang af hvordan i kan vha. environment variabler, docker volumens kan opnå persistens på tværs af jeres docker images og containers. (det som vi skulle have lavet sidste onsdag).
 
-Herefter kigger vi på nogle elementer der skal til for at 
-
+Herefter laver vi en services fra øvelsen herunder sammen ved tavlen, og i fortsætter i grupper med øvelsen herunder. 
 
 ## Materialer
 
@@ -41,20 +39,28 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 
 -->
 
-<!-- * [Video: Microservices • Martin Fowler • GOTO 2014](https://www.youtube.com/watch?v=wgdBVIX9ifA)-->
 
 
 ### Øvelser
 #### Øv 1: Shopping Site Microservices
 Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.    
-Vi har sammen lavet XXX og I skal nu lave en 2-3 stykker yderligere.    
+Vi har sammen lavet XXX og I skal nu lave 2 stykker yderligere plus et API GATEWAY.    
 
-I forhold til Product Catalog Service kan i bruge data fra dette [api](https://openlibrary.org/dev/docs/api/search)
+I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge data fra dette [api](https://dummyjson.com/docs)    
+ 
+Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være afhængig af de andre services.
 
-Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS). 
+**Docker**
+Jeres services skal kunne køre i en docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.    
 
- Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være afhængig af de andre services.
+**Grupper**
+Det vil være meget fint hvis i arbejder sammen i grupper og hver gruppe står for én Service af det samlede system. Det i skal være enige om inden i satrter er endpoints på jeres api´er. Altså hvad kan jeres service bruges til?
 
+I skal i README filerne til alle Services beskrive jeres endpoints.
+
+I skal udover jeres services herunder have et API GATEWAY.  
+ 
+Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS).     
 
 1. **User Service**:
    - Håndterer brugerkonti, herunder registrering, autentificering og profiladministration.
@@ -109,7 +115,6 @@ Sørg for at lave jeres services simple og kun med de nødvendige funktionalitet
     - Foreslår produkter til brugerne baseret på deres adfærd og præferencer.
     - Implementeres ved hjælp af algoritmer som samarbejdsfiltrering eller indholdsbaseret filtrering.
 
-I hope this helps you with your requirements!
 
 
 

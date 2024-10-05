@@ -111,26 +111,25 @@
 <p><img alt="_images/microsevices_quote.png" src="_images/microsevices_quote.png" /></p>
 <section id="forberedels">
 <h2><span class="section-number">11.1. </span>Forberedels<a class="headerlink" href="#forberedels" title="Link to this heading"></a></h2>
-<p>Se denne video for at få en forståelse for hvad Microservices er:</p>
+<p>Se de 2 videoer og læs artiklen:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=CdBtNQZH8a4">Video: What are Microservices?</a> (6:37)</p></li>
-</ul>
-<p>Læs denne artikkel:</p>
-<ul class="simple">
 <li><p><a class="reference external" href="https://martinfowler.com/articles/microservices.html">Microservices (Martin Fowler)</a> (30:00)</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=1vjOv_f9L8I">What is API gateway really all about? Java Brains - Brain Bytes</a> (8:55)</p></li>
 </ul>
 </section>
 <section id="laeringsmal">
 <h2><span class="section-number">11.2. </span>Læringsmål<a class="headerlink" href="#laeringsmal" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p>Have viden om grundprincipperne i hvad en Microservice arkitektur er</p></li>
-<li><p>Kunne bygge 2 microservices der arbejder sammen gennem et JSON API</p></li>
+<li><p>Kunne bygge microservices der arbejder sammen gennem et JSON API</p></li>
+<li><p>Kunne forstå konceptet om et API GATEWAY</p></li>
 </ul>
 </section>
 <section id="dagens-indhold">
 <h2><span class="section-number">11.3. </span>Dagens indhold<a class="headerlink" href="#dagens-indhold" title="Link to this heading"></a></h2>
 <p>Vi starter dagen med en gennemgang af hvordan i kan vha. environment variabler, docker volumens kan opnå persistens på tværs af jeres docker images og containers. (det som vi skulle have lavet sidste onsdag).</p>
-<p>Herefter kigger vi på nogle elementer der skal til for at</p>
+<p>Herefter laver vi en services fra øvelsen herunder sammen ved tavlen, og i fortsætter i grupper med øvelsen herunder.</p>
 </section>
 <section id="materialer">
 <h2><span class="section-number">11.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
@@ -148,14 +147,20 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 * [Building a Realistic Microservice Step-By-Step with Flask](https://www.youtube.com/watch?v=QauGyIdGiNc)
 * [flask-change-microservice](https://github.com/noahgift/flask-change-microservice/tree/main)
 
---><!-- * [Video: Microservices • Martin Fowler • GOTO 2014](https://www.youtube.com/watch?v=wgdBVIX9ifA)--><section id="ovelser">
+--><section id="ovelser">
 <h3><span class="section-number">11.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
 <section id="ov-1-shopping-site-microservices">
 <h4><span class="section-number">11.4.1.1. </span>Øv 1: Shopping Site Microservices<a class="headerlink" href="#ov-1-shopping-site-microservices" title="Link to this heading"></a></h4>
-<p>Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.<br />Vi har sammen lavet XXX og I skal nu lave en 2-3 stykker yderligere.</p>
-<p>I forhold til Product Catalog Service kan i bruge data fra dette <a class="reference external" href="https://openlibrary.org/dev/docs/api/search">api</a></p>
-<p>Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS).</p>
+<p>Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.<br />Vi har sammen lavet XXX og I skal nu lave 2 stykker yderligere plus et API GATEWAY.</p>
+<p>I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge data fra dette <a class="reference external" href="https://dummyjson.com/docs">api</a></p>
 <p>Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være afhængig af de andre services.</p>
+<p><strong>Docker</strong>
+Jeres services skal kunne køre i en docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.</p>
+<p><strong>Grupper</strong>
+Det vil være meget fint hvis i arbejder sammen i grupper og hver gruppe står for én Service af det samlede system. Det i skal være enige om inden i satrter er endpoints på jeres api´er. Altså hvad kan jeres service bruges til?</p>
+<p>I skal i README filerne til alle Services beskrive jeres endpoints.</p>
+<p>I skal udover jeres services herunder have et API GATEWAY.</p>
+<p>Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS).</p>
 <ol class="simple">
 <li><p><strong>User Service</strong>:</p>
 <ul class="simple">
@@ -237,7 +242,6 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 </ul>
 </li>
 </ol>
-<p>I hope this helps you with your requirements!</p>
 </section>
 </section>
 </section>
