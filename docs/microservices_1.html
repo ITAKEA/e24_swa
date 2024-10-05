@@ -70,7 +70,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#laeringsmal">11.2. Læringsmål</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#dagens-indhold">11.3. Dagens indhold</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#materialer">11.4. Materialer</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#ovelser">11.4.1. Øvelser</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ovelser">11.4.1. Øvelser</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ov-1-shopping-site-microservices">11.4.1.1. Øv 1: Shopping Site Microservices</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -133,6 +136,8 @@
 <h2><span class="section-number">11.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="materialer/routes.html"><span class="doc">Query parametre</span></a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=CdBtNQZH8a4">Video: What are Microservices?</a> (6:37)</p></li>
+<li><p><a class="reference external" href="https://martinfowler.com/articles/microservices.html">Microservices (Martin Fowler)</a></p></li>
 </ul>
 <!--
 Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som host
@@ -143,12 +148,97 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 * [Building a Realistic Microservice Step-By-Step with Flask](https://www.youtube.com/watch?v=QauGyIdGiNc)
 * [flask-change-microservice](https://github.com/noahgift/flask-change-microservice/tree/main)
 
---><ul class="simple">
-<li><p><a class="reference external" href="https://www.youtube.com/watch?v=CdBtNQZH8a4">Video: What are Microservices?</a> (6:37)</p></li>
-<li><p><a class="reference external" href="https://martinfowler.com/articles/microservices.html">Microservices (Martin Fowler)</a></p></li>
-</ul>
-<!-- * [Video: Microservices • Martin Fowler • GOTO 2014](https://www.youtube.com/watch?v=wgdBVIX9ifA)--><section id="ovelser">
+--><!-- * [Video: Microservices • Martin Fowler • GOTO 2014](https://www.youtube.com/watch?v=wgdBVIX9ifA)--><section id="ovelser">
 <h3><span class="section-number">11.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
+<section id="ov-1-shopping-site-microservices">
+<h4><span class="section-number">11.4.1.1. </span>Øv 1: Shopping Site Microservices<a class="headerlink" href="#ov-1-shopping-site-microservices" title="Link to this heading"></a></h4>
+<p>Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.<br />Vi har sammen lavet XXX og I skal nu lave en 2-3 stykker yderligere.</p>
+<p>I forhold til Product Catalog Service kan i bruge data fra dette <a class="reference external" href="https://openlibrary.org/dev/docs/api/search">api</a></p>
+<p>Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS).</p>
+<p>Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være afhængig af de andre services.</p>
+<ol class="simple">
+<li><p><strong>User Service</strong>:</p>
+<ul class="simple">
+<li><p>Håndterer brugerkonti, herunder registrering, autentificering og profiladministration.</p></li>
+<li><p>Behandler login, logout, passwordhåndtering og brugerroller.</p></li>
+</ul>
+</li>
+<li><p><strong>Product Catalog Service</strong>:</p>
+<ul class="simple">
+<li><p>Styrer listen over tilgængelige produkter, inklusive detaljer såsom navn, beskrivelse, pris og billeder.</p></li>
+<li><p>Tilbyder funktionalitet til at søge, filtrere og kategorisere produkter.</p></li>
+</ul>
+</li>
+<li><p><strong>Inventory Service</strong>:</p>
+<ul class="simple">
+<li><p>Håndterer lagerbeholdningen for produkter.</p></li>
+<li><p>Sporer ændringer i lageret (f.eks. justeringer af mængden efter salg).</p></li>
+</ul>
+</li>
+<li><p><strong>Order Service</strong>:</p>
+<ul class="simple">
+<li><p>Håndterer ordreplacering, behandling og sporing.</p></li>
+<li><p>Administrerer livscyklussen for en ordre fra oprettelse til opfyldelse.</p></li>
+</ul>
+</li>
+<li><p><strong>Payment Service</strong>:</p>
+<ul class="simple">
+<li><p>Behandler betalinger for ordrer.</p></li>
+<li><p>Integrerer med betalingsgateways og styrer transaktionsregistre.</p></li>
+</ul>
+</li>
+<li><p><strong>Cart Service</strong>:</p>
+<ul class="simple">
+<li><p>Håndterer brugernes indkøbskurve.</p></li>
+<li><p>Tilbyder funktioner til at tilføje, fjerne og opdatere varer i kurven.</p></li>
+</ul>
+</li>
+<li><p><strong>Shipping Service</strong>:</p>
+<ul class="simple">
+<li><p>Beregner forsendelsesomkostninger og styrer leveringsmuligheder.</p></li>
+<li><p>Sporer forsendelser og opdaterer ordrestatus ved levering.</p></li>
+</ul>
+</li>
+<li><p><strong>Currency Service</strong>:</p>
+<ul class="simple">
+<li><p>Håndterer omregning mellem forskellige valutaer for at sikre, at priserne vises korrekt afhængigt af brugerens valgte valuta.</p></li>
+<li><p>Opdaterer valutakurser i realtid ved at integrere med eksterne valutakurseressourcer og API’er.</p></li>
+<li><p>Giver funktionalitet til at indstille eller vælge en foretrukken valuta for både brugere og administratorer.</p></li>
+</ul>
+</li>
+<li><p><strong>Review and Ratings Service</strong>:</p>
+<ul class="simple">
+<li><p>Giver brugerne mulighed for at anmelde og vurdere produkter.</p></li>
+<li><p>Styrer moderation og visning af brugergenereret indhold.</p></li>
+</ul>
+</li>
+<li><p><strong>Notification Service</strong>:</p>
+<ul class="simple">
+<li><p>Sender meddelelser til brugerne (f.eks. ordrebekræftelser, forsendelsesopdateringer).</p></li>
+<li><p>Kan håndtere forskellige kanaler som e-mail, SMS eller push-beskeder.</p></li>
+</ul>
+</li>
+<li><p><strong>Search Service</strong>:</p>
+<ul class="simple">
+<li><p>Tilbyder fuldtekstsøgning på tværs af produkter.</p></li>
+<li><p>Implementerer funktioner som auto-forslag og forudsigende søgning.</p></li>
+</ul>
+</li>
+<li><p><strong>Analytics Service</strong>:</p>
+<ul class="simple">
+<li><p>Samler og behandler data til rapportering og indsigt.</p></li>
+<li><p>Tilbyder dashboards og metrikker for salg, brugeradfærd osv.</p></li>
+</ul>
+</li>
+<li><p><strong>Recommendation Service</strong>:</p>
+<ul class="simple">
+<li><p>Foreslår produkter til brugerne baseret på deres adfærd og præferencer.</p></li>
+<li><p>Implementeres ved hjælp af algoritmer som samarbejdsfiltrering eller indholdsbaseret filtrering.</p></li>
+</ul>
+</li>
+</ol>
+<p>I hope this helps you with your requirements!</p>
+</section>
 </section>
 </section>
 </section>
