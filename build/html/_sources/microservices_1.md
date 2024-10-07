@@ -11,7 +11,6 @@ Se de 2 videoer og læs artiklen:
 ## Læringsmål
 * Have viden om grundprincipperne i hvad en Microservice arkitektur er
 * Kunne bygge microservices der arbejder sammen gennem et JSON API
-* Kunne forstå konceptet om et API GATEWAY
 
 ## Dagens indhold
 
