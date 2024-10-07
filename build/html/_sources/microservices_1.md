@@ -7,7 +7,6 @@
 Se de 2 videoer og læs artiklen:    
 * [Video: What are Microservices?](https://www.youtube.com/watch?v=CdBtNQZH8a4) (6:37)
 * [Microservices (Martin Fowler)](https://martinfowler.com/articles/microservices.html) (30:00)   
-* [What is API gateway really all about? Java Brains - Brain Bytes](https://www.youtube.com/watch?v=1vjOv_f9L8I) (8:55)
 
 ## Læringsmål
 * Have viden om grundprincipperne i hvad en Microservice arkitektur er
