@@ -150,17 +150,15 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 <h3><span class="section-number">11.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
 <section id="shopping-site-microservices">
 <h4><span class="section-number">11.4.1.1. </span>Shopping Site Microservices<a class="headerlink" href="#shopping-site-microservices" title="Link to this heading"></a></h4>
-<p>Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.<br />Vi har sammen lavet XXX og I skal nu minimum lave 2 stykker yderligere, og i skal vælge nogle der interagere med hinanden.</p>
-<p>I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge data fra dette <a class="reference external" href="https://dummyjson.com/docs">api</a></p>
-<p>Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være afhængig af de andre services.</p>
+<p>Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.<br />Vi har sammen lavet Account Service og I skal nu i grupper lave en service yderligere.<br />I skal arbjede sammen med minimum en anden gruppe, som har udviklet deres egen service (en anden service end jer).<br />I skal vælge services der interagere med hinanden.</p>
+<p>I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge data fra dette <a class="reference external" href="https://dummyjson.com/docs">api</a>. Vær opmærksom på at ikke alt data fra dette api kan bruges dirrekte (feks. vil i helt sikkert gerne kunne sætte en anden pris på produkterne end det der står i api´et).</p>
+<p>Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være stærkt afhængig af de andre services.</p>
 <p><strong>Docker</strong>
-Jeres services skal kunne køre i hver deres docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.</p>
-<p><strong>Grupper</strong>
-Det vil være meget fint hvis i arbejder sammen i grupper og hver gruppe står for én Service af det samlede system. Det i skal være enige om inden i satrter er endpoints på jeres api´er. Altså hvad kan jeres service bruges til?</p>
+Jeres services skal køre i hver deres docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.</p>
 <p>I skal i README filerne til alle Services beskrive jeres endpoints.</p>
 <p>Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS).</p>
 <ol class="simple">
-<li><p><strong>User Service</strong>:</p>
+<li><p><strong>Account Service</strong>:</p>
 <ul class="simple">
 <li><p>Håndterer brugerkonti, herunder registrering, autentificering og profiladministration.</p></li>
 <li><p>Behandler login, logout, passwordhåndtering og brugerroller.</p></li>

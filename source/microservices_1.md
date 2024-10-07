@@ -43,23 +43,22 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 ### Øvelser
 #### Shopping Site Microservices
 Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.    
-Vi har sammen lavet XXX og I skal nu minimum lave 2 stykker yderligere, og i skal vælge nogle der interagere med hinanden.     
+Vi har sammen lavet Account Service og I skal nu i grupper lave en service yderligere.     
+I skal arbjede sammen med minimum en anden gruppe, som har udviklet deres egen service (en anden service end jer).     
+I skal vælge services der interagere med hinanden.         
 
-I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge data fra dette [api](https://dummyjson.com/docs)    
+I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge data fra dette [api](https://dummyjson.com/docs). Vær opmærksom på at ikke alt data fra dette api kan bruges dirrekte (feks. vil i helt sikkert gerne kunne sætte en anden pris på produkterne end det der står i api´et).        
  
-Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være afhængig af de andre services.
+Husk at jeres services så vidt det er muligt skal kunne fungere uden de andre services. Ikke nødvendigvis perfekt, men men dog godt nok til at de stadig kan bruges uden at være stærkt afhængig af de andre services.
 
 **Docker**
-Jeres services skal kunne køre i hver deres docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.    
-
-**Grupper**
-Det vil være meget fint hvis i arbejder sammen i grupper og hver gruppe står for én Service af det samlede system. Det i skal være enige om inden i satrter er endpoints på jeres api´er. Altså hvad kan jeres service bruges til?
+Jeres services skal køre i hver deres docker container, og i skal gøre brug af environment variabler hvor det giver mening. I skal også sørge for at jeres images kan arbejde med persistent data via volumes.    
 
 I skal i README filerne til alle Services beskrive jeres endpoints.
  
 Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS).     
 
-1. **User Service**:
+1. **Account Service**:
    - Håndterer brugerkonti, herunder registrering, autentificering og profiladministration.
    - Behandler login, logout, passwordhåndtering og brugerroller.
 
