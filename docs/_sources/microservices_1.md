@@ -56,8 +56,6 @@ Jeres services skal kunne køre i hver deres docker container, og i skal gøre b
 Det vil være meget fint hvis i arbejder sammen i grupper og hver gruppe står for én Service af det samlede system. Det i skal være enige om inden i satrter er endpoints på jeres api´er. Altså hvad kan jeres service bruges til?
 
 I skal i README filerne til alle Services beskrive jeres endpoints.
-
-I skal udover jeres services herunder have et API GATEWAY.  
  
 Sørg for at lave jeres services simple og kun med de nødvendige funktionaliteter (KISS).     
 
