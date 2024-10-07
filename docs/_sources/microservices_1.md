@@ -43,7 +43,7 @@ Todo: Lav en tutorial og video baseret på denne artikkel, men med Azure som hos
 ### Øvelser
 #### Shopping Site Microservices
 Listen herunder indeholder nogle forslag til hvad en online markedsplads, som feks. Amazon.com kunne indeholde af Microservices.    
-Vi har sammen lavet XXX og I skal nu lave 2 stykker yderligere plus et API GATEWAY.    
+Vi har sammen lavet XXX og I skal nu minimum lave 2 stykker yderligere.    
 
 I forhold til Product Catalog Service (hvis i laver den) kan i med fordel bruge data fra dette [api](https://dummyjson.com/docs)    
  
