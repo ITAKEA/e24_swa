@@ -69,3 +69,21 @@ og ikke kørende containers
 
 > `docker login`    
 > `docker push USERNAME/IMAGE`    
+
+**Skab et netvæk mellem containers**
+
+Dine containers skal have et fast navn    
+
+> `docker run --name product_service`      
+
+Dine containers skal være på det samme netværk (brug bridge, eller lav dit eget)       
+
+> `docker run --network bridge`    
+
+I din app.py kode (eller lign. sted) skal du ændre `http://localhost:5000/products` til  `http://products_service:5000/products`      
+
+
+
+
+> ``
+
