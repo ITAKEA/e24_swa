@@ -150,18 +150,20 @@
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">login</span></code><br /><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">push</span> <span class="pre">USERNAME/IMAGE</span></code></p>
 </div></blockquote>
-<p><strong>Skab et netvæk mellem containers</strong></p>
+</section>
+<section id="skab-et-netvaek-mellem-containers">
+<h2>Skab et netvæk mellem containers<a class="headerlink" href="#skab-et-netvaek-mellem-containers" title="Link to this heading"></a></h2>
 <p>Dine containers skal have et fast navn</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--name</span> <span class="pre">product_service</span></code></p>
 </div></blockquote>
-<p>Dine containers skal være på det samme netværk (brug bridge, eller lav dit eget)</p>
+<p>Dine containers skal være på det samme netværk (brug <strong>bridge</strong>, eller lav dit eget)</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">--network</span> <span class="pre">bridge</span></code></p>
 </div></blockquote>
-<p>I din app.py kode (eller lign. sted) skal du ændre <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/products</span></code> til  <code class="docutils literal notranslate"><span class="pre">http://products_service:5000/products</span></code></p>
+<p>I din app.py kode (eller lign. sted) skal du ændre</p>
 <blockquote>
-<div><p>``</p>
+<div><p><code class="docutils literal notranslate"><span class="pre">http://localhost:5000/products</span></code> til<br /><code class="docutils literal notranslate"><span class="pre">http://products_service:5000/products</span></code></p>
 </div></blockquote>
 </section>
 </section>
