@@ -32,7 +32,7 @@ I dag skal vi arbejde med Arthendication og Arthorization med Json Web Token (JW
 ```
 # auth.py
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, make_response
 import jwt
 import datetime
 
@@ -55,10 +55,13 @@ def login():
 
     if users.get(username) and users.get(username) == password:
         token = jwt.encode({
-            'user': username
+            'user': username,
+            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
         }, app.config['SECRET_KEY'], algorithm='HS256')
         
-        return jsonify({"token": token})
+        response = make_response(jsonify({"message": "Login successful"}), 200)
+        response.headers['Authorization'] = f'Bearer {token}'
+        return response
     else:
         return jsonify({"message": "Invalid Credentials"}), 401
 
@@ -77,25 +80,26 @@ import jwt
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
 
-def token_required(f):
-    def wrapped(*args, **kwargs):
-        token = request.headers.get('Authorization')
-        if not token:
-            return jsonify({"message": "Token is missing!"}), 403
+def verify_token(token):
+    if not token:
+        return jsonify({"message": "Token is missing!"}), 403
 
-        try:
-            jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
-        except jwt.ExpiredSignatureError:
-            return jsonify({"message": "Token is expired!"}), 403
-        except jwt.InvalidTokenError:
-            return jsonify({"message": "Invalid token!"}), 403
+    try:
+        token = token.split(" ")[1] if token.startswith("Bearer ") else token
+        jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+    except jwt.ExpiredSignatureError:
+        return jsonify({"message": "Token is expired!"}), 403
+    except jwt.InvalidTokenError:
+        return jsonify({"message": "Invalid token!"}), 403
 
-        return f(*args, **kwargs)
-    return wrapped
+    return None
 
 @app.route("/")
-@token_required
 def home():
+    token = request.headers.get('Authorization')
+    token_error = verify_token(token)
+    if token_error:
+        return token_error
     return "Hello, this is a Flask Microservice"
 
 if __name__ == "__main__":
