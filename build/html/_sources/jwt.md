@@ -1,13 +1,14 @@
 # Authorization med JWT
+I dag skal vi arbejde med Arthendication og Arthorization med Json Web Token (JWT).
 
 ## Læringsmål
 * Kunne forklare begrebet Authendication i forbindelse med en Microservice arkitektur
 * Kunne forklare begrebet Authorisation i forbindelse med en Microservice arkitektur
-
-
-
+* 
 
 ## Forberedelse
+* [What is JWT? JSON Web Tokens Explained (Java Brains)](https://www.youtube.com/watch?v=soGRyl9ztjI)
+* [What is the structure of a JWT - Java Brains](https://www.youtube.com/watch?v=_XbXkVdoG_0)
 
 ## Dagens indhold
 
@@ -26,7 +27,7 @@
 
 #### Øvelse med app.py og auth.py services i samarbejde
 
-1. Kig på følgende to python filer iKør dem og forstå hvad der foregår i koden linie for linie. 
+1. Kig på følgende to python filer. Kør dem og forstå hvad der foregår i koden linie for linie. 
 
 ```
 # auth.py
