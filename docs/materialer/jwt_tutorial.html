@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture &mdash; ITA 2024 3. semester</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=a5898925" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="../_static/scripts/sphinx-book-theme.js"></script>
+        <script>let toggleHintShow = 'Click to show';</script>
+        <script>let toggleHintHide = 'Click to hide';</script>
+        <script>let toggleOpenOnPrint = 'true';</script>
+        <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            SoftwareArkitektur og Cloud
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_1.html">1. Introduction til python (dag1)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_2.html">2. Python - Datastrukture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux_1.html">3. Linux OS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux_2.html">4. Linux OS II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../py_intro_3.html">5. Python modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../introduktion_til_rest_api.html">6. En introduktion til REST API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flask.html">7. Flask API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../flask_2.html">8. Flask (dag 2)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker_1.html">9. Docker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../docker_2.html">10. Docker II</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../microservices_1.html">11. Microservices 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../microservices_2.html">12. Microservices 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../decorators.html">13. Python  - Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../jwt.html">14. Authorization med JWT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../azure_1.html">15. Azure Deployment 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../azure_2.html">16. Azure Deployment 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dokumentation.html">17. Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../swagger_1.html">18. Swagger API dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../swagger_2.html">19. Swagger 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../price.html">20. Azure prisberegning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auditional_exercises.html">21. Extra øvelser</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">SoftwareArkitektur og Cloud</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/ITAKEA/e24_swa.git/blob/mainmaterialer/jwt_tutorial.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="implementing-jwt-authentication-with-cookies-in-a-dockerized-flask-microservice-architecture">
+<h1>Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture<a class="headerlink" href="#implementing-jwt-authentication-with-cookies-in-a-dockerized-flask-microservice-architecture" title="Link to this heading"></a></h1>
+<p>In this tutorial, we’ll build a Flask microservices application that uses JSON Web Tokens (JWT) for authentication, with the token stored in a cookie. The application will consist of two microservices and an API gateway where the authentication takes place. Additionally, we’ll containerize each service using Docker.</p>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="#prerequisites"><span class="std std-ref">Prerequisites</span></a></p></li>
+<li><p><a class="reference internal" href="#project-structure"><span class="std std-ref">Project Structure</span></a></p></li>
+<li><p><a class="reference internal" href="#setting-up-the-environment"><span class="std std-ref">Setting Up the Environment</span></a></p></li>
+<li><p><a class="reference internal" href="#creating-the-api-gateway"><span class="std std-ref">Creating the API Gateway</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#implementing-jwt-authentication-with-cookies"><span class="std std-ref">Implementing JWT Authentication with Cookies</span></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#creating-microservice-1"><span class="std std-ref">Creating Microservice 1</span></a></p></li>
+<li><p><a class="reference internal" href="#creating-microservice-2"><span class="std std-ref">Creating Microservice 2</span></a></p></li>
+<li><p><a class="reference internal" href="#dockerizing-the-services"><span class="std std-ref">Dockerizing the Services</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#creating-dockerfiles"><span class="std std-ref">Creating Dockerfiles</span></a></p></li>
+<li><p>Creating a docker-compose.yml File</p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#running-the-services-with-docker-compose"><span class="std std-ref">Running the Services with Docker Compose</span></a></p></li>
+<li><p><a class="reference internal" href="#testing-the-application"><span class="std std-ref">Testing the Application</span></a></p>
+<ul>
+<li><p><a class="reference internal" href="#using-postman-to-test-the-api"><span class="std std-ref">Using Postman to Test the API</span></a></p>
+<ul>
+<li><p>1. Log In and Obtain JWT Token Cookie</p></li>
+<li><p>2. Access Microservice 1</p></li>
+<li><p>3. Access Microservice 2</p></li>
+<li><p>4. Access Without Token</p></li>
+<li><p>5. Log Out</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#conclusion"><span class="std std-ref">Conclusion</span></a></p></li>
+</ul>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Docker and Docker Compose installed on your machine</p></li>
+<li><p>Python 3.7 or higher (for development)</p></li>
+<li><p>Basic knowledge of Flask, RESTful APIs, and Docker</p></li>
+<li><p>Familiarity with JWT concepts</p></li>
+<li><p><a class="reference external" href="https://www.postman.com/downloads/">Postman</a> installed for API testing</p></li>
+</ul>
+</section>
+<section id="project-structure">
+<h2>Project Structure<a class="headerlink" href="#project-structure" title="Link to this heading"></a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>jwt_microservices/
+├── api_gateway/
+│   ├── gateway.py
+│   └── Dockerfile
+├── microservice1/
+│   ├── service1.py
+│   └── Dockerfile
+├── microservice2/
+│   ├── service2.py
+│   └── Dockerfile
+├── docker-compose.yml
+└── requirements.txt
+</pre></div>
+</div>
+</section>
+<section id="setting-up-the-environment">
+<h2>Setting Up the Environment<a class="headerlink" href="#setting-up-the-environment" title="Link to this heading"></a></h2>
+<p>First, create a project directory and navigate into it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>jwt_microservices
+<span class="nb">cd</span><span class="w"> </span>jwt_microservices
+</pre></div>
+</div>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file with the following contents:</p>
+<div class="highlight-txt notranslate"><div class="highlight"><pre><span></span>Flask==2.2.2
+PyJWT==2.4.0
+requests==2.28.1
+</pre></div>
+</div>
+</section>
+<section id="creating-the-api-gateway">
+<h2>Creating the API Gateway<a class="headerlink" href="#creating-the-api-gateway" title="Link to this heading"></a></h2>
+<p>Create a directory for the API gateway:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>api_gateway
+</pre></div>
+</div>
+<p>Create a file named <code class="docutils literal notranslate"><span class="pre">gateway.py</span></code> inside the <code class="docutils literal notranslate"><span class="pre">api_gateway</span></code> directory.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># api_gateway/gateway.py</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">make_response</span>
+<span class="kn">import</span> <span class="nn">jwt</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span><span class="p">,</span> <span class="n">timedelta</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">,</span> <span class="s1">&#39;your_secret_key&#39;</span><span class="p">)</span>
+
+<span class="c1"># In-memory user store for demonstration purposes</span>
+<span class="n">users</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;user1&#39;</span><span class="p">:</span> <span class="s1">&#39;password1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;user2&#39;</span><span class="p">:</span> <span class="s1">&#39;password2&#39;</span>
+<span class="p">}</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/login&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">auth_data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">json</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">auth_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">auth_data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">username</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">password</span> <span class="ow">or</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="o">!=</span> <span class="n">password</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Invalid credentials&#39;</span><span class="p">}),</span> <span class="mi">401</span>
+
+    <span class="n">token</span> <span class="o">=</span> <span class="n">jwt</span><span class="o">.</span><span class="n">encode</span><span class="p">({</span>
+        <span class="s1">&#39;sub&#39;</span><span class="p">:</span> <span class="n">username</span><span class="p">,</span>
+        <span class="s1">&#39;iat&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">(),</span>
+        <span class="s1">&#39;exp&#39;</span><span class="p">:</span> <span class="n">datetime</span><span class="o">.</span><span class="n">utcnow</span><span class="p">()</span> <span class="o">+</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+    <span class="p">},</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">],</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;HS256&#39;</span><span class="p">)</span>
+
+    <span class="n">response</span> <span class="o">=</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Logged in successfully&#39;</span><span class="p">}))</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">,</span> <span class="n">token</span><span class="p">,</span> <span class="n">httponly</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">samesite</span><span class="o">=</span><span class="s1">&#39;Strict&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/logout&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">logout</span><span class="p">():</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">make_response</span><span class="p">(</span><span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Logged out successfully&#39;</span><span class="p">}))</span>
+    <span class="n">response</span><span class="o">.</span><span class="n">set_cookie</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">expires</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">response</span>
+
+<span class="k">def</span> <span class="nf">verify_token</span><span class="p">():</span>
+    <span class="n">token</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;token&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">token</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">payload</span> <span class="o">=</span> <span class="n">jwt</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">],</span> <span class="n">algorithms</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;HS256&#39;</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">payload</span>
+    <span class="k">except</span> <span class="n">jwt</span><span class="o">.</span><span class="n">ExpiredSignatureError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;expired&#39;</span>
+    <span class="k">except</span> <span class="n">jwt</span><span class="o">.</span><span class="n">InvalidTokenError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/service1&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">service1</span><span class="p">():</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">verify_token</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">payload</span> <span class="o">==</span> <span class="s1">&#39;expired&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Token expired&#39;</span><span class="p">}),</span> <span class="mi">401</span>
+    <span class="k">if</span> <span class="n">payload</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Invalid token&#39;</span><span class="p">}),</span> <span class="mi">401</span>
+
+    <span class="c1"># Forward the request to microservice1</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+        <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+        <span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://microservice1:5001&#39;</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span> <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;Host&#39;</span><span class="p">},</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">get_data</span><span class="p">(),</span>
+        <span class="n">cookies</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="p">,</span>
+        <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/service2&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">service2</span><span class="p">():</span>
+    <span class="n">payload</span> <span class="o">=</span> <span class="n">verify_token</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">payload</span> <span class="o">==</span> <span class="s1">&#39;expired&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Token expired&#39;</span><span class="p">}),</span> <span class="mi">401</span>
+    <span class="k">if</span> <span class="n">payload</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Invalid token&#39;</span><span class="p">}),</span> <span class="mi">401</span>
+
+    <span class="c1"># Forward the request to microservice2</span>
+    <span class="n">resp</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+        <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+        <span class="n">url</span><span class="o">=</span><span class="s1">&#39;http://microservice2:5002&#39;</span> <span class="o">+</span> <span class="n">request</span><span class="o">.</span><span class="n">path</span><span class="p">,</span>
+        <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">value</span> <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="ow">in</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span> <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;Host&#39;</span><span class="p">},</span>
+        <span class="n">data</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">get_data</span><span class="p">(),</span>
+        <span class="n">cookies</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">cookies</span><span class="p">,</span>
+        <span class="n">allow_redirects</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5000</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<section id="implementing-jwt-authentication-with-cookies">
+<h3>Implementing JWT Authentication with Cookies<a class="headerlink" href="#implementing-jwt-authentication-with-cookies" title="Link to this heading"></a></h3>
+<p>In the API gateway, we’re handling JWT authentication by storing the token in a cookie:</p>
+<ol class="simple">
+<li><p><strong>Set the Token Cookie</strong>: Upon successful login, the JWT token is stored in an HTTP-only cookie.</p></li>
+<li><p><strong>Verify the Token</strong>: A helper function <code class="docutils literal notranslate"><span class="pre">verify_token()</span></code> extracts and verifies the token from the cookie.</p></li>
+<li><p><strong>Handle Exceptions</strong>: Manage cases where the token is expired or invalid.</p></li>
+<li><p><strong>Forward the Request</strong>: If the token is valid, forward the request to the appropriate microservice.</p></li>
+</ol>
+</section>
+</section>
+<section id="creating-microservice-1">
+<h2>Creating Microservice 1<a class="headerlink" href="#creating-microservice-1" title="Link to this heading"></a></h2>
+<p>Create a directory for microservice1:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>microservice1
+</pre></div>
+</div>
+<p>Create a file named <code class="docutils literal notranslate"><span class="pre">service1.py</span></code> inside the <code class="docutils literal notranslate"><span class="pre">microservice1</span></code> directory.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># microservice1/service1.py</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/service1&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">handle_service1</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Response from Microservice 1&#39;</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5001</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="creating-microservice-2">
+<h2>Creating Microservice 2<a class="headerlink" href="#creating-microservice-2" title="Link to this heading"></a></h2>
+<p>Create a directory for microservice2:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>microservice2
+</pre></div>
+</div>
+<p>Create a file named <code class="docutils literal notranslate"><span class="pre">service2.py</span></code> inside the <code class="docutils literal notranslate"><span class="pre">microservice2</span></code> directory.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># microservice2/service2.py</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/service2&#39;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;GET&#39;</span><span class="p">,</span> <span class="s1">&#39;POST&#39;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">handle_service2</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s1">&#39;message&#39;</span><span class="p">:</span> <span class="s1">&#39;Response from Microservice 2&#39;</span><span class="p">})</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5002</span><span class="p">,</span> <span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="dockerizing-the-services">
+<h2>Dockerizing the Services<a class="headerlink" href="#dockerizing-the-services" title="Link to this heading"></a></h2>
+<section id="creating-dockerfiles">
+<h3>Creating Dockerfiles<a class="headerlink" href="#creating-dockerfiles" title="Link to this heading"></a></h3>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> for each service.</p>
+<section id="api-gateway-dockerfile">
+<h4>API Gateway Dockerfile<a class="headerlink" href="#api-gateway-dockerfile" title="Link to this heading"></a></h4>
+<p>Create <code class="docutils literal notranslate"><span class="pre">api_gateway/Dockerfile</span></code>:</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># api_gateway/Dockerfile</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="k">COPY</span><span class="w"> </span>gateway.py<span class="w"> </span>.
+
+<span class="k">ENV</span><span class="w"> </span>SECRET_KEY<span class="w"> </span>your_secret_key
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">5000</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;gateway.py&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="microservice-1-dockerfile">
+<h4>Microservice 1 Dockerfile<a class="headerlink" href="#microservice-1-dockerfile" title="Link to this heading"></a></h4>
+<p>Create <code class="docutils literal notranslate"><span class="pre">microservice1/Dockerfile</span></code>:</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># microservice1/Dockerfile</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="k">COPY</span><span class="w"> </span>service1.py<span class="w"> </span>.
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">5001</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;service1.py&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="microservice-2-dockerfile">
+<h4>Microservice 2 Dockerfile<a class="headerlink" href="#microservice-2-dockerfile" title="Link to this heading"></a></h4>
+<p>Create <code class="docutils literal notranslate"><span class="pre">microservice2/Dockerfile</span></code>:</p>
+<div class="highlight-dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># microservice2/Dockerfile</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.9-slim</span>
+
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+
+<span class="k">COPY</span><span class="w"> </span>requirements.txt<span class="w"> </span>.
+
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+
+<span class="k">COPY</span><span class="w"> </span>service2.py<span class="w"> </span>.
+
+<span class="k">EXPOSE</span><span class="w"> </span><span class="s">5002</span>
+
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;service2.py&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="creating-a-docker-compose-yml-file">
+<h3>Creating a <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> File<a class="headerlink" href="#creating-a-docker-compose-yml-file" title="Link to this heading"></a></h3>
+<p>In the root of your project directory, create a <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code> file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># docker-compose.yml</span>
+<span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.8&#39;</span>
+
+<span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">api_gateway</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./api_gateway</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5000:5000&quot;</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microservice1</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">microservice2</span>
+
+<span class="w">  </span><span class="nt">microservice1</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./microservice1</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5001:5001&quot;</span>
+
+<span class="w">  </span><span class="nt">microservice2</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./microservice2</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;5002:5002&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="running-the-services-with-docker-compose">
+<h2>Running the Services with Docker Compose<a class="headerlink" href="#running-the-services-with-docker-compose" title="Link to this heading"></a></h2>
+<p>From the root of your project directory, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>up<span class="w"> </span>--build
+</pre></div>
+</div>
+<p>This command will build the Docker images and start all the services defined in <code class="docutils literal notranslate"><span class="pre">docker-compose.yml</span></code>.</p>
+</section>
+<section id="testing-the-application">
+<h2>Testing the Application<a class="headerlink" href="#testing-the-application" title="Link to this heading"></a></h2>
+<section id="using-postman-to-test-the-api">
+<h3>Using Postman to Test the API<a class="headerlink" href="#using-postman-to-test-the-api" title="Link to this heading"></a></h3>
+<p>We’ll use Postman to interact with our API and test the authentication flow.</p>
+<section id="log-in-and-obtain-jwt-token-cookie">
+<h4>1. Log In and Obtain JWT Token Cookie<a class="headerlink" href="#log-in-and-obtain-jwt-token-cookie" title="Link to this heading"></a></h4>
+<ul>
+<li><p><strong>Open Postman</strong>.</p></li>
+<li><p><strong>Create a new POST request</strong> to <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/login</span></code>.</p></li>
+<li><p><strong>Set Headers</strong>:</p>
+<ul class="simple">
+<li><p>Click on the “Headers” tab.</p></li>
+<li><p>Ensure that <code class="docutils literal notranslate"><span class="pre">Content-Type</span></code> is set to <code class="docutils literal notranslate"><span class="pre">application/json</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Set Body</strong>:</p>
+<ul>
+<li><p>Click on the “Body” tab.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">raw</span></code> and choose <code class="docutils literal notranslate"><span class="pre">JSON</span></code> from the dropdown.</p></li>
+<li><p>Enter the following JSON data:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;password1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Send the Request</strong>:</p>
+<ul class="simple">
+<li><p>Click the “Send” button.</p></li>
+</ul>
+</li>
+<li><p><strong>Check the Response</strong>:</p>
+<ul>
+<li><p>You should receive a response with a message indicating a successful login:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Logged in successfully&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Manage Cookies</strong>:</p>
+<ul class="simple">
+<li><p>Click on the “Cookies” link (below the “Send” button).</p></li>
+<li><p>Ensure that a cookie named <code class="docutils literal notranslate"><span class="pre">token</span></code> is stored for <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p></li>
+<li><p>Postman automatically saves cookies from responses, so you should see the <code class="docutils literal notranslate"><span class="pre">token</span></code> cookie listed.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="access-microservice-1">
+<h4>2. Access Microservice 1<a class="headerlink" href="#access-microservice-1" title="Link to this heading"></a></h4>
+<ul>
+<li><p><strong>Create a new GET request</strong> to <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/service1</span></code>.</p></li>
+<li><p><strong>Ensure Cookies are Sent</strong>:</p>
+<ul class="simple">
+<li><p>Postman automatically includes saved cookies when making requests to the same host.</p></li>
+<li><p>Verify that the <code class="docutils literal notranslate"><span class="pre">token</span></code> cookie is present by clicking on the “Cookies” link.</p></li>
+</ul>
+</li>
+<li><p><strong>Send the Request</strong>:</p>
+<ul class="simple">
+<li><p>Click the “Send” button.</p></li>
+</ul>
+</li>
+<li><p><strong>Check the Response</strong>:</p>
+<ul>
+<li><p>You should receive a response from Microservice 1:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Response from Microservice 1&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="access-microservice-2">
+<h4>3. Access Microservice 2<a class="headerlink" href="#access-microservice-2" title="Link to this heading"></a></h4>
+<ul>
+<li><p><strong>Create a new GET request</strong> to <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/service2</span></code>.</p></li>
+<li><p><strong>Ensure Cookies are Sent</strong>:</p>
+<ul class="simple">
+<li><p>As before, make sure the <code class="docutils literal notranslate"><span class="pre">token</span></code> cookie is present.</p></li>
+</ul>
+</li>
+<li><p><strong>Send the Request</strong>:</p>
+<ul class="simple">
+<li><p>Click the “Send” button.</p></li>
+</ul>
+</li>
+<li><p><strong>Check the Response</strong>:</p>
+<ul>
+<li><p>You should receive a response from Microservice 2:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Response from Microservice 2&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="access-without-token">
+<h4>4. Access Without Token<a class="headerlink" href="#access-without-token" title="Link to this heading"></a></h4>
+<p>To test access without the token:</p>
+<ul>
+<li><p><strong>Delete the <code class="docutils literal notranslate"><span class="pre">token</span></code> Cookie</strong>:</p>
+<ul class="simple">
+<li><p>Click on the “Cookies” link.</p></li>
+<li><p>Select <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p></li>
+<li><p>Hover over the <code class="docutils literal notranslate"><span class="pre">token</span></code> cookie and click the “X” to delete it.</p></li>
+</ul>
+</li>
+<li><p><strong>Create a new GET request</strong> to <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/service1</span></code>.</p></li>
+<li><p><strong>Send the Request</strong>:</p>
+<ul class="simple">
+<li><p>Click the “Send” button.</p></li>
+</ul>
+</li>
+<li><p><strong>Check the Response</strong>:</p>
+<ul>
+<li><p>You should receive an error message indicating an invalid token:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid token&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="log-out">
+<h4>5. Log Out<a class="headerlink" href="#log-out" title="Link to this heading"></a></h4>
+<ul>
+<li><p><strong>Re-Login if Necessary</strong>:</p>
+<ul class="simple">
+<li><p>If you deleted the <code class="docutils literal notranslate"><span class="pre">token</span></code> cookie in the previous step, log in again to obtain a new token cookie.</p></li>
+</ul>
+</li>
+<li><p><strong>Create a new POST request</strong> to <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/logout</span></code>.</p></li>
+<li><p><strong>Ensure Cookies are Sent</strong>:</p>
+<ul class="simple">
+<li><p>Verify that the <code class="docutils literal notranslate"><span class="pre">token</span></code> cookie is present.</p></li>
+</ul>
+</li>
+<li><p><strong>Send the Request</strong>:</p>
+<ul class="simple">
+<li><p>Click the “Send” button.</p></li>
+</ul>
+</li>
+<li><p><strong>Check the Response</strong>:</p>
+<ul>
+<li><p>You should receive a message indicating a successful logout:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Logged out successfully&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Token Cookie is Cleared</strong>:</p>
+<ul class="simple">
+<li><p>Click on the “Cookies” link.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">token</span></code> cookie should no longer be present under <code class="docutils literal notranslate"><span class="pre">localhost</span></code>.</p></li>
+</ul>
+</li>
+<li><p><strong>Attempt to Access a Service After Logout</strong>:</p>
+<ul>
+<li><p><strong>Create a new GET request</strong> to <code class="docutils literal notranslate"><span class="pre">http://localhost:5000/service1</span></code>.</p></li>
+<li><p><strong>Send the Request</strong>.</p></li>
+<li><p><strong>Check the Response</strong>:</p>
+<ul>
+<li><p>You should receive an error message indicating an invalid token:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid token&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Link to this heading"></a></h2>
+<p>We’ve successfully built a Flask microservices application with JWT authentication using cookies and containerized each service using Docker. We’ve also demonstrated how to test the application using Postman, a powerful API development tool.</p>
+<section id="key-takeaways">
+<h3>Key Takeaways<a class="headerlink" href="#key-takeaways" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>JWT in Cookies</strong>: Storing the JWT in a cookie enhances security by utilizing HTTP-only cookies, which are not accessible via JavaScript.</p></li>
+<li><p><strong>Containerization</strong>: Dockerizing each service ensures consistent environments and simplifies deployment.</p></li>
+<li><p><strong>Microservices Interaction</strong>: Each microservice remains independent, promoting modularity and ease of maintenance.</p></li>
+<li><p><strong>Using Postman</strong>: Postman simplifies API testing by managing cookies, headers, and request bodies effectively.</p></li>
+</ul>
+</section>
+<section id="next-steps">
+<h3>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Secure Cookies</strong>: In a production environment, ensure cookies are marked as <code class="docutils literal notranslate"><span class="pre">Secure</span></code> and consider using HTTPS.</p></li>
+<li><p><strong>Environment Variables</strong>: Manage secrets and configuration using environment variables or a secrets manager.</p></li>
+<li><p><strong>Scaling Services</strong>: Use orchestration tools like Kubernetes for scaling and managing your services.</p></li>
+<li><p><strong>Database Integration</strong>: Extend the application by integrating databases for persistent storage.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Claus Bove.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
