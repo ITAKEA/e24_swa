@@ -1,29 +1,29 @@
 # Authorization med JWT
-I dag skal vi arbejde med Arthendication og Arthorization med Json Web Token (JWT).
+I dag skal vi arbejde med Arthorization og med Json Web Token (JWT). Vi skal desuden kigge på hvordan man gemmer denne token i en cookies.
 
 ## Læringsmål
-* Kunne forklare begrebet Authendication i forbindelse med en Microservice arkitektur
 * Kunne forklare begrebet Authorisation i forbindelse med en Microservice arkitektur
-* 
+* Kunne forklare forskellen på Authendication og Arthorization.
+
 
 ## Forberedelse
 * [What is JWT? JSON Web Tokens Explained (Java Brains)](https://www.youtube.com/watch?v=soGRyl9ztjI)
 * [What is the structure of a JWT - Java Brains](https://www.youtube.com/watch?v=_XbXkVdoG_0)
 
 ## Dagens indhold
-
-
-## Hjemmesrabejde
-
+I dag er online via Teams. 
+Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere JWT i en flask/python/microservice arkitektur. 
 
 ## Materialer
-* [JWT Authentication Explained](https://www.youtube.com/watch?v=iHNkGQyJxJs)
 * [JWT Debugger](https://jwt.io/#debugger-io)
-
 * [What is JWT? JSON Web Tokens Explained (Java Brains)](https://www.youtube.com/watch?v=soGRyl9ztjI)
 * [What is the structure of a JWT - Java Brains](https://www.youtube.com/watch?v=_XbXkVdoG_0)
 
 ### Øvelser
+
+#### Øv.1:
+Lav følgen de tutorial:
+* [Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture](materialer/jwt_tutorial.md)
 
 #### Øvelse med app.py og auth.py services i samarbejde
 
@@ -32,7 +32,7 @@ I dag skal vi arbejde med Arthendication og Arthorization med Json Web Token (JW
 ```
 # auth.py
 
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify
 import jwt
 import datetime
 
@@ -55,13 +55,10 @@ def login():
 
     if users.get(username) and users.get(username) == password:
         token = jwt.encode({
-            'user': username,
-            'exp': datetime.datetime.utcnow() + datetime.timedelta(hours=1)
+            'user': username
         }, app.config['SECRET_KEY'], algorithm='HS256')
         
-        response = make_response(jsonify({"message": "Login successful"}), 200)
-        response.headers['Authorization'] = f'Bearer {token}'
-        return response
+        return jsonify({"token": token})
     else:
         return jsonify({"message": "Invalid Credentials"}), 401
 
@@ -80,28 +77,26 @@ import jwt
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
 
-def verify_token(token):
-    if not token:
-        return jsonify({"message": "Token is missing!"}), 403
+def token_required(f):
+    def wrapped(*args, **kwargs):
+        token = request.headers.get('Authorization')
+        if not token:
+            return jsonify({"message": "Token is missing!"}), 403
 
-    try:
-        token = token.split(" ")[1] if token.startswith("Bearer ") else token
-        jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
-    except jwt.ExpiredSignatureError:
-        return jsonify({"message": "Token is expired!"}), 403
-    except jwt.InvalidTokenError:
-        return jsonify({"message": "Invalid token!"}), 403
+        try:
+            jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            return jsonify({"message": "Token is expired!"}), 403
+        except jwt.InvalidTokenError:
+            return jsonify({"message": "Invalid token!"}), 403
 
-    return None
+        return f(*args, **kwargs)
+    return wrapped
 
 @app.route("/")
+@token_required
 def home():
-    token = request.headers.get('Authorization')
-    token_error = verify_token(token)
-    if token_error:
-        return token_error
     return "Hello, this is a Flask Microservice"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
-```
