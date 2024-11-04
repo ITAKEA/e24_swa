@@ -74,7 +74,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#materialer">13.4. Materialer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#ovelser">13.4.1. Øvelser</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#ov-1">13.4.1.1. Øv.1:</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#ovelse-med-app-py-og-auth-py-services-i-samarbejde">13.4.1.2. Øvelse med app.py og auth.py services i samarbejde</a></li>
 </ul>
 </li>
 </ul>
@@ -140,91 +139,92 @@ Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere J
 <li><p><a class="reference external" href="https://jwt.io/#debugger-io">JWT Debugger</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=soGRyl9ztjI">What is JWT? JSON Web Tokens Explained (Java Brains)</a></p></li>
 <li><p><a class="reference external" href="https://www.youtube.com/watch?v=_XbXkVdoG_0">What is the structure of a JWT - Java Brains</a></p></li>
+<li><p><a class="reference external" href="https://flask-jwt-extended.readthedocs.io/en/stable/">Flask-JWT-Extended’s Documentation</a></p></li>
 </ul>
 <section id="ovelser">
 <h3><span class="section-number">13.4.1. </span>Øvelser<a class="headerlink" href="#ovelser" title="Link to this heading"></a></h3>
 <section id="ov-1">
 <h4><span class="section-number">13.4.1.1. </span>Øv.1:<a class="headerlink" href="#ov-1" title="Link to this heading"></a></h4>
-<p>Lav følgen de tutorial:</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="materialer/jwt_tutorial.html"><span class="doc">Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture</span></a></p></li>
-</ul>
-</section>
-<section id="ovelse-med-app-py-og-auth-py-services-i-samarbejde">
-<h4><span class="section-number">13.4.1.2. </span>Øvelse med app.py og auth.py services i samarbejde<a class="headerlink" href="#ovelse-med-app-py-og-auth-py-services-i-samarbejde" title="Link to this heading"></a></h4>
-<ol class="simple">
-<li><p>Kig på følgende to python filer. Kør dem og forstå hvad der foregår i koden linie for linie.</p></li>
-</ol>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># auth.py</span>
+<!--
+Lav følgen de tutorial:
+* [Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture](materialer/jwt_tutorial.md)
 
-<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">jsonify</span>
-<span class="kn">import</span> <span class="nn">jwt</span>
-<span class="kn">import</span> <span class="nn">datetime</span>
+#### Øvelse med app.py og auth.py services i samarbejde
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your_secret_key&#39;</span>
+1. Kig på følgende to python filer. Kør dem og forstå hvad der foregår i koden linie for linie. 
 
-<span class="n">users</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;testuser&#39;</span><span class="p">:</span> <span class="s1">&#39;password123&#39;</span>
-<span class="p">}</span>
+```
+# auth.py
 
-<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/login&quot;</span><span class="p">,</span> <span class="n">methods</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;POST&quot;</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">get_json</span><span class="p">()</span>
+from flask import Flask, request, jsonify
+import jwt
+import datetime
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
+
+users = {
+    'testuser': 'password123'
+}
+
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.get_json()
     
-    <span class="n">username</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;password&#39;</span><span class="p">)</span>
+    username = data.get('username')
+    password = data.get('password')
     
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">username</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">password</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Username and Password required&quot;</span><span class="p">}),</span> <span class="mi">400</span>
+    if not username or not password:
+        return jsonify({"message": "Username and Password required"}), 400
 
-    <span class="k">if</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="ow">and</span> <span class="n">users</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">username</span><span class="p">)</span> <span class="o">==</span> <span class="n">password</span><span class="p">:</span>
-        <span class="n">token</span> <span class="o">=</span> <span class="n">jwt</span><span class="o">.</span><span class="n">encode</span><span class="p">({</span>
-            <span class="s1">&#39;user&#39;</span><span class="p">:</span> <span class="n">username</span>
-        <span class="p">},</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">],</span> <span class="n">algorithm</span><span class="o">=</span><span class="s1">&#39;HS256&#39;</span><span class="p">)</span>
+    if users.get(username) and users.get(username) == password:
+        token = jwt.encode({
+            'user': username
+        }, app.config['SECRET_KEY'], algorithm='HS256')
         
-        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;token&quot;</span><span class="p">:</span> <span class="n">token</span><span class="p">})</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid Credentials&quot;</span><span class="p">}),</span> <span class="mi">401</span>
+        return jsonify({"token": token})
+    else:
+        return jsonify({"message": "Invalid Credentials"}), 401
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5001</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># app.py</span>
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5001)
 
-<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">jsonify</span><span class="p">,</span> <span class="n">request</span>
-<span class="kn">import</span> <span class="nn">jwt</span>
+```
 
-<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your_secret_key&#39;</span>
 
-<span class="k">def</span> <span class="nf">token_required</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">wrapped</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">token</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Authorization&#39;</span><span class="p">)</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">token</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Token is missing!&quot;</span><span class="p">}),</span> <span class="mi">403</span>
+```
+# app.py
 
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">jwt</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="p">[</span><span class="s1">&#39;SECRET_KEY&#39;</span><span class="p">],</span> <span class="n">algorithms</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;HS256&#39;</span><span class="p">])</span>
-        <span class="k">except</span> <span class="n">jwt</span><span class="o">.</span><span class="n">ExpiredSignatureError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Token is expired!&quot;</span><span class="p">}),</span> <span class="mi">403</span>
-        <span class="k">except</span> <span class="n">jwt</span><span class="o">.</span><span class="n">InvalidTokenError</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">jsonify</span><span class="p">({</span><span class="s2">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Invalid token!&quot;</span><span class="p">}),</span> <span class="mi">403</span>
+from flask import Flask, jsonify, request
+import jwt
 
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapped</span>
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
 
-<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-<span class="nd">@token_required</span>
-<span class="k">def</span> <span class="nf">home</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s2">&quot;Hello, this is a Flask Microservice&quot;</span>
+def token_required(f):
+    def wrapped(*args, **kwargs):
+        token = request.headers.get('Authorization')
+        if not token:
+            return jsonify({"message": "Token is missing!"}), 403
 
-<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">debug</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
+        try:
+            jwt.decode(token, app.config['SECRET_KEY'], algorithms=['HS256'])
+        except jwt.ExpiredSignatureError:
+            return jsonify({"message": "Token is expired!"}), 403
+        except jwt.InvalidTokenError:
+            return jsonify({"message": "Invalid token!"}), 403
+
+        return f(*args, **kwargs)
+    return wrapped
+
+@app.route("/")
+@token_required
+def home():
+    return "Hello, this is a Flask Microservice"
+
+if __name__ == "__main__":
+    app.run(debug=True, host="0.0.0.0", port=5000)
+--></section>
 </section>
 </section>
 </section>
