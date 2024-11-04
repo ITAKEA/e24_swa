@@ -26,6 +26,8 @@ Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere J
 * [What is JWT? JSON Web Tokens Explained (Java Brains)](https://www.youtube.com/watch?v=soGRyl9ztjI)
 * [What is the structure of a JWT - Java Brains](https://www.youtube.com/watch?v=_XbXkVdoG_0)
 * [Flask-JWT-Extended's Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
+* [Kodeeksempel fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/jwt)
+
 ### Øvelser
 
 <!--
