@@ -14,6 +14,10 @@ I dag skal vi arbejde med Authorization og med Json Web Token (JWT). Vi skal des
 I dag er online via Teams. 
 Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere JWT i en flask/python/microservice arkitektur. 
 
+Det jeg demoer vil i kunne finde i denne dokumentation:
+
+* [Flask-JWT-Extended's Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
+
 <!-- TODO -->
 <!-- 
 * Implementer JWT
@@ -26,6 +30,8 @@ Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere J
 * [What is JWT? JSON Web Tokens Explained (Java Brains)](https://www.youtube.com/watch?v=soGRyl9ztjI)
 * [What is the structure of a JWT - Java Brains](https://www.youtube.com/watch?v=_XbXkVdoG_0)
 * [Flask-JWT-Extended's Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
+    * [Configuration Options](https://flask-jwt-extended.readthedocs.io/en/stable/options.html)
+    * []()
 * [Kodeeksempel fra undervisningen](https://github.com/ITAKEA/kode_fra_undervisning_e24/tree/master/jwt)
 
 ### Øvelser
