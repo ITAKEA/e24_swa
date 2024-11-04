@@ -44,8 +44,7 @@ Det jeg demoer vil i kunne finde i denne dokumentation:
 
 ### Øvelser
 
-<!--
-#### Øv.1:
-Lav følgen de tutorial:
-* [Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture](materialer/jwt_tutorial.md)
--->
+Der er en øvelse i dag. 
+
+I skal tage jeres "Hotel Arthur" opgave om implementere JWT tokens i applikationen. 
+
