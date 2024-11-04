@@ -1,9 +1,9 @@
 # Authorization med JWT
-I dag skal vi arbejde med Arthorization og med Json Web Token (JWT). Vi skal desuden kigge på hvordan man gemmer denne token i en cookies.
+I dag skal vi arbejde med Authorization og med Json Web Token (JWT). Vi skal desuden kigge på hvordan man gemmer denne token i en cookie.
 
 ## Læringsmål
-* Kunne forklare begrebet Authorisation i forbindelse med en Microservice arkitektur
-* Kunne forklare forskellen på Authendication og Arthorization.
+* Kunne forklare begrebet Authorization i forbindelse med en Microservice arkitektur
+* Kunne forklare forskellen på Authentication og Authorization.
 
 
 ## Forberedelse
@@ -25,7 +25,7 @@ Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere J
 * [JWT Debugger](https://jwt.io/#debugger-io)
 * [What is JWT? JSON Web Tokens Explained (Java Brains)](https://www.youtube.com/watch?v=soGRyl9ztjI)
 * [What is the structure of a JWT - Java Brains](https://www.youtube.com/watch?v=_XbXkVdoG_0)
-* [Flask-JWT-Extended’s Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
+* [Flask-JWT-Extended's Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
 ### Øvelser
 
 <!--
