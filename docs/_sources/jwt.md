@@ -17,6 +17,14 @@ Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere J
 Det jeg demoer vil i kunne finde i denne dokumentation:
 
 * [Flask-JWT-Extended's Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
+    * [Configuration Options](https://flask-jwt-extended.readthedocs.io/en/stable/options.html)
+        * JWT_ACCESS_TOKEN_EXPIRES
+        * JWT_TOKEN_LOCATION
+        * JWT_HEADER_NAME
+        * JWT_HEADER_TYPE
+        * JWT_ACCESS_COOKIE_NAME
+
+
 
 <!-- TODO -->
 <!-- 
