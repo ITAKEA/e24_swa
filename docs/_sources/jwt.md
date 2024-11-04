@@ -28,8 +28,8 @@ Jeg kommer til at lave en 30/45 minutters demo af hvordan man kan implementere J
 * [Flask-JWT-Extended’s Documentation](https://flask-jwt-extended.readthedocs.io/en/stable/)
 ### Øvelser
 
-#### Øv.1:
 <!--
+#### Øv.1:
 Lav følgen de tutorial:
 * [Implementing JWT Authentication with Cookies in a Dockerized Flask Microservice Architecture](materialer/jwt_tutorial.md)
 
