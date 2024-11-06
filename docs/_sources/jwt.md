@@ -47,4 +47,3 @@ Det jeg demoer vil i kunne finde i denne dokumentation:
 Der er en øvelse i dag. 
 
 I skal tage jeres "Hotel Arthur" opgave om implementere JWT tokens i applikationen. 
-
