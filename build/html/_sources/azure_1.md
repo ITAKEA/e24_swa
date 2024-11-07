@@ -27,5 +27,6 @@ I dag og næste gang skal i lære at deploey jeres microservices til Azure.
 * [https://jokes-service.azurewebsites.net/](https://jokes-service.azurewebsites.net/)
 * [https://github.com/ITAKEA/jokes_service](https://github.com/ITAKEA/jokes_service)
 * [DockerHub - jokes-service](https://hub.docker.com/r/clbo/joke-service)
-* [Use persistent shared storage](https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux&tabs=debian#use-persistent-shared-storage)
+<!-- * [Use persistent shared storage](https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux&tabs=debian#use-persistent-shared-storage) -->
 * [Tip 12: Deploying a container image to Azure App Service from Docker Hub](https://www.youtube.com/watch?v=_LNOg8kU4CE)
+* [YAML | In One Video](https://www.youtube.com/watch?v=cdLNKUoMc6c)
