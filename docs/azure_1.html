@@ -71,6 +71,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">14. Azure Deployment 1</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#laeringsmal">14.1. Læringsmål</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#forberedelse">14.2. Forberedelse</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dagen-i-dag">14.3. Dagen i dag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#materialer">14.4. Materialer</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="azure_2.html">15. Azure Deployment 2</a></li>
@@ -115,8 +117,45 @@
 <section id="forberedelse">
 <h2><span class="section-number">14.2. </span>Forberedelse<a class="headerlink" href="#forberedelse" title="Link to this heading"></a></h2>
 <ul class="simple">
-<li><p>Opret en Students account på <strong>Azure</strong>: https://azure.microsoft.com/en-us/free/students/</p></li>
-<li><p>Opret en account på <strong>DockerHub</strong>: https://hub.docker.com/</p></li>
+<li><p>Opret en Students account på <strong><a class="reference external" href="https://azure.microsoft.com/en-us/free/students/">Azure</a></strong></p></li>
+<li><p>Opret en account på <strong><a class="reference external" href="https://hub.docker.com/">DockerHub</a></strong></p></li>
+<li><p>Kør kommandoen: <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-it</span> <span class="pre">--rm</span> <span class="pre">-p</span> <span class="pre">5000:5000</span> <span class="pre">clbo/jokes-service:0.0.2</span></code> (vi skal arbejde med dette image i timerne).</p></li>
+</ul>
+</section>
+<section id="dagen-i-dag">
+<h2><span class="section-number">14.3. </span>Dagen i dag<a class="headerlink" href="#dagen-i-dag" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Gennemgang af Azure Portal</p>
+<ul>
+<li><p>Azure Web App</p></li>
+<li><p>forbind til dockerhub</p>
+<ul>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=_LNOg8kU4CE">Tip 12: Deploying a container image to Azure App Service from Docker Hub</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>DockeHub</p>
+<ul>
+<li><p>push image til docker hub</p>
+<ul>
+<li><p>docker build -t clbo/jokes-service:0.0.1 –push</p></li>
+<li><p>(el. docker push clbo/jokes-service:0.0.1)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Github Actions</p></li>
+</ul>
+</section>
+<section id="materialer">
+<h2><span class="section-number">14.4. </span>Materialer<a class="headerlink" href="#materialer" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jokes-service.azurewebsites.net/">https://jokes-service.azurewebsites.net/</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ITAKEA/jokes_service">https://github.com/ITAKEA/jokes_service</a></p></li>
+<li><p><a class="reference external" href="https://hub.docker.com/r/clbo/joke-service">DockerHub - jokes-service</a></p></li>
+<li><p><a class="reference external" href="https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux&amp;tabs=debian#use-persistent-shared-storage">Use persistent shared storage</a></p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=_LNOg8kU4CE">Tip 12: Deploying a container image to Azure App Service from Docker Hub</a></p></li>
 </ul>
 </section>
 </section>
