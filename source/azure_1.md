@@ -8,7 +8,7 @@ I dag og næste gang skal i lære at deploey jeres microservices til Azure.
 ## Forberedelse
 * Opret en Students account på **[Azure](https://azure.microsoft.com/en-us/free/students/)**
 * Opret en account på **[DockerHub](https://hub.docker.com/)**
-* Kør kommandoen: `docker run -it --rm -p 5000:5000 clbo/jokes-service:0.0.2` 
+* Kør kommandoen: `docker run -it --rm -p 5000:5000 clbo/jokes-service:0.0.2`      
     (vi skal arbejde med dette image i timerne).
 
 
