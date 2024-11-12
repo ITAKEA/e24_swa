@@ -19,5 +19,7 @@ og til github_microservice sådan:
 ## WEBSITES_ENABLE_APP_SERVICE_STORAGE
 Hvis denne variabel sættes til **true** vil alle filer der ligger i Azure Web Appens `/home` mappe forblive liggende når vi deployer et nyt image.    
 Dette kan vi udnytte til at vi ligger vores database fil i denne mappe.    
-Det gøre ved at lave en miljøvariabel i vores kode feks. `DB_PATH = os.getenv('SQLITE_DB_PATH')` og så lave en ny environment variabel `SQLITE_DB_PATH : /home/users.db` (som beskrevet oven over).    
+Det gøre ved at læser fra en miljøvariabel i vores kode `DB_PATH = os.getenv('SQLITE_DB_PATH')` og så lave en ny environment variabel på Azure: `SQLITE_DB_PATH : /home/users.db` (som beskrevet oven over). 
+
+
 
