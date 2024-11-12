@@ -17,6 +17,7 @@
 * [Github-microservice på github](https://github.com/ITAKEA/github_microservice)
 
 ## Materialer
+* [Azure Cheatsheet](materialer/azure_cheatsheet.md)
 * [Use persistent shared storage](https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux&tabs=debian#use-persistent-shared-storage)
 * [Api-gateway på Azure](https://api-gateway-xx-bfb3bkgfcmhnaph3.northeurope-01.azurewebsites.net/)
 * [Github-microservice på Azure](https://github-microservice-gygahdabdwbjbbhj.northeurope-01.azurewebsites.net/)
