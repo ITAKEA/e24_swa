@@ -119,6 +119,10 @@
 <h2>WEBSITES_ENABLE_APP_SERVICE_STORAGE<a class="headerlink" href="#websites-enable-app-service-storage" title="Link to this heading"></a></h2>
 <p>Hvis denne variabel sættes til <strong>true</strong> vil alle filer der ligger i Azure Web Appens <code class="docutils literal notranslate"><span class="pre">/home</span></code> mappe forblive liggende når vi deployer et nyt image.<br />Dette kan vi udnytte til at vi ligger vores database fil i denne mappe.<br />Det gøre ved at læser fra en miljøvariabel i vores kode <code class="docutils literal notranslate"><span class="pre">DB_PATH</span> <span class="pre">=</span> <span class="pre">os.getenv('SQLITE_DB_PATH')</span></code> og så lave en ny environment variabel på Azure: <code class="docutils literal notranslate"><span class="pre">SQLITE_DB_PATH</span> <span class="pre">:</span> <span class="pre">/home/users.db</span></code> (som beskrevet oven over).</p>
 </section>
+<section id="development-tools-advanced-tools-go-bash">
+<h2>Development Tools -&gt; Advanced Tools -&gt; Go -&gt; Bash<a class="headerlink" href="#development-tools-advanced-tools-go-bash" title="Link to this heading"></a></h2>
+<p>Her kan vi gennem en terminal bruge bash kommandoer som vi lærte i starten af semesteret.<br />I kan blandt andet se at jeres database fil ligger i <code class="docutils literal notranslate"><span class="pre">home</span></code> mappen</p>
+</section>
 </section>
 
 

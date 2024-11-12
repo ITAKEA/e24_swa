@@ -22,4 +22,6 @@ Dette kan vi udnytte til at vi ligger vores database fil i denne mappe.
 Det gøre ved at læser fra en miljøvariabel i vores kode `DB_PATH = os.getenv('SQLITE_DB_PATH')` og så lave en ny environment variabel på Azure: `SQLITE_DB_PATH : /home/users.db` (som beskrevet oven over). 
 
 
-
+## Development Tools -> Advanced Tools -> Go -> Bash
+Her kan vi gennem en terminal bruge bash kommandoer som vi lærte i starten af semesteret.    
+I kan blandt andet se at jeres database fil ligger i `home` mappen
