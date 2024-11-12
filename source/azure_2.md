@@ -10,7 +10,15 @@
 * [Video: Environment variabler i Deployment processen]()
 
 ## Dagen i dag
-* Vi arbejder med en applikation som består af 2 microservices og en api gataway, deployer den og får den til at virke. 
+* Vi arbejder med en applikation som består af 2 microservices, deployer dem og får dem til at virke. 
+* [Api-gateway på Azure](https://api-gateway-xx-bfb3bkgfcmhnaph3.northeurope-01.azurewebsites.net/)
+* [Github-microservice på Azure](https://github-microservice-gygahdabdwbjbbhj.northeurope-01.azurewebsites.net/)
+* [Api-gateway på github](https://github.com/ITAKEA/api_gateway)
+* [Github-microservice på github](https://github.com/ITAKEA/github_microservice)
 
 ## Materialer
 * [Use persistent shared storage](https://learn.microsoft.com/en-us/azure/app-service/configure-custom-container?pivots=container-linux&tabs=debian#use-persistent-shared-storage)
+* [Api-gateway på Azure](https://api-gateway-xx-bfb3bkgfcmhnaph3.northeurope-01.azurewebsites.net/)
+* [Github-microservice på Azure](https://github-microservice-gygahdabdwbjbbhj.northeurope-01.azurewebsites.net/)
+* [Api-gateway på github](https://github.com/ITAKEA/api_gateway)
+* [Github-microservice på github](https://github.com/ITAKEA/github_microservice)
