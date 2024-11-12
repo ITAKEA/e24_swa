@@ -24,4 +24,7 @@ Det gøre ved at læser fra en miljøvariabel i vores kode `DB_PATH = os.getenv(
 
 ## Development Tools -> Advanced Tools -> Go -> Bash
 Her kan vi gennem en terminal bruge bash kommandoer som vi lærte i starten af semesteret.    
-I kan blandt andet se at jeres database fil ligger i `home` mappen
+I kan blandt andet se at jeres database fil ligger i `home` mappen.    
+I skal ikke bruge denne del til andet end sjov :) .   
+
+
