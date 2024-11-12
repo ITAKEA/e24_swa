@@ -6,6 +6,8 @@
 * Kunne arbejde med persistance storage i en CI/CD pipenline. 
 
 ## Forberedelse
+* [Video: gennemgang af sidste lektions indhold](https://youtu.be/qpxVNXjHSFQ)
+* [Video: Environment variabler i Deployment processen]()
 
 ## Dagen i dag
 * Vi arbejder med en applikation som består af 2 microservices og en api gataway, deployer den og får den til at virke. 
