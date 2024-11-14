@@ -42,7 +42,7 @@ Der er lavet en ny mappe **[swagger](https://github.com/ITAKEA/api_gateway/tree/
 **Demo**     
 * [SwaggerUI](https://swagger.io/tools/swagger-ui/)
 * [OpenAI - openapi.yaml](https://github.com/openai/openai-openapi/blob/master/openapi.yaml)
-
+* [OpemAI API](https://platform.openai.com/docs/overview)
 
 
 ## Materialer
