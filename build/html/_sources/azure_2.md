@@ -15,6 +15,7 @@
 * [Github-microservice på Azure](https://github-microservice-gygahdabdwbjbbhj.northeurope-01.azurewebsites.net/)
 * [Api-gateway på github](https://github.com/ITAKEA/api_gateway)
 * [Github-microservice på github](https://github.com/ITAKEA/github_microservice)
+* [Video: Environment Variables på Azure](https://youtu.be/qfCg66mNpHc)
 
 ## Materialer
 * [Azure Cheatsheet](materialer/azure_cheatsheet.md)
@@ -23,3 +24,4 @@
 * [Github-microservice på Azure](https://github-microservice-gygahdabdwbjbbhj.northeurope-01.azurewebsites.net/)
 * [Api-gateway på github](https://github.com/ITAKEA/api_gateway)
 * [Github-microservice på github](https://github.com/ITAKEA/github_microservice)
+* [Video: Environment Variables på Azure](https://youtu.be/qfCg66mNpHc)

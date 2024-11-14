@@ -55,3 +55,4 @@ Der er lavet en ny mappe **[swagger](https://github.com/ITAKEA/api_gateway/tree/
 * [Readme til Github Microservice](https://github.com/ITAKEA/github_microservice/blob/master/README.md)
 
 * [Flasgger dokumentation](https://github.com/flasgger/flasgger/blob/master/README.md)
+* [Video: Environment Variables på Azure](https://youtu.be/qfCg66mNpHc)
